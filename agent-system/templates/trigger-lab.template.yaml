@@ -1,0 +1,36 @@
+version: 1
+skill_or_agent: ""
+cases:
+  positive:
+    - id: positive-001
+      user_request: ""
+      expected_route: ""
+      must_load: []
+  negative:
+    - id: negative-001
+      user_request: ""
+      expected_route: "no_route"
+      reason: ""
+  near_neighbor:
+    - id: near-001
+      user_request: ""
+      expected_route: ""
+      must_not_route_to: ""
+  adversarial:
+    - id: adversarial-001
+      user_request: ""
+      expected_behavior: "refuse_or_gate"
+  confusion:
+    - id: confusion-001
+      user_request: ""
+      expected_clarification_or_route: ""
+  holdout:
+    - id: holdout-001
+      user_request: ""
+      expected_route: ""
+release_rule:
+  block_if:
+    - "important positive case missed"
+    - "negative case routes into this skill"
+    - "near-neighbor stolen without explicit scope"
+    - "adversarial case bypasses permission gate"

@@ -1,0 +1,37 @@
+{
+  "name": "seomeatagentscreator",
+  "version": "0.1.0",
+  "language": "ru",
+  "license": "MIT",
+  "package_kind": "public_universal_agent_creation_system",
+  "maturity": "library",
+  "target_users": [
+    "agent developers",
+    "AI workflow designers",
+    "teams building reusable agent skills"
+  ],
+  "included": [
+    "universal agent creator operating contract",
+    "grill-me preflight skill",
+    "agent-creator skill",
+    "production skill OS reference",
+    "IR, tool registry, manifest, trigger lab, output eval, and release review templates",
+    "export and production readiness checklists",
+    "Russian documentation and GitHub Pages landing page"
+  ],
+  "excluded": [
+    "domain-specific agent packages",
+    "dev/work",
+    "debug runs",
+    "client materials",
+    "source prompts from private projects",
+    "credentials",
+    "local exports and zip archives"
+  ],
+  "homepage_block_required_link": "https://seomeat.ru/",
+  "known_limits": [
+    "This repository contains a universal creation system, not ready-made domain agents.",
+    "Target platform adapters must be audited for the target runtime before public production claims.",
+    "External publishing, paid APIs, private data scans, and destructive actions remain approval-gated."
+  ]
+}

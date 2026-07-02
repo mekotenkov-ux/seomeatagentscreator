@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "name": "example_read_source",
+      "purpose": "Read an approved source artifact with bounded projection.",
+      "input_schema": {
+        "type": "object",
+        "required": ["artifact_id", "projection"],
+        "properties": {
+          "artifact_id": {"type": "string"},
+          "projection": {"type": "string"}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["status", "summary", "items", "evidence_refs", "next_valid_actions"],
+        "properties": {
+          "status": {"enum": ["success", "error", "skipped", "blocked"]},
+          "summary": {"type": "string"},
+          "items": {"type": "array"},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}},
+          "next_valid_actions": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "risk_class": "private_read",
+      "side_effects": "none",
+      "permission_gate": "approved_source_only",
+      "timeout_seconds": 30,
+      "result_size_limit": "bounded_summary_plus_artifact_ref",
+      "retry_policy": "retry_once_on_transient_error",
+      "audit_policy": "append structured observation to tool_observations.jsonl"
+    }
+  ]
+}

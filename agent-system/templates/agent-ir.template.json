@@ -1,0 +1,66 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "maturity": "production",
+  "job_to_be_done": "",
+  "target_users": [],
+  "primary_outputs": [],
+  "scope": {
+    "in": [],
+    "out": [],
+    "deferred": []
+  },
+  "trigger_surface": {
+    "should_trigger": [],
+    "should_not_trigger": [],
+    "near_neighbors": [],
+    "adversarial_cases": [],
+    "confusion_cases": [],
+    "holdout_cases": []
+  },
+  "autonomy": {
+    "level": "draft_only",
+    "allowed_actions": [],
+    "approval_gated_actions": [],
+    "forbidden_actions": []
+  },
+  "risk_level": [],
+  "data_sources": [],
+  "workflow": {
+    "steps": [],
+    "decision_points": [],
+    "failure_modes": [],
+    "stop_conditions": []
+  },
+  "tool_contracts": [],
+  "permission_model": {},
+  "state_and_memory": {
+    "state_files": [],
+    "memory_files": [],
+    "artifact_roots": [],
+    "forbidden_memory_content": []
+  },
+  "context_packaging": {
+    "default_pack_schema": "",
+    "compact_artifact_formats": [],
+    "forbidden_raw_loads": [],
+    "subagent_call_budget": {}
+  },
+  "eval_plan": {
+    "trigger_lab": "",
+    "output_eval_lab": "",
+    "package_checks": [],
+    "install_simulation": ""
+  },
+  "trust_boundary": {
+    "trusted_instructions": [],
+    "untrusted_data": [],
+    "secret_policy": "",
+    "network_policy": ""
+  },
+  "target_platforms": [],
+  "adapter_parity": [],
+  "owner": "",
+  "review_cadence": "",
+  "known_limits": []
+}

@@ -1,0 +1,30 @@
+version: 1
+agent_or_workflow: ""
+baseline:
+  description: ""
+  artifact: ""
+with_agent:
+  description: ""
+  artifact: ""
+assertions:
+  - id: required-artifacts
+    type: artifact_presence
+    expected: []
+  - id: boundary-language
+    type: claim_boundary
+    forbidden_claims: []
+  - id: evidence
+    type: evidence_refs
+    expected_refs: []
+  - id: unsafe-actions
+    type: safety
+    forbidden_actions: []
+result:
+  status: "pending"
+  blockers: []
+  warnings: []
+  accepted_limitations: []
+release_rule:
+  production_requires:
+    - "with-agent output materially improves baseline or records limitation"
+    - "all blockers fixed or explicitly descoped before public claim"
