@@ -1,0 +1,2 @@
+candidate_id,source_workflow_run_id,name,trigger_summary,procedure_summary,inputs,outputs,boundaries,evidence_refs,status,priority,owner,next_review_at
+skill_candidate_example,,Example skill candidate,When a repeated task pattern appears,Describe the repeatable procedure,Input artifacts,Output artifacts,What it must not do,,proposed,3,,

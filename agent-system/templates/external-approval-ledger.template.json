@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "approvals": [
+    {
+      "approval_id": "",
+      "action_id": "",
+      "risk_class": "network|paid_api|external_write|destructive|subagent|package_install|other",
+      "scope": "",
+      "budget": {
+        "max_requests": null,
+        "max_cost": null,
+        "max_runtime_minutes": null
+      },
+      "approved_by": "",
+      "approval_ref": "",
+      "approved_at": "YYYY-MM-DDTHH:MM:SSZ",
+      "expires_at": "",
+      "evidence_refs": []
+    }
+  ]
+}

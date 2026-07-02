@@ -1,0 +1,19 @@
+version: 1
+positive_fixtures:
+  - id: happy-path-runtime
+    purpose: Runtime package installs and required files exist.
+    command: ""
+negative_fixtures:
+  - id: markdown-only-review
+    should_fail_because: Independent review summary is missing machine-readable reviewer trace.
+  - id: descope-counted-as-pass
+    should_fail_because: Descoped evidence is a limitation, not external_pass.
+  - id: runtime-contains-devkit
+    should_fail_because: Runtime contains tests, source materials, or validation scripts.
+  - id: local-absolute-path
+    should_fail_because: Package or evidence manifest contains a local absolute path.
+release_rule:
+  production_requires:
+    - required positive fixtures pass
+    - negative fixtures fail for the expected reason
+    - remaining gaps are blockers, warnings, or accepted limitations

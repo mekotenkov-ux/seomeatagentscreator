@@ -32,6 +32,29 @@
     "failure_modes": [],
     "stop_conditions": []
   },
+  "loop_contract": {
+    "trigger": "",
+    "state_read": [],
+    "context_build": [],
+    "tool_proposal": "",
+    "schema_validation": "",
+    "permission_decision": "",
+    "execution_or_skip": "",
+    "structured_observation": "",
+    "checker_pass": "",
+    "state_write": "",
+    "repair_policy": "",
+    "hard_stop": ""
+  },
+  "budgets": {
+    "max_steps": null,
+    "max_tool_calls": null,
+    "max_runtime_minutes": null,
+    "max_tokens": null,
+    "max_cost": null,
+    "max_repair_iterations": null,
+    "max_subagent_calls_per_stage": null
+  },
   "tool_contracts": [],
   "permission_model": {},
   "state_and_memory": {
@@ -50,7 +73,31 @@
     "trigger_lab": "",
     "output_eval_lab": "",
     "package_checks": [],
-    "install_simulation": ""
+    "install_simulation": "",
+    "workflow_lab": "",
+    "stage_quality_gates": "",
+    "negative_fixtures": []
+  },
+  "final_evidence": {
+    "contract": "",
+    "runbook": "",
+    "external_evidence_items": [],
+    "descope_policy": "",
+    "forbidden_claims_until_external_pass": []
+  },
+  "claim_boundary": {
+    "accepted_evidence": [],
+    "pending_evidence": [],
+    "known_gaps": [],
+    "allowed_claims": [],
+    "forbidden_claims": []
+  },
+  "living_adaptation": {
+    "workflow_ledger": "",
+    "subagent_ledger": "",
+    "skill_candidate_registry": "",
+    "method_lesson_registry": "",
+    "promotion_gate": ""
   },
   "trust_boundary": {
     "trusted_instructions": [],
@@ -59,7 +106,14 @@
     "network_policy": ""
   },
   "target_platforms": [],
+  "target_conformance_matrix": "",
   "adapter_parity": [],
+  "install_birth": {
+    "birth_file": "",
+    "environment_phase": "",
+    "project_phase": "",
+    "post_birth_cleanup": []
+  },
   "owner": "",
   "review_cadence": "",
   "known_limits": []

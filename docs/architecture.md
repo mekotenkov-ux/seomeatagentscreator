@@ -48,3 +48,11 @@ request_action_approval(action_id, evidence_refs)
 ## Почему нужен claim guard
 
 Agent package не готов, если готовность существует только в финальном тексте агента. Production claim требует внешних доказательств: evals, checker reports, package verification, install simulation, release review.
+
+## Почему нужен birth protocol
+
+Мультиплатформенность нужна до установки. После birth установленный агент должен заниматься своей задачей, а не сохранением adapters, connectors или экспортного состояния. Environment adaptation идет до project adaptation, а native consolidation требует approval.
+
+## Почему нужен Skill Training Lab
+
+Скиллы нельзя писать для текущего чата. Их нужно проверять на fresh agents, хранить skill-candidate lifecycle и повышать в runtime только после evidence, trigger/output checks и boundaries.

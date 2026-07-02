@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "stages": [
+    {
+      "stage": "",
+      "owner": "",
+      "required_by_scope": true,
+      "input_universe_ref": "",
+      "expected_item_count": 0,
+      "processed_item_count": 0,
+      "status": "pending|done|blocked|partial|descoped|not_applicable",
+      "quality_verdict": "pass|warn|fail|blocked|not_applicable",
+      "quality_criteria": [],
+      "blocking_missing_artifacts": [],
+      "skipped_or_blocked_reason": "",
+      "evidence_refs": [],
+      "next_valid_actions": [],
+      "human_visible_note": ""
+    }
+  ]
+}

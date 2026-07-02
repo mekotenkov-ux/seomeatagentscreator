@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "package": "",
+  "version": "0.1.0",
+  "runtime": {
+    "source_root": "runtime",
+    "staging_dir": "dist/runtime-staging",
+    "zip_path": "dist/runtime.zip",
+    "include": [
+      "AGENTS.md",
+      "agent-ir.json",
+      "skills/**",
+      "references/**",
+      "templates/**",
+      "state/**",
+      "memory/**",
+      "MANIFEST.json",
+      "INSTALL.md"
+    ],
+    "exclude_parts": [
+      "tests",
+      "validation-tests",
+      "source-materials",
+      "agent-workspace",
+      "__pycache__",
+      "node_modules",
+      "browser-profile",
+      "chrome-profile"
+    ],
+    "exclude_suffixes": [".pyc", ".pyo", ".sqlite", ".db", ".zip"]
+  },
+  "devkit": {
+    "source_root": "devkit",
+    "staging_dir": "dist/devkit-staging",
+    "zip_path": "dist/devkit.zip",
+    "include": ["**"]
+  },
+  "required_dot_directories": [],
+  "generate_files_sha256": true,
+  "install_simulation_command": ""
+}

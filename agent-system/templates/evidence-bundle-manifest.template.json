@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "bundle_id": "",
+  "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "claim_boundary": {
+    "supports": [],
+    "does_not_support": []
+  },
+  "files": [
+    {
+      "path": "",
+      "sha256": "",
+      "kind": "raw|processed|report|summary|approval|review",
+      "row_count": null,
+      "included_raw_body": false,
+      "source": ""
+    }
+  ],
+  "forbidden": {
+    "absolute_paths": true,
+    "secrets": true,
+    "unapproved_private_data": true
+  }
+}

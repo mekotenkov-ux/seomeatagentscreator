@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "decided_at": "YYYY-MM-DD",
+  "workflow_run_id": "",
+  "status": "no_update_needed|updates_required|updates_required_and_applied|blocked",
+  "route_decision": "self|subagents|hybrid",
+  "durable_lessons": [
+    {
+      "lesson_id": "",
+      "summary": "",
+      "scope": "router|skill|command|checker|tool|validation|reference|memory|package-boundary",
+      "applied_to": [],
+      "validation": ""
+    }
+  ],
+  "skill_candidates": [
+    {
+      "candidate_id": "",
+      "status": "proposed|draft|accepted|implemented|rejected",
+      "trigger_summary": "",
+      "evidence_refs": []
+    }
+  ],
+  "no_update_reason": "",
+  "next_living_adaptation_check": ""
+}

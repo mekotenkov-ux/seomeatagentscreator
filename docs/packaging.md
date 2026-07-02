@@ -42,3 +42,11 @@ Devkit содержит:
 ## GitHub Pages
 
 Этот репозиторий содержит статическую страницу `docs/index.html`. Для публикации в GitHub Pages выберите source `Deploy from a branch`, branch `main`, folder `/docs`.
+
+## Export Builder Pattern
+
+Используйте `agent-system/templates/export-manifest.template.json` и `scripts/build_agent_export.py` как базовый паттерн: explicit allowlist, clean staging, `FILES.sha256`, zip inspection, slash-only entries и install simulation из финального архива.
+
+## Evidence Boundary
+
+Пакет может быть locally ready, но external proof требует `final-evidence-contract.template.json`. Planned work, fixture, self-review, copied template и descope не повышают claim до external pass.

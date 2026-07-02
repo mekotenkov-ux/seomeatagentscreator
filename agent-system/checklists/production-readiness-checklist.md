@@ -41,3 +41,11 @@
 - [ ] Pending review не считается approval.
 - [ ] Warnings имеют action/waiver/limitation.
 - [ ] Blockers не waived.
+
+## Living And Packaging
+
+- [ ] Skill candidates не считаются implemented skills без promotion gate.
+- [ ] Independent review summary machine-readable или blocker записан.
+- [ ] Runtime install проверяется из финального zip.
+- [ ] Birth flow отделяет environment adaptation от project adaptation.
+- [ ] Post-birth cleanup не удаляет canonical runtime assets без approval.

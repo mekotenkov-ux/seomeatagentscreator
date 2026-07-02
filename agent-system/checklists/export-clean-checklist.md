@@ -26,3 +26,11 @@
 - [ ] GitHub Pages не раскрывает локальные пути или закрытые материалы.
 - [ ] `.gitignore` блокирует секреты и отладочные артефакты.
 - [ ] Domain-specific lessons не встроены в универсальное ядро.
+
+## Evidence Hygiene
+
+- [ ] Templates не считаются evidence.
+- [ ] Markdown-only review не считается independent audit.
+- [ ] Descope не считается external pass.
+- [ ] Evidence manifests не содержат локальные абсолютные пути.
+- [ ] Domain/client literals не попали в universal core.

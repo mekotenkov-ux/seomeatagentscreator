@@ -100,3 +100,16 @@ Devkit содержит:
 - runtime содержит dev/test/private artifacts;
 - есть blocker;
 - успех основан только на self-review.
+
+## Reference Map
+
+Перед production/library/governed упаковкой используйте:
+
+- `references/skill-training-lab.md`;
+- `references/package-boundary.md`;
+- `references/birth-protocol.md`;
+- `references/context-and-quality-gates.md`;
+- `references/target-adapters.md`;
+- `references/final-evidence-and-claim-guard.md`;
+- `references/universal-core-isolation.md`;
+- `references/validation-harness.md`.

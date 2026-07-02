@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "pack_id": "",
+  "objective": "",
+  "scenario": "",
+  "frozen_criteria": [],
+  "allowed_files": [],
+  "compact_artifacts": [
+    {
+      "path": "",
+      "kind": "csv|tsv|json|jsonl|markdown|sqlite|other",
+      "source_of_truth": false,
+      "row_count": null,
+      "summary": ""
+    }
+  ],
+  "tool_observations": [],
+  "skip_records": [],
+  "forbidden_actions": [],
+  "forbidden_context": [
+    "hidden desired verdict",
+    "intended fix",
+    "whole workspace unless explicitly allowed"
+  ],
+  "expected_report_schema": "checker-report.template.json",
+  "claim_boundary": []
+}

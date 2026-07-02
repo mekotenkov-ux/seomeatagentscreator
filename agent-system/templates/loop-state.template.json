@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "",
+  "objective": "",
+  "status": "pending|running|blocked|done",
+  "iteration": 0,
+  "max_iterations": 3,
+  "budgets": {
+    "max_steps": null,
+    "max_tool_calls": null,
+    "max_runtime_minutes": null,
+    "max_cost": null,
+    "max_tokens": null
+  },
+  "last_action": "",
+  "tool_observations": [],
+  "checker_reports": [],
+  "repair_plan": [],
+  "blockers": [],
+  "evidence_refs": [],
+  "next_valid_actions": [],
+  "stop_condition": ""
+}

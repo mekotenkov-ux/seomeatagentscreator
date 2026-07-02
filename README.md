@@ -29,10 +29,14 @@
 - trigger lab;
 - output eval lab;
 - checker/reviewer layer;
+- skill training lab и skill-candidate lifecycle;
+- target conformance matrix;
+- final evidence contract;
 - release review;
 - runtime/devkit boundary;
 - package verification;
 - install simulation;
+- post-birth cleanup;
 - public claim guard.
 
 ## Быстрый старт
@@ -74,6 +78,17 @@ agent-system/
       references/production-skill-os.md
     grill-me/
       SKILL.md
+  references/
+    skill-training-lab.md
+    package-boundary.md
+    birth-protocol.md
+    context-and-quality-gates.md
+    target-adapters.md
+    final-evidence-and-claim-guard.md
+    long-running-tool-lifecycle.md
+    universal-core-isolation.md
+    observability-and-living-adaptation.md
+    validation-harness.md
   templates/
     agent-ir.template.json
     tool-registry.template.json
@@ -81,6 +96,13 @@ agent-system/
     release-review.template.md
     trigger-lab.template.yaml
     output-eval-lab.template.yaml
+    target-conformance.template.json
+    final-evidence-contract.template.json
+    independent-review-summary.template.json
+    stage-quality-gates.template.json
+    state.template.md
+    local-memory.template.md
+    export-manifest.template.json
   checklists/
     export-clean-checklist.md
     production-readiness-checklist.md

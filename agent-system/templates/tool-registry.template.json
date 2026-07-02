@@ -1,35 +1,104 @@
 {
   "version": 1,
+  "observation_contract": {
+    "required_fields": [
+      "status",
+      "summary",
+      "items",
+      "evidence_refs",
+      "next_valid_actions"
+    ],
+    "allowed_statuses": [
+      "success",
+      "blocked",
+      "invalid_args",
+      "timeout",
+      "quality_fail",
+      "error",
+      "skipped"
+    ]
+  },
   "tools": [
     {
+      "id": "example_read_source",
       "name": "example_read_source",
       "purpose": "Read an approved source artifact with bounded projection.",
+      "command": "",
       "input_schema": {
         "type": "object",
-        "required": ["artifact_id", "projection"],
+        "required": [
+          "artifact_id",
+          "projection"
+        ],
         "properties": {
-          "artifact_id": {"type": "string"},
-          "projection": {"type": "string"}
+          "artifact_id": {
+            "type": "string"
+          },
+          "projection": {
+            "type": "string"
+          }
         }
       },
       "output_schema": {
         "type": "object",
-        "required": ["status", "summary", "items", "evidence_refs", "next_valid_actions"],
+        "required": [
+          "status",
+          "summary",
+          "items",
+          "evidence_refs",
+          "next_valid_actions"
+        ],
         "properties": {
-          "status": {"enum": ["success", "error", "skipped", "blocked"]},
-          "summary": {"type": "string"},
-          "items": {"type": "array"},
-          "evidence_refs": {"type": "array", "items": {"type": "string"}},
-          "next_valid_actions": {"type": "array", "items": {"type": "string"}}
+          "status": {
+            "enum": [
+              "success",
+              "blocked",
+              "invalid_args",
+              "timeout",
+              "quality_fail",
+              "error",
+              "skipped"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_valid_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         }
       },
       "risk_class": "private_read",
-      "side_effects": "none",
+      "side_effects": [
+        "none"
+      ],
       "permission_gate": "approved_source_only",
+      "approval_ref_fields": [],
       "timeout_seconds": 30,
       "result_size_limit": "bounded_summary_plus_artifact_ref",
       "retry_policy": "retry_once_on_transient_error",
-      "audit_policy": "append structured observation to tool_observations.jsonl"
+      "cost_notes": "",
+      "token_budget": null,
+      "cost_budget": null,
+      "dry_run_contract": "",
+      "sidecar_artifacts": [],
+      "resume_policy": "",
+      "cancel_policy": "",
+      "status_tool": "",
+      "audit_policy": "append structured observation to tool_observations.jsonl",
+      "observation_schema": "observation_contract"
     }
   ]
 }

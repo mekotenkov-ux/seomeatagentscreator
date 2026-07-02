@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "package": "",
+  "accepted_evidence": [
+    {
+      "id": "",
+      "kind": "test|checker|package|install|external|review|manual_approval",
+      "status": "pass|warn|fail|blocked",
+      "summary": "",
+      "artifact_refs": [],
+      "claim_support": []
+    }
+  ],
+  "pending_evidence": [],
+  "known_gaps": [],
+  "claim_boundary": {
+    "allowed_claims": [],
+    "forbidden_claims": [],
+    "limitations": []
+  }
+}

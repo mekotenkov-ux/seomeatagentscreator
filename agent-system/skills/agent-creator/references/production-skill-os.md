@@ -57,3 +57,7 @@
 - generated temp files;
 - local absolute paths;
 - domain-specific agents, если пакет заявлен как универсальный.
+
+## Source Isolation
+
+Universal agent-creation files must not contain domain package rules, client facts, provider defaults, raw logs, screenshots, browser profiles, or local absolute paths. Durable domain lessons belong in scoped references and must be generalized before they enter the public core.

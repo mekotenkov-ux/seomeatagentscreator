@@ -47,3 +47,11 @@ sandbox-project/
 3. Добавьте regression check.
 4. Пересоберите runtime.
 5. Повторите sandbox run.
+
+## Skill Training Lab
+
+Повторяемые ошибки и удачные процедуры сначала записываются как skill candidates. Перед тем как сделать их runtime skill, прогоните fresh-context или subagent forward-testing: проверяющий получает skill, реалистичную задачу и compact artifacts, но не получает intended fix или ожидаемый ответ.
+
+## Machine Records
+
+Сохраняйте `workflow_runs`, `subagent_runs`, `tool_observations`, `stage-quality-gates` и `living-adaptation-decision`. Если решение не требует durable update, запишите `no_update_reason`, чтобы не превращать шум в методику.

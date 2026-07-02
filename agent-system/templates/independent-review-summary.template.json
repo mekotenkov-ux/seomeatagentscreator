@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "independent_execution": true,
+  "self_review_only": false,
+  "reviews": [
+    {
+      "id": "first-run-onboarding",
+      "kind": "scenario|clean-auditor",
+      "reviewer_id": "",
+      "independent": true,
+      "status": "pass|warn|fail|blocked",
+      "inspected_files": [],
+      "work_trace": [],
+      "confusion_points": [],
+      "findings": []
+    }
+  ],
+  "required_review_ids": [
+    "first-run-onboarding",
+    "happy-path-full-run",
+    "missing-input-or-permission",
+    "direct-skill-or-narrow-workflow",
+    "handoff-export-install",
+    "memory-state-living-adaptation",
+    "consistency-routing-auditor",
+    "modern-agent-system-auditor",
+    "export-boundary-auditor",
+    "claim-boundary-auditor"
+  ],
+  "findings": [
+    {
+      "id": "",
+      "status": "fixed|rejected_with_reason|known_limitation|not_applicable",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "all_findings_dispositioned": false
+}

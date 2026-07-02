@@ -70,7 +70,11 @@ agent-system/templates/agent-ir.template.json
 - `tool-registry.template.json`;
 - `release-review.template.md`;
 - `production-readiness-checklist.md`;
-- `export-clean-checklist.md`.
+- `export-clean-checklist.md`;
+- `stage-quality-gates.template.json`;
+- `target-conformance.template.json`;
+- `final-evidence-contract.template.json`;
+- `independent-review-summary.template.json`.
 
 ## 6. Разделите runtime и devkit
 
@@ -92,3 +96,7 @@ Devkit - тесты, fixtures, validation scripts, source materials, audit repor
 - нет доменных скиллов, если пакет универсальный;
 - нет локальных абсолютных путей;
 - нет скрытой зависимости от истории чата.
+
+## 9. Проверьте переносимость
+
+Перед публикацией заполните target conformance matrix, birth protocol, final evidence contract и runtime/devkit boundary. Если пакет поддерживает несколько платформ, adapters должны быть thin layers поверх одного IR, а не расходящимися копиями промптов.

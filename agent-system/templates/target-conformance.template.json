@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "canonical_contract": "agent-ir.json",
+  "targets": [
+    {
+      "platform": "Codex",
+      "adapter_paths": ["AGENTS.md"],
+      "semantic_parity": "unknown|partial|full",
+      "unsupported_features": [],
+      "degraded_behavior": "",
+      "permission_mapping": "",
+      "install_scope": "",
+      "native_consolidation_policy": "ask_before_merge",
+      "verification_status": "pending|pass|warn|block",
+      "evidence_refs": []
+    }
+  ]
+}
