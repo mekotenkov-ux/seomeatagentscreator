@@ -19,18 +19,14 @@
     "export and production readiness checklists",
     "Russian documentation and GitHub Pages landing page"
   ],
-  "excluded": [
-    "domain-specific agent packages",
-    "dev/work",
-    "debug runs",
-    "client materials",
-    "source prompts from private projects",
-    "credentials",
-    "local exports and zip archives"
+  "public_package_policy": [
+    "keep the repository domain-neutral",
+    "publish reusable instructions, templates, checklists, and docs",
+    "keep secrets, private data, temporary work artifacts, and local-only files out of the package"
   ],
   "homepage_block_required_link": "https://seomeat.ru/",
   "known_limits": [
-    "This repository contains a universal creation system, not ready-made domain agents.",
+    "This repository provides a universal creation system and templates.",
     "Target platform adapters must be audited for the target runtime before public production claims.",
     "External publishing, paid APIs, private data scans, and destructive actions remain approval-gated."
   ]

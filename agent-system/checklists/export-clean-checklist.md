@@ -9,7 +9,7 @@
 - [ ] Devkit содержит tests, fixtures, validation scripts, source materials и audit reports.
 - [ ] Нет `.env`, ключей, токенов, cookies, credentials.
 - [ ] Нет client/private data.
-- [ ] Нет `dev/work/`, debug-runs, browser profiles, temp/cache.
+- [ ] Нет временных рабочих папок, debug-runs, browser profiles, temp/cache.
 - [ ] Нет legacy drafts и source prompts в runtime.
 - [ ] Нет локальных абсолютных путей.
 - [ ] Нет hidden dependency on current chat.
@@ -23,6 +23,6 @@
 
 - [ ] README объясняет назначение без доменных обещаний.
 - [ ] LICENSE есть и соответствует заявленной лицензии.
-- [ ] GitHub Pages не раскрывает приватные пути или материалы.
+- [ ] GitHub Pages не раскрывает локальные пути или закрытые материалы.
 - [ ] `.gitignore` блокирует секреты и отладочные артефакты.
 - [ ] Domain-specific lessons не встроены в универсальное ядро.

@@ -33,8 +33,7 @@ Devkit содержит:
 - нет secrets;
 - нет credentials;
 - нет private client data;
-- нет `dev/work/`;
-- нет debug-runs;
+- нет временных рабочих папок и debug-runs;
 - нет browser profiles;
 - нет zip-архивов предыдущих сборок;
 - нет локальных абсолютных путей;
