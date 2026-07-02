@@ -41,4 +41,4 @@ Devkit содержит:
 
 ## GitHub Pages
 
-Этот репозиторий содержит `docs/index.html` и workflow `.github/workflows/pages.yml`. После публикации в GitHub Pages страница будет собираться из `docs/`.
+Этот репозиторий содержит статическую страницу `docs/index.html`. Для публикации в GitHub Pages выберите source `Deploy from a branch`, branch `main`, folder `/docs`.

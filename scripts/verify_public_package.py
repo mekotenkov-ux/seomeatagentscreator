@@ -29,7 +29,6 @@ REQUIRED_FILES = [
     "docs/architecture.md",
     "docs/debugging.md",
     "docs/packaging.md",
-    ".github/workflows/pages.yml",
 ]
 
 FORBIDDEN_PARTS = {
