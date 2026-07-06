@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "required_gates": [
+    {
+      "id": "runtime_profile_exists",
+      "status": "block",
+      "assertion": "runtime-profile.json exists and records active runtime or explicit ambiguity."
+    },
+    {
+      "id": "environment_before_project",
+      "status": "block",
+      "assertion": "Birth sequence completes or defers environment adaptation before project context intake."
+    },
+    {
+      "id": "protected_cleanup",
+      "status": "block",
+      "assertion": "Cleanup rules protect router, contract, skills, tools, references, templates, schemas, state, memory, license, and package code."
+    },
+    {
+      "id": "thin_adapters",
+      "status": "warn",
+      "assertion": "Adapters point to the canonical router and semantic contract instead of copying full workflows."
+    },
+    {
+      "id": "project_context_saved",
+      "status": "block",
+      "assertion": "project-context.json records user inputs, sources, assumptions, missing evidence, and next valid actions."
+    },
+    {
+      "id": "mission_specific_first_action",
+      "status": "block",
+      "assertion": "The first post-birth action belongs to the installed agent's mission, not package maintenance."
+    },
+    {
+      "id": "runtime_hygiene",
+      "status": "block",
+      "assertion": "Runtime contains no devkit, validation junk, local absolute paths, secrets, or inactive-adapter confusion."
+    }
+  ]
+}

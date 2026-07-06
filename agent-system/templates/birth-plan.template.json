@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "active_runtime": "unknown",
+  "active_entrypoint": "",
+  "actions": [
+    {
+      "id": "example-action",
+      "type": "move_inactive_adapter|keep|ask_user|write_state|skip|verify|merge_after_approval|convert_after_approval",
+      "source": "",
+      "target": "",
+      "reason": "",
+      "status": "planned|applied|skipped|blocked"
+    }
+  ],
+  "protected_paths_checked": [],
+  "inactive_adapters_destination": "agent_state/runtime/inactive-adapters",
+  "requires_user_approval": [],
+  "cleanup_summary": "",
+  "next_valid_actions": []
+}

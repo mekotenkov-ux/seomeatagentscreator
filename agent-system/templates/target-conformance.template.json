@@ -4,13 +4,27 @@
   "targets": [
     {
       "platform": "Codex",
-      "adapter_paths": ["AGENTS.md"],
+      "active_entrypoint": "AGENTS.md",
+      "adapter_paths": [
+        "AGENTS.md"
+      ],
       "semantic_parity": "unknown|partial|full",
       "unsupported_features": [],
       "degraded_behavior": "",
       "permission_mapping": "",
       "install_scope": "",
+      "first_run_setup_command": "",
+      "native_support": {
+        "instructions": "native|metadata|unsupported|unknown",
+        "skills": "native|metadata|unsupported|unknown",
+        "commands_or_prompts": "native|metadata|unsupported|unknown",
+        "subagents": "native|metadata|unsupported|unknown",
+        "hooks": "native|metadata|unsupported|unknown",
+        "mcp": "native|metadata|unsupported|unknown",
+        "memory": "native|metadata|unsupported|unknown"
+      },
       "native_consolidation_policy": "ask_before_merge",
+      "inactive_adapter_cleanup": "keep|move_after_runtime_detected|ask_user|unsupported",
       "verification_status": "pending|pass|warn|block",
       "evidence_refs": []
     }

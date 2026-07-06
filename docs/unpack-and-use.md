@@ -24,6 +24,7 @@
 ## Что делать после распаковки
 
 - заполнить IR;
+- заполнить birth contract и first-run templates;
 - собрать router;
 - создать focused skills;
 - описать tools;
@@ -33,3 +34,12 @@
 - собрать clean runtime;
 - отдельно собрать devkit;
 - проверить архив или public repo.
+
+## Первый запуск установленного агента
+
+1. Определите runtime/IDE и активный instruction surface.
+2. Запишите `runtime-profile.json`.
+3. Сформируйте `birth-plan.json`: что оставить, что переместить, где нужен approval.
+4. Проверьте environment readiness до чтения проекта.
+5. Соберите `project-context.json` одним вопросом за раз.
+6. Предложите первый mission-specific workflow и остановитесь до явного старта задачи.

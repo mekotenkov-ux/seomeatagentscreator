@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "project": {
+    "primary_target": "",
+    "owner_or_brand": "",
+    "goal": "",
+    "target_users": [],
+    "region": "",
+    "language": "",
+    "platforms": [],
+    "constraints": [],
+    "forbidden_actions": []
+  },
+  "sources": {
+    "documents": [],
+    "urls": [],
+    "repos": [],
+    "connectors": [],
+    "public_acquisition_approved": false,
+    "private_acquisition_approved": false,
+    "acquisition_runs": [],
+    "acquisition_skips": []
+  },
+  "assumptions": [],
+  "missing_evidence": [],
+  "lower_assurance": false,
+  "next_valid_actions": []
+}

@@ -21,6 +21,7 @@ REQUIRED_FILES = [
     "agent-system/references/skill-training-lab.md",
     "agent-system/references/package-boundary.md",
     "agent-system/references/birth-protocol.md",
+    "agent-system/references/ide-runtime-adaptation.md",
     "agent-system/references/context-and-quality-gates.md",
     "agent-system/references/target-adapters.md",
     "agent-system/references/final-evidence-and-claim-guard.md",
@@ -29,6 +30,12 @@ REQUIRED_FILES = [
     "agent-system/references/observability-and-living-adaptation.md",
     "agent-system/references/validation-harness.md",
     "agent-system/templates/agent-ir.template.json",
+    "agent-system/templates/agent-birth-contract.template.json",
+    "agent-system/templates/runtime-profile.template.json",
+    "agent-system/templates/birth-plan.template.json",
+    "agent-system/templates/environment-readiness.template.json",
+    "agent-system/templates/project-context.template.json",
+    "agent-system/templates/birth-validation-gates.template.json",
     "agent-system/templates/tool-registry.template.json",
     "agent-system/templates/runtime-manifest.template.json",
     "agent-system/templates/release-review.template.md",
@@ -60,6 +67,7 @@ REQUIRED_FILES = [
     "docs/index.html",
     "docs/quick-start.md",
     "docs/architecture.md",
+    "docs/birth.md",
     "docs/debugging.md",
     "docs/packaging.md",
 ]
@@ -140,7 +148,7 @@ def main() -> None:
     page = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     if "https://seomeat.ru/" not in page:
         fail("docs/index.html must link to https://seomeat.ru/")
-    for public_term in ["Skill Training Lab", "target conformance", "final evidence"]:
+    for public_term in ["Skill Training Lab", "target conformance", "final evidence", "birth protocol"]:
         if public_term not in page:
             fail(f"docs/index.html must mention {public_term}")
 

@@ -76,7 +76,8 @@
     "install_simulation": "",
     "workflow_lab": "",
     "stage_quality_gates": "",
-    "negative_fixtures": []
+    "negative_fixtures": [],
+    "birth_validation_gates": ""
   },
   "final_evidence": {
     "contract": "",
@@ -109,9 +110,17 @@
   "target_conformance_matrix": "",
   "adapter_parity": [],
   "install_birth": {
+    "birth_contract": "",
     "birth_file": "",
-    "environment_phase": "",
-    "project_phase": "",
+    "runtime_profile": "",
+    "birth_plan": "",
+    "environment_readiness": "",
+    "project_context": "",
+    "environment_phase": "detect runtime, native entrypoint, workspace, state paths, permissions, and cleanup policy before project inspection",
+    "project_phase": "ask one material context question at a time after environment adaptation passes, is declined, or is explicitly deferred",
+    "first_response_policy": "bare greeting starts mission-specific intake, not package maintenance",
+    "ambiguous_runtime_policy": "ask one clarifying question and skip adapter cleanup",
+    "protected_paths": [],
     "post_birth_cleanup": []
   },
   "owner": "",

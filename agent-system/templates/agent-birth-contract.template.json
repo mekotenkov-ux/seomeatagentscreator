@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "agent_name": "<agent-name>",
+  "maturity": "production|library|governed",
+  "job_to_be_done": "<one primary job>",
+  "target_users": [],
+  "canonical_router": "AGENTS.md",
+  "semantic_contract": "agent-ir.json",
+  "birth_file": "install-birth.md",
+  "first_run": {
+    "principle": "environment adaptation first, project context second",
+    "runtime_profile": "agent_state/runtime/runtime-profile.json",
+    "birth_plan": "agent_state/runtime/birth-plan.json",
+    "environment_readiness": "agent_state/runtime/environment-readiness.json",
+    "project_context": "agent_state/context/project-context.json",
+    "ambiguous_runtime_behavior": "ask one clarifying question before adapter cleanup",
+    "bare_greeting_behavior": "start mission-specific intake, not package-maintenance menu"
+  },
+  "target_platforms": ["codex", "claude", "cursor", "vscode-copilot", "github-copilot", "opencode", "gemini-cli", "cli"],
+  "protected_paths": ["AGENTS.md", "agent-ir.json", "install-birth.md", "skills/", "tools/", "references/", "templates/", "schemas/", "state/", "memory/", "LICENSE"],
+  "adapter_rules": {
+    "thin_adapters": true,
+    "must_reference_contract": true,
+    "must_include_runtime_setup_command_when_supported": true,
+    "must_not_copy_full_workflow_prose": true,
+    "must_record_degraded_behavior": true
+  },
+  "native_consolidation": {
+    "merge_router_requires_approval": true,
+    "convert_skills_requires_approval": true,
+    "inactive_adapter_cleanup_requires_runtime_confidence": "high|explicit"
+  },
+  "notice_policy": {
+    "required": false,
+    "notice_text": "",
+    "timing": [],
+    "not_required_for": ["clarification questions", "minor status updates", "intermediate progress messages"]
+  },
+  "claim_boundary": {
+    "forbidden_claims": [
+      "adapter support without target conformance",
+      "production readiness without validation",
+      "project context complete when required inputs are missing",
+      "live data collected when only fixture or dry-run evidence exists"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "required_runtimes": [],
+  "required_commands": [],
+  "state_paths": [],
+  "artifact_paths": [],
+  "env_templates": [],
+  "optional_connectors": [],
+  "credential_presence_checks": [],
+  "permission_gates": ["network", "paid_api", "private_data", "external_write", "destructive_action", "subagent_or_background_worker"],
+  "command_allowlist": [],
+  "status": "pass|warn|block|unknown",
+  "blockers": [],
+  "warnings": [],
+  "next_valid_actions": []
+}

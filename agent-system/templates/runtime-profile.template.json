@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "workspace_root": "<relative-or-redacted>",
+  "package_root": "<relative-or-redacted>",
+  "active_runtime": "codex|claude|cursor|vscode-copilot|github-copilot|opencode|gemini-cli|cli|unknown",
+  "confidence": "explicit|high|medium|low|ambiguous",
+  "detection_signals": [],
+  "native_entrypoints_found": [],
+  "active_entrypoint": "",
+  "is_source_runtime": false,
+  "cleanup_allowed": false,
+  "state_root": "",
+  "artifact_root": "",
+  "blocked_reasons": [],
+  "next_valid_actions": []
+}

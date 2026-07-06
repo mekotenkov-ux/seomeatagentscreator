@@ -17,12 +17,13 @@
 4. Output Eval Lab.
 5. Context Budget.
 6. Runtime Matrix.
-7. Tool and Permission Gates.
-8. Trust Report.
-9. Package and Install Simulation.
-10. Review Studio.
-11. Evidence Ledger and Claim Guard.
-12. Operations Loop.
+7. Birth And IDE Adaptation: runtime profile, birth plan, environment readiness, project context, first response rule, and native consolidation policy.
+8. Tool and Permission Gates.
+9. Trust Report.
+10. Package and Install Simulation.
+11. Review Studio.
+12. Evidence Ledger and Claim Guard.
+13. Operations Loop.
 
 ## Anti-overclaim rules
 
@@ -32,6 +33,8 @@
 - Pending human review is not approval.
 - Metadata fallback is not native permission enforcement.
 - Local install is not portability proof.
+- Adapter file presence is not target conformance.
+- Birth templates are not first-run evidence until filled by an actual install run.
 - Warning waiver is not blocker waiver.
 
 ## Release decision

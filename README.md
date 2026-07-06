@@ -30,6 +30,7 @@
 - output eval lab;
 - checker/reviewer layer;
 - skill training lab и skill-candidate lifecycle;
+- birth contract и first-run artifacts;
 - target conformance matrix;
 - final evidence contract;
 - release review;
@@ -82,6 +83,7 @@ agent-system/
     skill-training-lab.md
     package-boundary.md
     birth-protocol.md
+    ide-runtime-adaptation.md
     context-and-quality-gates.md
     target-adapters.md
     final-evidence-and-claim-guard.md
@@ -91,6 +93,12 @@ agent-system/
     validation-harness.md
   templates/
     agent-ir.template.json
+    agent-birth-contract.template.json
+    runtime-profile.template.json
+    birth-plan.template.json
+    environment-readiness.template.json
+    project-context.template.json
+    birth-validation-gates.template.json
     tool-registry.template.json
     runtime-manifest.template.json
     release-review.template.md
@@ -110,6 +118,7 @@ docs/
   index.html
   quick-start.md
   architecture.md
+  birth.md
   unpack-and-use.md
   debugging.md
   packaging.md

@@ -33,6 +33,18 @@
 - [ ] Package verification есть.
 - [ ] Install simulation есть или blocker записан.
 
+## Birth And IDE Adaptation
+
+- [ ] Birth contract создан до адаптеров.
+- [ ] `runtime-profile.json` шаблон определяет active runtime, confidence, entrypoints и cleanup_allowed.
+- [ ] `birth-plan.json` шаблон описывает keep/move/ask/skip/blocked actions.
+- [ ] `environment-readiness.json` шаблон проверяет runtime commands, writable paths, env templates, connectors и permission gates.
+- [ ] `project-context.json` шаблон отделяет user inputs, normalized fields, sources, assumptions, missing evidence и next actions.
+- [ ] Bare greeting ведет к mission-specific intake, а не к меню упаковки агента.
+- [ ] Conflicting IDE/runtime markers блокируют cleanup до уточнения.
+- [ ] Native consolidation asks before merge/convert.
+- [ ] Target conformance включает first-run setup command, native support и inactive adapter cleanup.
+
 ## Claims
 
 - [ ] Planned work не считается evidence.
@@ -48,4 +60,5 @@
 - [ ] Independent review summary machine-readable или blocker записан.
 - [ ] Runtime install проверяется из финального zip.
 - [ ] Birth flow отделяет environment adaptation от project adaptation.
+- [ ] Birth gate проверяет runtime profile, birth plan, environment readiness, project context и mission-specific next action.
 - [ ] Post-birth cleanup не удаляет canonical runtime assets без approval.

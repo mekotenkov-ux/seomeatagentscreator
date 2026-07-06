@@ -46,7 +46,22 @@ agent-system/templates/agent-ir.template.json
 
 Заполните его до создания платформенных файлов. IR - главный смысловой контракт, а не документация после факта.
 
-## 4. Соберите первый vertical slice
+## 4. Создайте birth contract
+
+Скопируйте и адаптируйте:
+
+```text
+agent-system/templates/agent-birth-contract.template.json
+agent-system/templates/runtime-profile.template.json
+agent-system/templates/birth-plan.template.json
+agent-system/templates/environment-readiness.template.json
+agent-system/templates/project-context.template.json
+agent-system/templates/birth-validation-gates.template.json
+```
+
+Birth contract нужен до платформенных адаптеров. Он фиксирует, как агент при первом запуске определяет runtime, выбирает активный adapter, проверяет окружение, собирает project context и где останавливается до первой реальной задачи.
+
+## 5. Соберите первый vertical slice
 
 Сначала один полный путь:
 
@@ -61,7 +76,7 @@ agent-system/templates/agent-ir.template.json
 
 Не расширяйте возможности, пока первый путь не проверен.
 
-## 5. Добавьте проверки
+## 6. Добавьте проверки
 
 Минимум:
 
@@ -76,17 +91,17 @@ agent-system/templates/agent-ir.template.json
 - `final-evidence-contract.template.json`;
 - `independent-review-summary.template.json`.
 
-## 6. Разделите runtime и devkit
+## 7. Разделите runtime и devkit
 
 Runtime - только файлы нормальной работы агента.
 
 Devkit - тесты, fixtures, validation scripts, source materials, audit reports и packaging scripts.
 
-## 7. Отлаживайте через sandbox
+## 8. Отлаживайте через sandbox
 
 Для качественной отладки создайте отдельный sandbox-проект, установите туда runtime и работайте из отдельного чата. Агент-создатель должен читать полный trace из sandbox и чинить исходный пакет.
 
-## 8. Публикуйте только clean package
+## 9. Публикуйте только clean package
 
 Перед публикацией проверьте:
 
@@ -97,6 +112,6 @@ Devkit - тесты, fixtures, validation scripts, source materials, audit repor
 - нет локальных абсолютных путей;
 - нет скрытой зависимости от истории чата.
 
-## 9. Проверьте переносимость
+## 10. Проверьте переносимость
 
-Перед публикацией заполните target conformance matrix, birth protocol, final evidence contract и runtime/devkit boundary. Если пакет поддерживает несколько платформ, adapters должны быть thin layers поверх одного IR, а не расходящимися копиями промптов.
+Перед публикацией заполните target conformance matrix, birth protocol, birth validation gates, final evidence contract и runtime/devkit boundary. Если пакет поддерживает несколько платформ, adapters должны быть thin layers поверх одного IR, а не расходящимися копиями промптов.
