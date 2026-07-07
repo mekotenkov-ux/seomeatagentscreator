@@ -11,6 +11,13 @@
 - [ ] Allowed/forbidden actions записаны.
 - [ ] Done condition внешний и проверяемый.
 
+## Repo And Tool Library
+
+- [ ] External repo/tool links are cataloged, not integrated by default.
+- [ ] Catalog status separates `cataloged`, `evaluated`, `approved_candidate`, `selected_for_project`, and `integrated`.
+- [ ] No dependency, tool, connector, prompt, or workflow was added from the library without explicit project approval.
+- [ ] License, security, maintenance, and runtime compatibility are checked before integration.
+
 ## Workflow Discovery
 
 - [ ] `workflow-loop-me` run or blocker recorded.

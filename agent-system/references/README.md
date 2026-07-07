@@ -6,6 +6,7 @@
 
 - `skill-training-lab.md` - как выращивать скиллы из реальных прогонов.
 - `package-boundary.md` - как разделять runtime и devkit.
+- `repo-tool-library.md` - как сохранять внешние репозитории и инструменты как каталог идей без немедленной интеграции.
 - `birth-protocol.md` - как проводить first-run, runtime detection, environment readiness и project context intake.
 - `ide-runtime-adaptation.md` - как адаптировать один агент под Codex, Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenCode и CLI без drift.
 - `context-and-quality-gates.md` - как строить compact context packs и stage gates.

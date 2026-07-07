@@ -21,6 +21,7 @@
 Не полагайтесь на "модель сама аккуратно сделает". Для production-grade агента нужны:
 
 - workflow discovery перед IR;
+- repo/tool catalog для внешних ссылок и идей;
 - Agent/Skill IR;
 - router и focused skills;
 - typed tool registry;
@@ -82,9 +83,12 @@ agent-system/
       SKILL.md
     workflow-loop-me/
       SKILL.md
+    repo-tool-librarian/
+      SKILL.md
   references/
     skill-training-lab.md
     package-boundary.md
+    repo-tool-library.md
     birth-protocol.md
     ide-runtime-adaptation.md
     context-and-quality-gates.md
@@ -98,6 +102,9 @@ agent-system/
     workflow-notes.template.md
     workflow-spec.template.md
     workflow-discovery-ledger.template.json
+    repo-tool-library.template.json
+    repo-tool-card.template.md
+    repo-tool-intake.template.md
     agent-ir.template.json
     agent-birth-contract.template.json
     runtime-profile.template.json

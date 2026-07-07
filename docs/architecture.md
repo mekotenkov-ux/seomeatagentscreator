@@ -4,16 +4,17 @@
 
 1. **Router** - короткий entrypoint: миссия, порядок запуска, границы, маршрутизация к skills/workflows.
 2. **Workflow discovery** - карта реальных loops: trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes и done signal.
-3. **Agent/Skill IR** - платформенно-нейтральный смысловой контракт.
-4. **Skills** - сфокусированные процедуры с frontmatter-trigger.
-5. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
-6. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
-7. **Checkers** - независимые проверки результата и границ.
-8. **Evals** - Trigger Lab и Output Eval Lab.
-9. **State/memory** - короткие durable файлы вне истории чата.
-10. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
-11. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
-12. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
+3. **Repo/tool library** - каталог внешних репозиториев и инструментов как источников идей, без автоматической интеграции.
+4. **Agent/Skill IR** - платформенно-нейтральный смысловой контракт.
+5. **Skills** - сфокусированные процедуры с frontmatter-trigger.
+6. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
+7. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
+8. **Checkers** - независимые проверки результата и границ.
+9. **Evals** - Trigger Lab и Output Eval Lab.
+10. **State/memory** - короткие durable файлы вне истории чата.
+11. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
+12. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
+13. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
 
 ## Почему workflow discovery до IR
 

@@ -12,7 +12,8 @@
 2. Для нового агента начните с `agent-system/skills/grill-me/SKILL.md`, затем проведите workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
 3. До написания адаптеров заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
 4. До заявлений о готовности создайте Trigger Lab, Output Eval Lab, tool registry, permission matrix, release review и package verification.
-5. Держите репозиторий универсальным: публикуйте только повторяемую методику, шаблоны, инструкции и чеклисты.
+5. Если пользователь дает ссылки на репозитории или инструменты, индексируйте их через `agent-system/skills/repo-tool-librarian/SKILL.md`; не встраивайте их без отдельного явного запроса.
+6. Держите репозиторий универсальным: публикуйте только повторяемую методику, шаблоны, инструкции и чеклисты.
 
 ## Язык
 

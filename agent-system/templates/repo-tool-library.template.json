@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "library_policy": "Cataloging is not adoption. Items are not integrated without explicit project selection and validation.",
+  "items": [
+    {
+      "id": "",
+      "canonical_url": "",
+      "name": "",
+      "type": "repo|library|cli|sdk|saas|mcp_server|agent_framework|eval_tool|dataset|reference|example|other",
+      "short_description": "",
+      "why_it_matters": "",
+      "agent_building_use_cases": [],
+      "tags": [],
+      "language_or_runtime": [],
+      "license": "unknown",
+      "maintenance_signals": {
+        "last_release": "",
+        "recent_activity": "unknown",
+        "maintainer": "",
+        "known_adoption": ""
+      },
+      "install_or_use_shape": "",
+      "risks": [],
+      "permission_needs": [],
+      "when_to_consider": [],
+      "when_not_to_use": [],
+      "alternatives": [],
+      "source_evidence_refs": [],
+      "inspection_date": "",
+      "status": "raw_link|cataloged|evaluated|approved_candidate|selected_for_project|integrated|rejected|blocked",
+      "status_reason": "",
+      "selected_for_projects": [],
+      "integration_evidence_refs": [],
+      "next_review_action": ""
+    }
+  ]
+}

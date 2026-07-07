@@ -37,7 +37,7 @@ agent-system/skills/workflow-loop-me/SKILL.md
 - validation method;
 - done condition.
 
-Затем через `workflow-loop-me` зафиксируйте candidate loops, выбранный workflow, trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes и done signal. Используйте:
+Затем через `workflow-loop-me` зафиксируйте candidate loops, выбранный workflow, trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes и done signal. Если пользователь дает ссылки на репозитории или инструменты, сохраните их через `repo-tool-librarian` как catalog candidates, не как зависимости. Используйте:
 
 ```text
 agent-system/templates/workflow-notes.template.md

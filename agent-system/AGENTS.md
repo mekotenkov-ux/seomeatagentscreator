@@ -18,7 +18,8 @@
 - перенести агента между Codex, Claude Code, Cursor, OpenCode или локальным CLI;
 - подготовить runtime/devkit zip;
 - провести аудит агентского пакета;
-- превратить отладочные находки в устойчивую методику.
+- превратить отладочные находки в устойчивую методику;
+- индексировать внешние repo/tool ссылки как каталог идей без немедленной интеграции.
 
 Не используйте эту систему для одноразового ответа, перевода, brainstorm или документации без повторяемого агентского поведения.
 
@@ -120,6 +121,7 @@ Devkit содержит:
 
 - `references/skill-training-lab.md`;
 - `references/package-boundary.md`;
+- `references/repo-tool-library.md`;
 - `references/birth-protocol.md`;
 - `references/ide-runtime-adaptation.md`;
 - `references/context-and-quality-gates.md`;

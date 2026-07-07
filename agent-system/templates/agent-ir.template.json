@@ -140,5 +140,12 @@
     "checkpoints": [],
     "done_signal": "",
     "blocking_questions": []
+  },
+  "repo_tool_library": {
+    "library_path": "",
+    "candidate_items": [],
+    "selected_items": [],
+    "integration_requires_explicit_approval": true,
+    "integration_gate": "license, security, maintenance, runtime compatibility, validation, rollback"
   }
 }
