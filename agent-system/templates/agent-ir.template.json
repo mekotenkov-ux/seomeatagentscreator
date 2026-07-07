@@ -77,7 +77,8 @@
     "workflow_lab": "",
     "stage_quality_gates": "",
     "negative_fixtures": [],
-    "birth_validation_gates": ""
+    "birth_validation_gates": "",
+    "workflow_discovery_gate": ""
   },
   "final_evidence": {
     "contract": "",
@@ -125,5 +126,19 @@
   },
   "owner": "",
   "review_cadence": "",
-  "known_limits": []
+  "known_limits": [],
+  "workflow_discovery": {
+    "notes": "",
+    "candidate_loop_ledger": "",
+    "selected_workflow_spec": "",
+    "trigger": "",
+    "inputs": [],
+    "actors": [],
+    "tools_or_channels": [],
+    "state": [],
+    "artifacts": [],
+    "checkpoints": [],
+    "done_signal": "",
+    "blocking_questions": []
+  }
 }

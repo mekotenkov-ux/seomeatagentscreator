@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "generated_at": "<iso-8601>",
+  "source_notes": "workflow-notes.md",
+  "candidate_loops": [
+    {
+      "id": "",
+      "name": "",
+      "trigger": "",
+      "frequency": "",
+      "current_manual_steps": [],
+      "pain": "",
+      "expected_output": "",
+      "risk_level": "",
+      "automation_fit": "low|medium|high|unknown",
+      "decision": "selected|backlog|rejected|blocked",
+      "reason": ""
+    }
+  ],
+  "selected_workflow": {
+    "id": "",
+    "spec_path": "",
+    "ready_for_implementation": false,
+    "blocking_questions": []
+  },
+  "next_valid_actions": []
+}

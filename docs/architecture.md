@@ -3,16 +3,21 @@
 ## Слои
 
 1. **Router** - короткий entrypoint: миссия, порядок запуска, границы, маршрутизация к skills/workflows.
-2. **Agent/Skill IR** - платформенно-нейтральный смысловой контракт.
-3. **Skills** - сфокусированные процедуры с frontmatter-trigger.
-4. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
-5. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
-6. **Checkers** - независимые проверки результата и границ.
-7. **Evals** - Trigger Lab и Output Eval Lab.
-8. **State/memory** - короткие durable файлы вне истории чата.
-9. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
-10. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
-11. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
+2. **Workflow discovery** - карта реальных loops: trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes и done signal.
+3. **Agent/Skill IR** - платформенно-нейтральный смысловой контракт.
+4. **Skills** - сфокусированные процедуры с frontmatter-trigger.
+5. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
+6. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
+7. **Checkers** - независимые проверки результата и границ.
+8. **Evals** - Trigger Lab и Output Eval Lab.
+9. **State/memory** - короткие durable файлы вне истории чата.
+10. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
+11. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
+12. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
+
+## Почему workflow discovery до IR
+
+Пользователь часто описывает желаемого агента общими словами. До IR нужно найти реальные повторяемые loops, иначе агент будет спроектирован под фантазию, а не под работу. Workflow spec должен быть настолько ясным, чтобы fresh implementer agent мог построить процесс без уточнений.
 
 ## Почему IR до адаптеров
 

@@ -20,6 +20,7 @@
 
 Не полагайтесь на "модель сама аккуратно сделает". Для production-grade агента нужны:
 
+- workflow discovery перед IR;
 - Agent/Skill IR;
 - router и focused skills;
 - typed tool registry;
@@ -44,8 +45,8 @@
 
 1. Скопируйте `agent-system/` в новый репозиторий или проект, где будете проектировать агента.
 2. Откройте `agent-system/AGENTS.md` как корневую инструкцию для агента-создателя.
-3. Запустите preflight по `agent-system/skills/grill-me/SKILL.md`.
-4. Заполните `agent-system/templates/agent-ir.template.json`.
+3. Запустите preflight по `agent-system/skills/grill-me/SKILL.md`, затем workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
+4. Заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
 5. Соберите первый vertical slice: router, один workflow, один skill, один tool path, один checker, один eval set.
 6. Проверьте Trigger Lab и Output Eval Lab.
 7. Разделите runtime и devkit.
@@ -79,6 +80,8 @@ agent-system/
       references/production-skill-os.md
     grill-me/
       SKILL.md
+    workflow-loop-me/
+      SKILL.md
   references/
     skill-training-lab.md
     package-boundary.md
@@ -92,6 +95,9 @@ agent-system/
     observability-and-living-adaptation.md
     validation-harness.md
   templates/
+    workflow-notes.template.md
+    workflow-spec.template.md
+    workflow-discovery-ledger.template.json
     agent-ir.template.json
     agent-birth-contract.template.json
     runtime-profile.template.json
@@ -119,6 +125,7 @@ docs/
   quick-start.md
   architecture.md
   birth.md
+  workflow-discovery.md
   unpack-and-use.md
   debugging.md
   packaging.md

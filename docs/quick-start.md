@@ -15,10 +15,11 @@ my-agent-dev/
 
 ## 2. Запустите preflight
 
-Откройте:
+Откройте оба preflight skill:
 
 ```text
 agent-system/skills/grill-me/SKILL.md
+agent-system/skills/workflow-loop-me/SKILL.md
 ```
 
 Зафиксируйте:
@@ -35,6 +36,14 @@ agent-system/skills/grill-me/SKILL.md
 - export shape;
 - validation method;
 - done condition.
+
+Затем через `workflow-loop-me` зафиксируйте candidate loops, выбранный workflow, trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes и done signal. Используйте:
+
+```text
+agent-system/templates/workflow-notes.template.md
+agent-system/templates/workflow-spec.template.md
+agent-system/templates/workflow-discovery-ledger.template.json
+```
 
 ## 3. Создайте IR
 

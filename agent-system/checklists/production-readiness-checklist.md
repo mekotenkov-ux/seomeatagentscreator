@@ -11,6 +11,14 @@
 - [ ] Allowed/forbidden actions записаны.
 - [ ] Done condition внешний и проверяемый.
 
+## Workflow Discovery
+
+- [ ] `workflow-loop-me` run or blocker recorded.
+- [ ] Candidate loops listed before architecture.
+- [ ] First workflow selected or rejected with reason.
+- [ ] Workflow spec has trigger, inputs, actors, tools, state, artifacts, checkpoints, failure modes, validation, budgets, and done signal.
+- [ ] Implementer agent could build from the workflow spec without guessing, or blocking questions are explicit.
+
 ## Architecture
 
 - [ ] Agent/Skill IR создан до адаптеров.

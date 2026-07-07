@@ -1,6 +1,6 @@
 {
   "name": "seomeatagentscreator",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "language": "ru",
   "license": "MIT",
   "package_kind": "public_universal_agent_creation_system",
@@ -13,11 +13,13 @@
   "included": [
     "universal agent creator operating contract",
     "grill-me preflight skill",
+    "workflow-loop-me preflight skill for discovering repeatable work loops before agent architecture",
     "agent-creator skill",
     "production skill OS reference",
     "universal references for skill training, package boundary, birth, IDE/runtime adaptation, adapters, context gates, evidence, long-running tools, isolation, observability, and validation",
     "IR, tool registry, manifest, trigger lab, output eval, stage gate, target conformance, final evidence, independent review, and release review templates",
     "first-run birth contract, runtime profile, birth plan, environment readiness, project context, and birth validation templates",
+    "workflow notes, workflow spec, and workflow discovery ledger templates",
     "state, memory, skill-candidate, loop-state, checker-context, evidence-ledger, approval-ledger, and export-manifest templates",
     "export and production readiness checklists",
     "generic export, install validation, and core-isolation scripts",

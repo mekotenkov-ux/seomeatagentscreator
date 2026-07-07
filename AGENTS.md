@@ -9,8 +9,8 @@
 ## Рабочий порядок
 
 1. Прочитайте `agent-system/AGENTS.md`.
-2. Для нового агента начните с `agent-system/skills/grill-me/SKILL.md`.
-3. До написания адаптеров заполните `agent-system/templates/agent-ir.template.json`.
+2. Для нового агента начните с `agent-system/skills/grill-me/SKILL.md`, затем проведите workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
+3. До написания адаптеров заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
 4. До заявлений о готовности создайте Trigger Lab, Output Eval Lab, tool registry, permission matrix, release review и package verification.
 5. Держите репозиторий универсальным: публикуйте только повторяемую методику, шаблоны, инструкции и чеклисты.
 
