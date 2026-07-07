@@ -98,6 +98,10 @@ agent-system/
     universal-core-isolation.md
     observability-and-living-adaptation.md
     validation-harness.md
+  catalog/
+    README.md
+    repo-tool-library.json
+    repo-tool-cards/
   templates/
     workflow-notes.template.md
     workflow-spec.template.md

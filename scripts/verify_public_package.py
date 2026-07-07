@@ -23,6 +23,8 @@ REQUIRED_FILES = [
     "agent-system/references/skill-training-lab.md",
     "agent-system/references/package-boundary.md",
     "agent-system/references/repo-tool-library.md",
+    "agent-system/catalog/README.md",
+    "agent-system/catalog/repo-tool-library.json",
     "agent-system/references/birth-protocol.md",
     "agent-system/references/ide-runtime-adaptation.md",
     "agent-system/references/context-and-quality-gates.md",
@@ -162,6 +164,18 @@ def main() -> None:
     for public_term in ["Skill Training Lab", "target conformance", "final evidence", "birth protocol", "workflow discovery", "repo/tool library"]:
         if public_term not in page:
             fail(f"docs/index.html must mention {public_term}")
+
+    catalog = json.loads((ROOT / "agent-system" / "catalog" / "repo-tool-library.json").read_text(encoding="utf-8"))
+    required_catalog_ids = {"withastro-flue", "paddlepaddle-paddleocr", "panniantong-agent-reach"}
+    actual_catalog_ids = {item.get("id") for item in catalog.get("items", [])}
+    missing_catalog_ids = required_catalog_ids - actual_catalog_ids
+    if missing_catalog_ids:
+        fail(f"repo/tool catalog missing ids: {sorted(missing_catalog_ids)}")
+    for item in catalog.get("items", []):
+        if item.get("status") == "integrated":
+            fail(f"catalog item must not be integrated by default: {item.get('id')}")
+        if item.get("selected_for_projects"):
+            fail(f"catalog item must not be selected for a project by default: {item.get('id')}")
 
     for path in ROOT.rglob("*"):
         rel_path = path.relative_to(ROOT)

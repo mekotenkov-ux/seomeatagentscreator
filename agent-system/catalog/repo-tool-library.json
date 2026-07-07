@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-07",
+  "library_policy": "Cataloging is not adoption. Items are not integrated without explicit project selection and validation.",
+  "items": [
+    {
+      "id": "withastro-flue",
+      "canonical_url": "https://github.com/withastro/flue",
+      "name": "withastro/flue",
+      "type": "agent_framework",
+      "short_description": "TypeScript framework for building autonomous agents and AI workflows with a programmable harness, tools, skills, sandboxes, sessions, deployment targets, and observability hooks.",
+      "why_it_matters": "Useful as a reference architecture for agent harness design: how to combine instructions, typed tools, reusable skills, sandboxed execution, durable sessions, deployment surfaces, subagents, MCP, and observability.",
+      "agent_building_use_cases": [
+        "Study harness/runtime boundaries for production agents.",
+        "Borrow ideas for typed tool packaging, skills, sandboxes, subagents, and deployment targets.",
+        "Compare with our runtime/devkit, birth, target-conformance, and long-running tool lifecycle layers."
+      ],
+      "tags": [
+        "agent-framework",
+        "typescript",
+        "sandbox",
+        "skills",
+        "tools",
+        "subagents",
+        "mcp",
+        "observability",
+        "durable-execution"
+      ],
+      "language_or_runtime": [
+        "TypeScript",
+        "Node.js",
+        "Cloudflare Workers",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Daytona",
+        "Render"
+      ],
+      "license": "Apache-2.0",
+      "maintenance_signals": {
+        "last_release": "unknown from catalog inspection",
+        "recent_activity": "active-looking repository; GitHub page showed 1,053 commits and public issues",
+        "maintainer": "withastro",
+        "known_adoption": "GitHub page showed 7.1k stars and 410 forks during inspection"
+      },
+      "install_or_use_shape": "Monorepo with @flue/runtime, @flue/cli, @flue/sdk, @flue/opentelemetry, and @flue/postgres packages; candidate for study before any dependency selection.",
+      "risks": [
+        "Harness integration changes runtime architecture and should be treated as a separate project.",
+        "Sandbox, HTTP exposure, model keys, and connected tools require explicit permission and threat review.",
+        "Do not copy workflow prose or package structure into our runtime without target conformance and validation."
+      ],
+      "permission_needs": [
+        "network",
+        "package_install",
+        "model_provider_keys",
+        "sandbox_or_container_execution",
+        "external_service_connectors"
+      ],
+      "when_to_consider": [
+        "When designing a TypeScript agent runtime or harness.",
+        "When comparing patterns for skills, tools, subagents, sandboxes, sessions, channels, MCP, and observability.",
+        "When building deployable agents that need explicit runtime composition."
+      ],
+      "when_not_to_use": [
+        "When the task only needs a prompt/skill package for an existing IDE agent.",
+        "When target runtime is not TypeScript/Node and no harness migration is desired.",
+        "When there is no approval to add framework dependencies or hosted runtime surface."
+      ],
+      "alternatives": [
+        "LangGraph",
+        "Mastra",
+        "Temporal/Workflows plus LLM tools",
+        "custom lightweight harness"
+      ],
+      "source_evidence_refs": [
+        "https://github.com/withastro/flue - README describes Flue as an agent harness framework with tools, skills, sandbox, sessions, deployment targets, MCP, and observability; inspected 2026-07-07."
+      ],
+      "inspection_date": "2026-07-07",
+      "status": "cataloged",
+      "status_reason": "Primary GitHub repo inspected and basic metadata/use-case notes recorded. Not selected for any project and not integrated.",
+      "selected_for_projects": [],
+      "integration_evidence_refs": [],
+      "next_review_action": "If considered for a concrete agent, review docs, package maturity, security model, deployment assumptions, and license compatibility."
+    },
+    {
+      "id": "paddlepaddle-paddleocr",
+      "canonical_url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "name": "PaddlePaddle/PaddleOCR",
+      "type": "library",
+      "short_description": "OCR and document AI toolkit for converting PDFs and images into structured LLM-ready data such as JSON or Markdown, with multilingual recognition and document structure parsing.",
+      "why_it_matters": "Useful for agents that need to read screenshots, scans, PDFs, tables, forms, multilingual images, document layouts, and RAG inputs from visual sources.",
+      "agent_building_use_cases": [
+        "Document ingestion layer for RAG or research agents.",
+        "OCR step for screenshot/PDF processing workflows.",
+        "Structured extraction from tables, formulas, seals, charts, and scanned documents.",
+        "Potential MCP/document parsing reference because the repo contains an mcp_server folder."
+      ],
+      "tags": [
+        "ocr",
+        "document-ai",
+        "pdf",
+        "image-processing",
+        "rag",
+        "structured-extraction",
+        "python",
+        "multilingual",
+        "mcp-candidate"
+      ],
+      "language_or_runtime": [
+        "Python",
+        "PaddlePaddle",
+        "OCR models",
+        "optional JS bindings observed in repo tree"
+      ],
+      "license": "Apache-2.0",
+      "maintenance_signals": {
+        "last_release": "unknown from catalog inspection",
+        "recent_activity": "large active-looking repository; GitHub page showed 6,923 commits, issues, PRs, docs, tests, and multiple language docs",
+        "maintainer": "PaddlePaddle",
+        "known_adoption": "GitHub page showed 84.9k stars and 11k forks during inspection"
+      },
+      "install_or_use_shape": "Python OCR/document parsing toolkit with models and APIs; integration likely requires model download/runtime setup and document privacy policy.",
+      "risks": [
+        "OCR on private documents can expose sensitive data; needs explicit data handling rules.",
+        "Model/runtime dependencies may be heavy; GPU/CPU, install size, and performance need validation.",
+        "OCR outputs can be wrong; downstream agents need confidence, evidence refs, and human review for high-stakes documents.",
+        "Do not treat benchmark or README claims as proof for a target document set without evals."
+      ],
+      "permission_needs": [
+        "package_install",
+        "model_download",
+        "local_file_read",
+        "private_document_access",
+        "possible_gpu_or_native_dependencies"
+      ],
+      "when_to_consider": [
+        "When an agent must ingest PDFs, scanned documents, screenshots, tables, or multilingual visual text.",
+        "When building document-to-Markdown/JSON pipelines for RAG or research workflows.",
+        "When closed-source OCR is not acceptable or local processing is preferred."
+      ],
+      "when_not_to_use": [
+        "When the source is already clean text/HTML/Markdown.",
+        "When target environment cannot support Python/model dependencies.",
+        "When private document processing has no approved privacy/security policy."
+      ],
+      "alternatives": [
+        "Tesseract",
+        "docTR",
+        "unstructured",
+        "Marker",
+        "cloud OCR APIs",
+        "vision-language models"
+      ],
+      "source_evidence_refs": [
+        "https://github.com/PaddlePaddle/PaddleOCR - GitHub page describes OCR/document AI conversion to structured LLM-ready JSON/Markdown and 100+ language support; inspected 2026-07-07."
+      ],
+      "inspection_date": "2026-07-07",
+      "status": "cataloged",
+      "status_reason": "Primary GitHub repo inspected and basic metadata/use-case notes recorded. Not selected for any project and not integrated.",
+      "selected_for_projects": [],
+      "integration_evidence_refs": [],
+      "next_review_action": "Before integration, run target-document evals, check install/runtime size, privacy rules, model licenses, and output-quality gates."
+    },
+    {
+      "id": "panniantong-agent-reach",
+      "canonical_url": "https://github.com/Panniantong/Agent-Reach",
+      "name": "Panniantong/Agent-Reach",
+      "type": "cli",
+      "short_description": "CLI/capability layer that helps agents read and search web/social sources such as webpages, YouTube, RSS, search, GitHub, Twitter/X, Reddit, Bilibili, XiaoHongShu, LinkedIn, and others through selected upstream tools.",
+      "why_it_matters": "Useful as a reference for agent-access bootstrapping, channel routing, doctor checks, and practical web/social research capabilities where native APIs are fragmented or paid.",
+      "agent_building_use_cases": [
+        "Research agent acquisition layer for web/social/video/RSS/GitHub sources.",
+        "Reference design for capability routing: preferred backend plus fallback backend per platform.",
+        "Doctor/checkup pattern for diagnosing whether each acquisition channel works.",
+        "Skill-install pattern for teaching an agent when to call external upstream tools."
+      ],
+      "tags": [
+        "cli",
+        "web-research",
+        "social-search",
+        "youtube",
+        "rss",
+        "github",
+        "mcp",
+        "browser-login",
+        "doctor-check",
+        "python"
+      ],
+      "language_or_runtime": [
+        "Python 3.10+",
+        "CLI",
+        "MCP/upstream tools",
+        "agent shell execution"
+      ],
+      "license": "MIT",
+      "maintenance_signals": {
+        "last_release": "unknown from catalog inspection",
+        "recent_activity": "active-looking repository; GitHub page showed 306 commits, issues, PRs, tests, docs, changelog, and security file",
+        "maintainer": "Panniantong",
+        "known_adoption": "GitHub page showed 52.2k stars and 4.2k forks during inspection"
+      },
+      "install_or_use_shape": "Python CLI installed/configured by an agent; repo README describes install/update prompts, doctor command, and channel-specific upstream tools.",
+      "risks": [
+        "Requires shell execution and package/system tool installation; never run during cataloging.",
+        "Some channels need cookies, browser login state, proxy, or platform-specific tooling; privacy and Terms-of-Service risk must be reviewed.",
+        "Web/social scraping routes can break or be blocked; needs fallback, doctor checks, and visible limitations.",
+        "Private account/session access requires explicit user approval and local-only credential handling."
+      ],
+      "permission_needs": [
+        "shell_exec",
+        "package_install",
+        "network",
+        "browser_login_state",
+        "cookies_for_some_channels",
+        "possible_proxy",
+        "external_service_access"
+      ],
+      "when_to_consider": [
+        "When a research agent needs practical web/social/video/RSS/GitHub acquisition beyond normal browser search.",
+        "When building an acquisition layer with channel health checks and fallbacks.",
+        "When a user explicitly approves command execution and source acquisition tooling."
+      ],
+      "when_not_to_use": [
+        "When the workflow only needs a few stable public webpages that can be fetched directly.",
+        "When shell execution, login state, cookies, or scraping are not approved.",
+        "When legal/compliance constraints forbid platform scraping or session reuse."
+      ],
+      "alternatives": [
+        "Jina Reader",
+        "Firecrawl",
+        "Exa",
+        "Tavily",
+        "Playwright/browser automation",
+        "platform official APIs",
+        "custom MCP servers"
+      ],
+      "source_evidence_refs": [
+        "https://github.com/Panniantong/Agent-Reach - README describes a CLI capability layer for web/social/video/GitHub/RSS acquisition, doctor checks, supported platforms, and MIT/Python 3.10+ signals; inspected 2026-07-07."
+      ],
+      "inspection_date": "2026-07-07",
+      "status": "cataloged",
+      "status_reason": "Primary GitHub repo inspected and basic metadata/use-case notes recorded. Not selected for any project and not integrated.",
+      "selected_for_projects": [],
+      "integration_evidence_refs": [],
+      "next_review_action": "Before integration, review install script, permissions, channel-specific credentials, platform risks, and create acquisition-skip/approval records."
+    }
+  ]
+}

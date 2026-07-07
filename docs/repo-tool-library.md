@@ -37,6 +37,13 @@
 
 ## Где хранить
 
+Живая подборка хранится в:
+
+```text
+agent-system/catalog/repo-tool-library.json
+agent-system/catalog/repo-tool-cards/
+```
+
 Используйте шаблоны:
 
 ```text
