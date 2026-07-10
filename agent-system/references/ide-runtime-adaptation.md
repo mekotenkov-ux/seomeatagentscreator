@@ -62,4 +62,6 @@ If the user declines or the runtime has no native equivalent, keep the shared fo
 
 For every platform, record active entrypoint, adapter file paths, semantic parity, unsupported features, degraded behavior, permission mapping, install scope, first-run setup command, native skill/command/hook/MCP support, cleanup behavior, verification status, and evidence refs.
 
+For hooks, keep canonical event families in the shared hook registry and map them to native events in the adapter. Verify tool names, field casing, matcher behavior, exit/decision semantics, timeout behavior, execution shell, and whether the hook can actually block. Read `hook-system.md` before claiming parity.
+
 Presence of an adapter file is not proof of support.

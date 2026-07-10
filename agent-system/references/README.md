@@ -9,6 +9,7 @@
 - `repo-tool-library.md` - как сохранять внешние репозитории и инструменты как каталог идей без немедленной интеграции.
 - `birth-protocol.md` - как проводить first-run, runtime detection, environment readiness и project context intake.
 - `ide-runtime-adaptation.md` - как адаптировать один агент под Codex, Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenCode и CLI без drift.
+- `hook-system.md` - как проектировать lifecycle hooks, policy gates, native mappings, fail modes и проверки без зависимости от модельной дисциплины.
 - `context-and-quality-gates.md` - как строить compact context packs и stage gates.
 - `target-adapters.md` - как проверять Codex, Claude, Cursor, OpenCode и другие adapters против одного IR.
 - `final-evidence-and-claim-guard.md` - как отделять доказанные claims от planned work.

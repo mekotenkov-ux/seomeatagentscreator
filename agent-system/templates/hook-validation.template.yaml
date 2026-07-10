@@ -1,0 +1,42 @@
+schema_version: 1
+registry_ref: hook-registry.json
+cases:
+  - id: pre_action_allows_safe_input
+    hook_id: pre_action_policy
+    event_family: pre_action
+    target: ""
+    fixture: ""
+    expected_decision: allow
+    expected_side_effects: []
+    max_runtime_ms: 5000
+    status: pending
+    evidence_refs: []
+  - id: pre_action_blocks_forbidden_input
+    hook_id: pre_action_policy
+    event_family: pre_action
+    target: ""
+    fixture: ""
+    expected_decision: deny
+    expected_side_effects: []
+    max_runtime_ms: 5000
+    status: pending
+    evidence_refs: []
+required_case_families:
+  - safe_allow
+  - policy_deny
+  - approval_escalation
+  - malformed_input
+  - timeout
+  - handler_failure
+  - sensitive_data_redaction
+  - duplicate_event_idempotency
+  - stop_loop_guard
+  - unsupported_target_degradation
+release_gate:
+  blocking_failures:
+    - security_hook_fail_open
+    - missing_loop_guard
+    - secret_or_transcript_leak
+    - unbounded_handler
+    - claimed_native_support_without_execution_evidence
+  status: pending

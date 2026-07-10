@@ -62,12 +62,13 @@
 6. Спроектируйте router, skills, command/workflow layer, tools, checkers, memory/state, workspace hygiene.
 7. Соберите один полный vertical slice.
 8. Опишите tool registry и permission matrix.
-9. Создайте Trigger Lab и Output Eval Lab.
-10. Добавьте context packaging policy.
-11. Добавьте release review, evidence ledger и claim guard.
-12. Разделите runtime и devkit.
-13. Проверьте package/install/birth gate.
-14. Только после этого публикуйте или архивируйте.
+9. Проведите hook design pass: какие правила остаются в skills, а какие требуют автоматического lifecycle gate; задайте fail mode, privacy, budgets, native mapping и tests.
+10. Создайте Trigger Lab и Output Eval Lab.
+11. Добавьте context packaging policy.
+12. Добавьте release review, evidence ledger и claim guard.
+13. Разделите runtime и devkit.
+14. Проверьте package/install/birth gate.
+15. Только после этого публикуйте или архивируйте.
 
 ## Runtime/devkit boundary
 
@@ -124,6 +125,7 @@ Devkit содержит:
 - `references/repo-tool-library.md`;
 - `references/birth-protocol.md`;
 - `references/ide-runtime-adaptation.md`;
+- `references/hook-system.md`;
 - `references/context-and-quality-gates.md`;
 - `references/target-adapters.md`;
 - `references/final-evidence-and-claim-guard.md`;

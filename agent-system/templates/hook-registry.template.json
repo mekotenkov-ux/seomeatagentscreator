@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "canonical_event_families": [
+    "session_start",
+    "prompt_submit",
+    "pre_action",
+    "post_action",
+    "action_failure",
+    "pre_compact",
+    "subagent_start_stop",
+    "stop",
+    "session_end"
+  ],
+  "hooks": [
+    {
+      "hook_id": "pre_action_policy",
+      "status": "candidate|active|disabled|retired",
+      "purpose": "",
+      "event_family": "pre_action",
+      "matcher": {
+        "tool_classes": [],
+        "path_scope": [],
+        "action_risks": []
+      },
+      "handler": {
+        "type": "command|http|mcp_tool|prompt|agent|runtime_native",
+        "entrypoint": "",
+        "dependencies": []
+      },
+      "input_schema_ref": "",
+      "output_schema_ref": "",
+      "allowed_decisions": ["allow", "deny", "ask", "modify", "observe"],
+      "risk_class": "",
+      "side_effects": [],
+      "permission_gate": "",
+      "timeout_ms": 5000,
+      "max_retries": 0,
+      "fail_mode": "open|closed|escalate",
+      "idempotency": "required|not_applicable|unknown",
+      "privacy": {
+        "allowed_fields": [],
+        "forbidden_fields": ["credentials", "secrets", "raw_transcript", "shell_history"],
+        "retention": ""
+      },
+      "loop_guard": {
+        "max_continuations": 0,
+        "max_calls_per_session": 0
+      },
+      "audit_artifact": "",
+      "target_mappings": [
+        {
+          "platform": "",
+          "native_event": "",
+          "config_path": "",
+          "support": "native|partial|unsupported|unknown",
+          "degraded_behavior": ""
+        }
+      ],
+      "test_case_ids": [],
+      "disable_or_rollback": "",
+      "owner": "",
+      "evidence_refs": []
+    }
+  ]
+}

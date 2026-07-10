@@ -26,6 +26,7 @@
 - router и focused skills;
 - typed tool registry;
 - permission matrix;
+- hook registry и lifecycle gates;
 - state/memory вне истории чата;
 - context packaging;
 - trigger lab;
@@ -49,9 +50,10 @@
 3. Запустите preflight по `agent-system/skills/grill-me/SKILL.md`, затем workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
 4. Заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
 5. Соберите первый vertical slice: router, один workflow, один skill, один tool path, один checker, один eval set.
-6. Проверьте Trigger Lab и Output Eval Lab.
-7. Разделите runtime и devkit.
-8. Соберите clean staging и только после этого делайте zip/public repo.
+6. Проведите hook design pass: определите автоматические gates, fail modes, privacy, native mappings и validation cases.
+7. Проверьте Trigger Lab и Output Eval Lab.
+8. Разделите runtime и devkit.
+9. Соберите clean staging и только после этого делайте zip/public repo.
 
 Подробно: [docs/quick-start.md](docs/quick-start.md).
 
@@ -91,6 +93,7 @@ agent-system/
     repo-tool-library.md
     birth-protocol.md
     ide-runtime-adaptation.md
+    hook-system.md
     context-and-quality-gates.md
     target-adapters.md
     final-evidence-and-claim-guard.md
@@ -117,6 +120,8 @@ agent-system/
     project-context.template.json
     birth-validation-gates.template.json
     tool-registry.template.json
+    hook-registry.template.json
+    hook-validation.template.yaml
     runtime-manifest.template.json
     release-review.template.md
     trigger-lab.template.yaml

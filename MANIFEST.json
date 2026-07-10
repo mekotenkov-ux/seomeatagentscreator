@@ -1,6 +1,6 @@
 {
   "name": "seomeatagentscreator",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "language": "ru",
   "license": "MIT",
   "package_kind": "public_universal_agent_creation_system",
@@ -17,6 +17,7 @@
     "repo/tool library reference, catalog template, card template, and intake template",
     "repo-tool-librarian skill for indexing external repositories and tools without automatic integration",
     "seed repo/tool catalog entries for Flue, PaddleOCR, and Agent-Reach",
+    "universal hook system reference, hook registry, lifecycle mapping, and validation template",
     "agent-creator skill",
     "production skill OS reference",
     "universal references for skill training, package boundary, birth, IDE/runtime adaptation, adapters, context gates, evidence, long-running tools, isolation, observability, and validation",

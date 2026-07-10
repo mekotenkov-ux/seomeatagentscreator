@@ -9,12 +9,13 @@
 5. **Skills** - сфокусированные процедуры с frontmatter-trigger.
 6. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
 7. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
-8. **Checkers** - независимые проверки результата и границ.
-9. **Evals** - Trigger Lab и Output Eval Lab.
-10. **State/memory** - короткие durable файлы вне истории чата.
-11. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
-12. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
-13. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
+8. **Hooks** - автоматические lifecycle gates вокруг session, tool use, compaction, subagents и Stop.
+9. **Checkers** - независимые проверки результата и границ.
+10. **Evals** - Trigger Lab и Output Eval Lab.
+11. **State/memory** - короткие durable файлы вне истории чата.
+12. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
+13. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
+14. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
 
 ## Почему workflow discovery до IR
 
@@ -51,6 +52,10 @@ request_action_approval(action_id, evidence_refs)
   "next_valid_actions": []
 }
 ```
+
+## Почему hooks - отдельный слой
+
+Инструкция или skill могут попросить модель проверить риск, но не гарантируют, что проверка сработает. Hook вызывается runtime автоматически. Поэтому security, approvals, protected paths, state handoff перед compaction и hard Stop gate можно вынести из надежды на модель в исполняемый контракт. Hook не заменяет typed tools, sandbox и CI; он соединяет события agent loop с этими механизмами.
 
 ## Почему нужен claim guard
 

@@ -27,6 +27,7 @@ REQUIRED_FILES = [
     "agent-system/catalog/repo-tool-library.json",
     "agent-system/references/birth-protocol.md",
     "agent-system/references/ide-runtime-adaptation.md",
+    "agent-system/references/hook-system.md",
     "agent-system/references/context-and-quality-gates.md",
     "agent-system/references/target-adapters.md",
     "agent-system/references/final-evidence-and-claim-guard.md",
@@ -48,6 +49,8 @@ REQUIRED_FILES = [
     "agent-system/templates/project-context.template.json",
     "agent-system/templates/birth-validation-gates.template.json",
     "agent-system/templates/tool-registry.template.json",
+    "agent-system/templates/hook-registry.template.json",
+    "agent-system/templates/hook-validation.template.yaml",
     "agent-system/templates/runtime-manifest.template.json",
     "agent-system/templates/release-review.template.md",
     "agent-system/templates/trigger-lab.template.yaml",
@@ -78,6 +81,7 @@ REQUIRED_FILES = [
     "docs/index.html",
     "docs/quick-start.md",
     "docs/architecture.md",
+    "docs/hooks.md",
     "docs/birth.md",
     "docs/workflow-discovery.md",
     "docs/repo-tool-library.md",
@@ -161,7 +165,7 @@ def main() -> None:
     page = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     if "https://seomeat.ru/" not in page:
         fail("docs/index.html must link to https://seomeat.ru/")
-    for public_term in ["Skill Training Lab", "target conformance", "final evidence", "birth protocol", "workflow discovery", "repo/tool library"]:
+    for public_term in ["Skill Training Lab", "target conformance", "final evidence", "birth protocol", "workflow discovery", "repo/tool library", "hook system"]:
         if public_term not in page:
             fail(f"docs/index.html must mention {public_term}")
 
