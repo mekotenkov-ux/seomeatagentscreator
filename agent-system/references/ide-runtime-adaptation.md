@@ -12,10 +12,10 @@ Adapter files should make the target runtime load the right contract, skills, to
 
 | Runtime or IDE | Common instruction surface | Native mechanisms to consider | Birth adaptation rule |
 | --- | --- | --- | --- |
-| Codex | `AGENTS.md` and nested `AGENTS.md` | skills, subagents, hooks, MCP, permissions, sandbox profiles | Keep `AGENTS.md` concise, route to shared contract/skills, verify active instruction chain when confused. |
+| Codex | `AGENTS.md`, `.codex/config.toml`, `.codex/agents/*.toml` | skills, subagents, hooks, MCP, permissions, sandbox profiles | Keep `AGENTS.md` concise, route to shared contract/skills, verify active instruction chain when confused. |
 | Claude Code | `CLAUDE.md`, `.claude/CLAUDE.md`, `.claude/settings.json`, `.claude/agents/` | settings scopes, permissions, subagents, hooks, MCP, local/user/project/managed config | Respect scope precedence; never treat local/user config as shareable package truth. |
 | Cursor | `.cursor/rules/*.mdc`, `AGENTS.md` where supported, project rules | rules, MCP, memories, composer/agent modes | Keep rules thin; do not duplicate full workflows into every `.mdc`. |
-| VS Code Copilot | `.github/copilot-instructions.md`, `.github/instructions/*.instructions.md`, `AGENTS.md`, `CLAUDE.md`, prompt files, skills, custom agents | agent customizations, hooks, MCP, prompt files, skills, custom agents | Use repo-wide instructions for stable context, path-specific instructions only for scoped rules. |
+| VS Code Copilot | `.github/agents/*.agent.md`, `.github/copilot-instructions.md`, `.github/instructions/*.instructions.md`, `AGENTS.md`, `CLAUDE.md`, prompt files, skills, custom agents | agent customizations, hooks, MCP, prompt files, skills, custom agents | Use repo-wide instructions for stable context, path-specific instructions only for scoped rules. |
 | GitHub Copilot cloud agent | `.github/copilot-instructions.md`, `.github/instructions/*.instructions.md`, `AGENTS.md` | cloud agent instructions, custom agents, skills, hooks, MCP, sandbox settings | Make build/test/validation commands obvious; do not hide permission or CI expectations. |
 | OpenCode/Gemini/local CLI | runtime-specific config plus shared router | CLI args, config files, MCP, command allowlists | Keep a shared router and record degraded behavior where native skills/hooks are absent. |
 
@@ -61,6 +61,8 @@ If the user declines or the runtime has no native equivalent, keep the shared fo
 ## Target Conformance Evidence
 
 For every platform, record active entrypoint, adapter file paths, semantic parity, unsupported features, degraded behavior, permission mapping, install scope, first-run setup command, native skill/command/hook/MCP support, cleanup behavior, verification status, and evidence refs.
+
+For subagents, keep role, topology, task/result, context, permission, lifecycle and eval contracts canonical. Map native role files, inheritance, spawn/join/steer/cancel/close, nesting, background approvals, handoffs, teams, batch fan-out and write isolation per target. A single `subagents: native` flag is not conformance.
 
 For hooks, keep canonical event families in the shared hook registry and map them to native events in the adapter. Verify tool names, field casing, matcher behavior, exit/decision semantics, timeout behavior, execution shell, and whether the hook can actually block. Read `hook-system.md` before claiming parity.
 

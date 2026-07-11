@@ -2,6 +2,10 @@
 
 Validation belongs in the devkit, not inside runtime.
 
+## Subagent validation
+
+Public package verification checks template integrity and safe defaults. It is not proof of a live subagent run. For a filled run, execute `scripts/validate_subagent_run.py` to validate topology, roles, task/result/ledger reconciliation, provenance, effective permissions, process and credential isolation, budgets, lifecycle states, retries, cancellation, done invariants and final merged artifacts. Subagent Eval Lab must still provide measured delta against a single-agent baseline.
+
 ## Required Checks
 
 - required runtime files exist;

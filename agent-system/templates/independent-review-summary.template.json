@@ -1,18 +1,32 @@
 {
-  "schema_version": 1,
-  "independent_execution": true,
+  "schema_version": 2,
+  "independent_execution": false,
   "self_review_only": false,
   "reviews": [
     {
       "id": "first-run-onboarding",
       "kind": "scenario|clean-auditor",
       "reviewer_id": "",
-      "independent": true,
-      "status": "pass|warn|fail|blocked",
+      "independent": false,
+      "status": "pending|pass|warn|fail|blocked",
       "inspected_files": [],
       "work_trace": [],
       "confusion_points": [],
-      "findings": []
+      "findings": [],
+      "subagent_run_id": "",
+      "parent_workflow_run_id": "",
+      "role_id": "",
+      "runtime": "",
+      "model": "",
+      "prompt_hash": "",
+      "context_pack_ref": "",
+      "context_hash": "",
+      "tools": [],
+      "permissions": [],
+      "isolation_mode": "",
+      "trace_ref": "",
+      "result_ref": "",
+      "evidence_refs": []
     }
   ],
   "required_review_ids": [

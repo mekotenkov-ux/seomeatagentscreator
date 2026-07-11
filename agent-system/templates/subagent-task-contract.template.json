@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "task_id": "",
+  "parent_workflow_run_id": "",
+  "delegation_plan_id": "",
+  "role_id": "",
+  "delegation_rationale": "",
+  "objective": "",
+  "done_condition": "",
+  "scope": {
+    "in": [],
+    "out": [],
+    "near_neighbor_exclusions": []
+  },
+  "dependencies": {
+    "task_ids": [],
+    "artifact_refs": []
+  },
+  "context": {
+    "mode": "fresh|fork|target_native",
+    "context_pack_ref": "",
+    "allowed_files": [],
+    "compact_artifacts": [],
+    "forbidden_raw_loads": [],
+    "full_artifact_load_requires_reason": true,
+    "snapshot_or_hash_refs": []
+  },
+  "actions": {
+    "allowed": [],
+    "approval_gated": [],
+    "forbidden": [],
+    "clarification_policy": "return_blocker|ask_parent|target_native"
+  },
+  "write_ownership": {
+    "mode": "read_only|exact_paths|worktree|clone|container|external_resource",
+    "scopes": [],
+    "must_not_touch": [],
+    "isolation_ref": "",
+    "process_isolation": {
+      "process_boundary_ref": "",
+      "environment_allowlist_ref": "",
+      "temp_root": "",
+      "cache_root": "",
+      "credential_scope_ref": "",
+      "mcp_credential_scope_ref": "",
+      "cleanup_verification_ref": ""
+    }
+  },
+  "expected_result": {
+    "schema_ref": "subagent-result.json",
+    "artifact_paths": [],
+    "required_evidence": [],
+    "validation_commands": []
+  },
+  "budgets": {
+    "max_runtime_seconds": null,
+    "max_tokens": null,
+    "max_tool_calls": null,
+    "max_cost": null,
+    "max_retries": 0,
+    "max_output_bytes": null
+  },
+  "failure_policy": {
+    "retryable_error_types": [],
+    "partial_result_required": true,
+    "cancellation_propagates_to_descendants": true,
+    "cancellation_cleanup": [],
+    "side_effect_retry_requires_idempotency_key": true,
+    "unknown_side_effect_requires_reconciliation": true,
+    "attempt_id": "",
+    "retry_of_attempt_id": "",
+    "idempotency_key": "",
+    "cancellation_deadline": "",
+    "cancellation_ack_required": true,
+    "process_tree_termination_required": true,
+    "reconciliation_artifact_required_for_unknown_outcome": true
+  },
+  "independence": {
+    "hidden_desired_verdict_forbidden": true,
+    "intended_fix_forbidden": false
+  },
+  "permission_envelope": {
+    "parent_permission_snapshot_ref": "",
+    "role_permission_ref": "",
+    "task_permission_ref": "",
+    "action_scoped_approval_refs": [],
+    "effective_permission_ref": "",
+    "effective_policy": "intersection_no_privilege_amplification",
+    "sandbox": "",
+    "network": "",
+    "secrets": "",
+    "external_write": ""
+  }
+}

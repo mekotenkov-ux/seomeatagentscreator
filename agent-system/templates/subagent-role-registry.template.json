@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "role_id": "",
+      "capability_class": "explorer|worker|reviewer|specialist|coordinator|merger",
+      "description": "",
+      "should_use": [],
+      "should_not_use": [],
+      "model_policy": {
+        "capability_tier": "inherit|fast|balanced|frontier|specialized",
+        "reasoning_effort": "inherit|low|medium|high|max",
+        "target_override": "",
+        "override_reason": ""
+      },
+      "tools": {
+        "allow": [],
+        "deny": []
+      },
+      "skills": {
+        "preload": [],
+        "discoverable": []
+      },
+      "permissions": {
+        "sandbox": "inherit|read_only|workspace_write|isolated_write|target_native",
+        "network": "deny|approved_sources|approval_gated|inherit",
+        "secrets": "none|scoped_tool_only|approval_gated",
+        "external_write": "deny|draft_only|approval_gated",
+        "inheritance_notes": ""
+      },
+      "scope": {
+        "read": [],
+        "write": [],
+        "forbidden": []
+      },
+      "delegation": {
+        "allowed_child_roles": [],
+        "max_depth": 1,
+        "background_allowed": false,
+        "team_mode_allowed": false,
+        "target_enforcement": "native|hook|adapter|metadata_only|unsupported|unknown"
+      },
+      "output_schema_ref": "subagent-result.json",
+      "acceptance_gate": "",
+      "target_mappings": [],
+      "owner": "",
+      "review_cadence": "",
+      "evidence_refs": []
+    }
+  ]
+}

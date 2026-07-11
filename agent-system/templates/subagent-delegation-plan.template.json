@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "plan_id": "",
+  "parent_workflow_run_id": "",
+  "authorization_ref": "",
+  "topology": "single_agent|agent_as_tool|handoff|sequential_chain|parallel_fanout|critic_loop|agent_team|batch_map",
+  "decision": {
+    "decomposability": "low|medium|high",
+    "dependency_density": "low|medium|high",
+    "tool_density": "low|medium|high",
+    "context_isolation_value": "low|medium|high",
+    "write_overlap_risk": "none|low|medium|high",
+    "verification_available": false,
+    "expected_quality_or_latency_gain": "",
+    "coordination_cost": "",
+    "why_not_single_agent": ""
+  },
+  "budgets": {
+    "max_workers": null,
+    "max_depth": 1,
+    "max_total_runtime_minutes": null,
+    "max_total_tokens": null,
+    "max_total_tool_calls": null,
+    "max_total_cost": null,
+    "max_retries": null,
+    "reserved_synthesis_and_verification_budget": null
+  },
+  "tasks": [
+    {
+      "task_id": "",
+      "role_id": "",
+      "depends_on": [],
+      "critical_path": false,
+      "immediate_parent_blocker": false,
+      "execution": "foreground|background|batch",
+      "context_pack_ref": "",
+      "task_contract_ref": "",
+      "write_ownership": [],
+      "expected_result_ref": "",
+      "status": "planned|authorized|queued|running|input_required|auth_required|completed|partial|failed|rejected|timed_out|budget_exhausted|cancelled|unknown_outcome",
+      "validation_status": "pending|accepted|rejected"
+    }
+  ],
+  "write_isolation": {
+    "strategy": "read_only|disjoint_scopes|worktrees|clones|containers|sandbox|serialized",
+    "merger_role_id": "",
+    "shared_mutable_checkout_forbidden": true,
+    "claim_or_lock_protocol": ""
+  },
+  "synthesis": {
+    "owner_role_id": "",
+    "count_reconciliation_required": true,
+    "disagreement_policy": "",
+    "partial_failure_policy": "fail_fast|best_effort|quorum",
+    "final_artifact_gate": "",
+    "independent_checker_ref": ""
+  },
+  "stop_conditions": [],
+  "known_limits": [],
+  "evidence_refs": [],
+  "recursive_delegation_justification": "",
+  "join_policy": {
+    "condition": "all_required|fail_fast|best_effort|quorum",
+    "quorum": null,
+    "deadline": "",
+    "late_result_policy": "reject|record_only|adjudicate"
+  }
+}

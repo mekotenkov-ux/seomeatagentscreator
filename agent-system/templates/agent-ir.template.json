@@ -78,7 +78,8 @@
     "stage_quality_gates": "",
     "negative_fixtures": [],
     "birth_validation_gates": "",
-    "workflow_discovery_gate": ""
+    "workflow_discovery_gate": "",
+    "subagent_eval_lab": ""
   },
   "final_evidence": {
     "contract": "",
@@ -147,5 +148,34 @@
     "selected_items": [],
     "integration_requires_explicit_approval": true,
     "integration_gate": "license, security, maintenance, runtime compatibility, validation, rollback"
+  },
+  "subagent_orchestration": {
+    "role_registry": "",
+    "delegation_plan": "",
+    "default_topology": "single_agent",
+    "allowed_topologies": [],
+    "authorization_sources": [],
+    "default_context_mode": "fresh",
+    "permission_inheritance": "",
+    "write_isolation_policy": "",
+    "result_schema": "subagent-result.json",
+    "run_ledger": "",
+    "single_agent_baseline_required": true,
+    "subagent_eval_lab": "",
+    "max_depth": 1,
+    "terminal_statuses": [
+      "completed",
+      "partial",
+      "failed",
+      "rejected",
+      "timed_out",
+      "budget_exhausted",
+      "cancelled",
+      "unknown_outcome"
+    ],
+    "interrupted_statuses": [
+      "input_required",
+      "auth_required"
+    ]
   }
 }

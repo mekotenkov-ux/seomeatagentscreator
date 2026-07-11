@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "package": "",
   "accepted_evidence": [
     {
@@ -8,7 +8,18 @@
       "status": "pass|warn|fail|blocked",
       "summary": "",
       "artifact_refs": [],
-      "claim_support": []
+      "claim_support": [],
+      "evidence_class": "local_pass|external_pending|external_pass|descoped",
+      "independent": false,
+      "provenance": {
+        "run_id": "",
+        "reviewer_id": "",
+        "runtime": "",
+        "prompt_hash": "",
+        "context_hash": "",
+        "trace_ref": "",
+        "result_ref": ""
+      }
     }
   ],
   "pending_evidence": [],

@@ -98,7 +98,15 @@ Birth contract нужен до платформенных адаптеров. О
 - `stage-quality-gates.template.json`;
 - `target-conformance.template.json`;
 - `final-evidence-contract.template.json`;
-- `independent-review-summary.template.json`.
+- `independent-review-summary.template.json`;
+- `subagent-role-registry.template.json`;
+- `subagent-delegation-plan.template.json`;
+- `subagent-task-contract.template.json`;
+- `subagent-result.template.json`;
+- `subagent-run-ledger.template.jsonl`;
+- `subagent-eval-lab.template.yaml`.
+
+Если workflow использует subagents, сначала докажите пользу против single-agent baseline. Параллельные write workers должны иметь disjoint ownership и отдельные worktrees/containers; result counts и evidence сверяются до synthesis.
 
 ## 7. Разделите runtime и devkit
 

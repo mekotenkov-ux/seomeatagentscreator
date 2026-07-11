@@ -19,5 +19,11 @@
   "blockers": [],
   "evidence_refs": [],
   "next_valid_actions": [],
-  "stop_condition": ""
+  "stop_condition": "",
+  "active_child_runs": [],
+  "child_join_condition": "",
+  "cancellation_policy": "",
+  "partial_child_artifacts": [],
+  "merge_verdict": "not_applicable|pending|pass|warn|fail|blocked",
+  "child_reconciliation_status": "pending|pass|warn|fail|blocked"
 }

@@ -63,12 +63,13 @@
 7. Соберите один полный vertical slice.
 8. Опишите tool registry и permission matrix.
 9. Проведите hook design pass: какие правила остаются в skills, а какие требуют автоматического lifecycle gate; задайте fail mode, privacy, budgets, native mapping и tests.
-10. Создайте Trigger Lab и Output Eval Lab.
-11. Добавьте context packaging policy.
-12. Добавьте release review, evidence ledger и claim guard.
-13. Разделите runtime и devkit.
-14. Проверьте package/install/birth gate.
-15. Только после этого публикуйте или архивируйте.
+10. Проведите subagent design pass через `skills/subagent-orchestrator/SKILL.md`: single-agent baseline, topology, roles, task graph, context, permissions, isolation, lifecycle, result schema и eval.
+11. Создайте Trigger Lab, Output Eval Lab и Subagent Eval Lab.
+12. Добавьте context packaging policy.
+13. Добавьте release review, evidence ledger и claim guard.
+14. Разделите runtime и devkit.
+15. Проверьте package/install/birth gate.
+16. Только после этого публикуйте или архивируйте.
 
 ## Runtime/devkit boundary
 
@@ -126,6 +127,7 @@ Devkit содержит:
 - `references/birth-protocol.md`;
 - `references/ide-runtime-adaptation.md`;
 - `references/hook-system.md`;
+- `references/subagent-orchestration.md`;
 - `references/context-and-quality-gates.md`;
 - `references/target-adapters.md`;
 - `references/final-evidence-and-claim-guard.md`;

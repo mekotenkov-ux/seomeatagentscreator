@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task_id": "",
+  "subagent_run_id": "",
+  "parent_workflow_run_id": "",
+  "role_id": "",
+  "status": "completed|partial|failed|rejected|timed_out|budget_exhausted|cancelled|input_required|auth_required|unknown_outcome",
+  "summary": "",
+  "work_trace": [],
+  "artifacts": [],
+  "changed_scopes": [],
+  "evidence_refs": [],
+  "validation": {
+    "commands_run": [],
+    "passed": [],
+    "failed": [],
+    "not_run": []
+  },
+  "findings": [],
+  "disagreements": [],
+  "blockers": [],
+  "limitations": [],
+  "usage": {
+    "runtime_ms": null,
+    "tokens": null,
+    "tool_calls": null,
+    "cost": null
+  },
+  "permission_requests": [],
+  "next_valid_actions": [],
+  "cleanup_status": "not_needed|completed|partial|failed",
+  "terminal": false,
+  "validation_status": "pending|accepted|rejected",
+  "attempt_id": "",
+  "retry_of_attempt_id": "",
+  "idempotency_key": "",
+  "cancellation_ack": {},
+  "process_tree_termination": {},
+  "reconciliation_artifact_ref": ""
+}

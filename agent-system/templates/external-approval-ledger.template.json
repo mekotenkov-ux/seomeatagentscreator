@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "approvals": [
     {
       "approval_id": "",
@@ -15,7 +15,15 @@
       "approval_ref": "",
       "approved_at": "YYYY-MM-DDTHH:MM:SSZ",
       "expires_at": "",
-      "evidence_refs": []
+      "evidence_refs": [],
+      "subagent_run_id": "",
+      "task_id": "",
+      "tool_call_id": "",
+      "decision": "pending|approved|denied|revoked|expired|consumed",
+      "consumed_at": "",
+      "revoked_at": "",
+      "idempotency_key": "",
+      "effective_permission_ref": ""
     }
   ]
 }

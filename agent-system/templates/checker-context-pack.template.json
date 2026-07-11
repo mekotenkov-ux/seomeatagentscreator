@@ -23,5 +23,21 @@
     "whole workspace unless explicitly allowed"
   ],
   "expected_report_schema": "checker-report.template.json",
-  "claim_boundary": []
+  "claim_boundary": [],
+  "allowed_actions": [],
+  "tool_allowlist": [],
+  "permission_scope": [],
+  "trust_labels": [],
+  "snapshot_or_hash_refs": [],
+  "freshness_checked_at": "",
+  "context_budget": {
+    "max_bytes": null,
+    "max_rows": null,
+    "max_files": null,
+    "enforcement": "runtime_enforced|advisory|unknown"
+  },
+  "full_artifact_load_reason": "",
+  "task_id": "",
+  "role_id": "",
+  "write_ownership": {}
 }

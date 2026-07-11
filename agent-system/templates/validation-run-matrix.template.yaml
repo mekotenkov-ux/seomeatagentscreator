@@ -1,19 +1,35 @@
 version: 1
 positive_fixtures:
-  - id: happy-path-runtime
-    purpose: Runtime package installs and required files exist.
-    command: ""
+- id: happy-path-runtime
+  purpose: Runtime package installs and required files exist.
+  command: ''
 negative_fixtures:
-  - id: markdown-only-review
-    should_fail_because: Independent review summary is missing machine-readable reviewer trace.
-  - id: descope-counted-as-pass
-    should_fail_because: Descoped evidence is a limitation, not external_pass.
-  - id: runtime-contains-devkit
-    should_fail_because: Runtime contains tests, source materials, or validation scripts.
-  - id: local-absolute-path
-    should_fail_because: Package or evidence manifest contains a local absolute path.
+- id: markdown-only-review
+  should_fail_because: Independent review summary is missing machine-readable reviewer
+    trace.
+- id: descope-counted-as-pass
+  should_fail_because: Descoped evidence is a limitation, not external_pass.
+- id: runtime-contains-devkit
+  should_fail_because: Runtime contains tests, source materials, or validation scripts.
+- id: local-absolute-path
+  should_fail_because: Package or evidence manifest contains a local absolute path.
+- id: independent-review-defaults-true
+  should_fail_because: Independent review templates must default claims to false until
+    provenance exists.
+- id: unbounded-subagent-fanout
+  should_fail_because: Delegation lacks worker, depth, runtime, token, tool-call,
+    cost, or retry budgets.
+- id: parallel-shared-mutable-checkout
+  should_fail_because: Write-capable workers share one mutable checkout or overlapping
+    ownership.
+- id: partial-subagent-hidden-as-success
+  should_fail_because: Failed, cancelled, timed-out, rejected, budget-exhausted, or
+    unknown branches are hidden by an aggregate success.
+- id: multi-agent-without-baseline
+  should_fail_because: Multi-agent value is claimed without a single-agent quality,
+    coverage, latency, and cost comparison.
 release_rule:
   production_requires:
-    - required positive fixtures pass
-    - negative fixtures fail for the expected reason
-    - remaining gaps are blockers, warnings, or accepted limitations
+  - required positive fixtures pass
+  - negative fixtures fail for the expected reason
+  - remaining gaps are blockers, warnings, or accepted limitations

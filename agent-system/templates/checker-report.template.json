@@ -18,5 +18,11 @@
   "confusion_points": [],
   "missing_evidence": [],
   "claim_boundary_notes": [],
-  "next_valid_actions": []
+  "next_valid_actions": [],
+  "parent_workflow_run_id": "",
+  "task_id": "",
+  "subagent_run_id": "",
+  "role_id": "",
+  "artifact_manifest_refs": [],
+  "trace_ref": ""
 }

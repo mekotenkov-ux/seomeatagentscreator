@@ -27,15 +27,14 @@ Use JSONL, CSV, SQLite, or another durable store for:
 
 ## Subagent Run Fields
 
-- subagent run id;
-- parent workflow run id;
-- scenario or role;
-- prompt summary;
-- allowed context pack;
-- status;
-- result ref;
-- findings;
-- confusion points.
+- subagent run id, task id, parent workflow/agent id and delegation plan id;
+- topology, role, context mode and context pack ref;
+- tool, skill, permission and write-isolation envelope;
+- prompt/context hashes without raw private content;
+- lifecycle transitions, attempt/retry/cancellation lineage and error class;
+- result/artifact/evidence/trace refs;
+- runtime, tokens, tool calls, cost and budget remaining;
+- findings, disagreements, blockers, confusion points and cleanup status.
 
 ## Living Adaptation Decision
 

@@ -1,6 +1,6 @@
 {
   "name": "seomeatagentscreator",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "language": "ru",
   "license": "MIT",
   "package_kind": "public_universal_agent_creation_system",
@@ -18,6 +18,7 @@
     "repo-tool-librarian skill for indexing external repositories and tools without automatic integration",
     "seed repo/tool catalog entries for Flue, PaddleOCR, and Agent-Reach",
     "universal hook system reference, hook registry, lifecycle mapping, and validation template",
+    "subagent orchestrator skill, topology and role registry, task/result contracts, run ledger, isolation rules, lifecycle controls, and Subagent Eval Lab",
     "agent-creator skill",
     "production skill OS reference",
     "universal references for skill training, package boundary, birth, IDE/runtime adaptation, adapters, context gates, evidence, long-running tools, isolation, observability, and validation",
@@ -27,7 +28,9 @@
     "state, memory, skill-candidate, loop-state, checker-context, evidence-ledger, approval-ledger, and export-manifest templates",
     "export and production readiness checklists",
     "generic export, install validation, and core-isolation scripts",
-    "Russian documentation and GitHub Pages landing page"
+    "Russian documentation and GitHub Pages landing page",
+    "strict filled-run subagent validator for budgets, permissions, isolation, lifecycle, provenance, reconciliation, and done invariants",
+    "PyYAML development dependency for parsing YAML validation templates"
   ],
   "public_package_policy": [
     "keep the repository domain-neutral",
@@ -39,7 +42,7 @@
     "This repository provides a universal creation system and templates.",
     "Target platform adapters must be audited for the target runtime before public production claims.",
     "Birth artifacts are templates until a real first-run install fills them with bounded observations.",
-    "External publishing, paid APIs, private data scans, subagents, and destructive actions remain approval-gated.",
+    "Subagent delegation requires explicit user, workflow, or platform-policy authorization plus target-specific permission and sandbox enforcement.",
     "Templates are not evidence until a real validated run fills them with bounded observations."
   ]
 }

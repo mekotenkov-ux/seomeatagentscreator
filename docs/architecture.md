@@ -10,12 +10,13 @@
 6. **Commands/workflows** - явные full-run процессы, если задача многошаговая.
 7. **Tools** - детерминированные действия со схемами, permission gates и bounded observations.
 8. **Hooks** - автоматические lifecycle gates вокруг session, tool use, compaction, subagents и Stop.
-9. **Checkers** - независимые проверки результата и границ.
-10. **Evals** - Trigger Lab и Output Eval Lab.
-11. **State/memory** - короткие durable файлы вне истории чата.
-12. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
-13. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
-14. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
+9. **Subagent orchestration** - выбор topology, роли, task graph, context, permissions, isolation, lifecycle, synthesis и eval против single-agent baseline.
+10. **Checkers** - независимые проверки результата и границ.
+11. **Evals** - Trigger Lab и Output Eval Lab.
+12. **State/memory** - короткие durable файлы вне истории чата.
+13. **Release review** - единая поверхность blockers, warnings, actions, evidence и limitations.
+14. **Birth protocol** - first-run процесс: runtime detection, active adapter decision, environment readiness, project context и birth gate.
+15. **Runtime/devkit packages** - чистая упаковка для установки и разработки.
 
 ## Почему workflow discovery до IR
 

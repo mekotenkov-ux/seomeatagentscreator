@@ -37,6 +37,20 @@
 - [ ] State/memory вне истории чата.
 - [ ] Workspace hygiene определен.
 
+## Subagent Orchestration
+
+- [ ] Single-agent baseline создан до multi-agent claim.
+- [ ] Topology выбрана по decomposability, dependencies, tool density, context value и write overlap.
+- [ ] Role registry определяет should/should-not use, tools, skills, model policy, permissions и output schema.
+- [ ] Delegation plan содержит task graph, ownership, budgets, join и partial-failure policy.
+- [ ] Каждый worker получает bounded task contract и compact context pack.
+- [ ] Default depth = 1; fan-out, concurrency, tokens, cost, runtime и retries ограничены.
+- [ ] Parallel writes используют disjoint scopes и worktrees/containers; shared mutable checkout запрещен.
+- [ ] Background approval behavior и permission inheritance проверены на target runtime.
+- [ ] Result schema, task count reconciliation, cancellation propagation и completed-worker cleanup проверены.
+- [ ] Independent reviewer имеет provenance и не получает intended verdict.
+- [ ] Subagent Eval Lab показывает полезный delta или ограничивает multi-agent конкретными task classes.
+
 ## Validation
 
 - [ ] Trigger Lab есть.

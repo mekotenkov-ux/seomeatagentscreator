@@ -44,6 +44,12 @@ Checker/subagent packs should contain:
 
 Do not include hidden desired verdicts, intended fixes, or broad workspace access.
 
+## Subagent Context Contract
+
+Every writer, explorer, specialist, and checker pack should also declare task id, role, allowed actions, tool allowlist, permission scope, trust labels, snapshot/hash refs, freshness, context budget, write ownership, expected result schema, and full-artifact load reason.
+
+Fresh isolated context is the default. Forked context requires a recorded reason because it loses input isolation and may carry irrelevant or sensitive history. Large outputs stay in the artifact store; the parent receives stable refs and a bounded summary.
+
 ## Full-Coverage Rule
 
 Preview limits are not read limits. `top 50`, excerpts, summaries, or sample rows may guide humans, but source-of-truth inventories and final reports must account for every input item when the task claims full coverage.

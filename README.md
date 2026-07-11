@@ -27,6 +27,7 @@
 - typed tool registry;
 - permission matrix;
 - hook registry и lifecycle gates;
+- subagent orchestration: topology, role registry, task graph, isolation, lifecycle и eval;
 - state/memory вне истории чата;
 - context packaging;
 - trigger lab;
@@ -51,9 +52,11 @@
 4. Заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
 5. Соберите первый vertical slice: router, один workflow, один skill, один tool path, один checker, один eval set.
 6. Проведите hook design pass: определите автоматические gates, fail modes, privacy, native mappings и validation cases.
-7. Проверьте Trigger Lab и Output Eval Lab.
-8. Разделите runtime и devkit.
-9. Соберите clean staging и только после этого делайте zip/public repo.
+7. Проведите subagent design pass: докажите необходимость делегирования, выберите topology, роли, task graph, context, isolation, budgets и result contracts.
+8. Сравните Subagent Eval Lab с single-agent baseline.
+9. Проверьте Trigger Lab и Output Eval Lab.
+10. Разделите runtime и devkit.
+11. Соберите clean staging и только после этого делайте zip/public repo.
 
 Подробно: [docs/quick-start.md](docs/quick-start.md).
 
@@ -70,7 +73,7 @@
 
 ## Гигиена публичного пакета
 
-Перед публикацией проверяйте, что пакет не содержит секреты, локальные пути, закрытые данные, временные рабочие артефакты и скрытую зависимость от истории текущего чата. Для этого в репозитории есть `agent-system/checklists/export-clean-checklist.md` и `scripts/verify_public_package.py`.
+Перед публикацией проверяйте, что пакет не содержит секреты, локальные пути, закрытые данные, временные рабочие артефакты и скрытую зависимость от истории текущего чата. Установите dev-зависимости через `python -m pip install -r requirements-dev.txt`, затем используйте `agent-system/checklists/export-clean-checklist.md` и `scripts/verify_public_package.py`. Заполненные subagent-run артефакты дополнительно проверяет `scripts/validate_subagent_run.py`.
 
 ## Структура
 
@@ -87,6 +90,8 @@ agent-system/
       SKILL.md
     repo-tool-librarian/
       SKILL.md
+    subagent-orchestrator/
+      SKILL.md
   references/
     skill-training-lab.md
     package-boundary.md
@@ -94,6 +99,7 @@ agent-system/
     birth-protocol.md
     ide-runtime-adaptation.md
     hook-system.md
+    subagent-orchestration.md
     context-and-quality-gates.md
     target-adapters.md
     final-evidence-and-claim-guard.md
@@ -122,6 +128,12 @@ agent-system/
     tool-registry.template.json
     hook-registry.template.json
     hook-validation.template.yaml
+    subagent-role-registry.template.json
+    subagent-delegation-plan.template.json
+    subagent-task-contract.template.json
+    subagent-result.template.json
+    subagent-run-ledger.template.jsonl
+    subagent-eval-lab.template.yaml
     runtime-manifest.template.json
     release-review.template.md
     trigger-lab.template.yaml
@@ -140,6 +152,7 @@ docs/
   index.html
   quick-start.md
   architecture.md
+  subagents.md
   birth.md
   workflow-discovery.md
   unpack-and-use.md

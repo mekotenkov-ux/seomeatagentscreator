@@ -16,19 +16,22 @@
 3. Trigger Lab.
 4. Output Eval Lab.
 5. Context Budget.
-6. Runtime Matrix.
-7. Birth And IDE Adaptation: runtime profile, birth plan, environment readiness, project context, first response rule, and native consolidation policy.
-8. Tool and Permission Gates.
-9. Trust Report.
-10. Package and Install Simulation.
-11. Review Studio.
-12. Evidence Ledger and Claim Guard.
-13. Operations Loop.
+6. Subagent Orchestration And Eval: single-agent baseline, topology, roles, task/result contracts, permissions, isolation, lifecycle, synthesis, provenance and measured delta.
+7. Runtime Matrix.
+8. Birth And IDE Adaptation: runtime profile, birth plan, environment readiness, project context, first response rule, and native consolidation policy.
+9. Tool and Permission Gates.
+10. Trust Report.
+11. Package and Install Simulation.
+12. Review Studio.
+13. Evidence Ledger and Claim Guard.
+14. Operations Loop.
 
 ## Anti-overclaim rules
 
 - Planned work is not evidence.
 - Self-review is not independent audit.
+- A boolean independent flag is not provenance of an independent run.
+- More agents, completed workers, or internal agreement are not evidence of better results without a single-agent comparison.
 - Recorded fixtures are not executed evidence.
 - Pending human review is not approval.
 - Metadata fallback is not native permission enforcement.

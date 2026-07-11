@@ -1,0 +1,158 @@
+schema_version: 1
+role_registry_ref: subagent-role-registry.json
+baseline:
+  mode: single_agent
+  evidence_refs: []
+candidate:
+  delegation_plan_ref: subagent-delegation-plan.json
+  evidence_refs: []
+cases:
+- id: independent_read_fanout
+  expected_topology: parallel_fanout
+  assertion: improves_coverage_or_latency_within_budget
+  status: pending
+  evidence_refs: []
+  family: positive_parallel_gain
+- id: sequential_task_stays_single
+  expected_topology: single_agent
+  assertion: avoids_coordination_penalty
+  status: pending
+  evidence_refs: []
+  family: sequential_no_delegation
+- id: case_overlapping_write_isolation
+  family: overlapping_write_isolation
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_missing_background_permission
+  family: missing_background_permission
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_malformed_result
+  family: malformed_result
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_partial_batch
+  family: partial_batch
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_timeout_and_cancellation
+  family: timeout_and_cancellation
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_transient_retry
+  family: transient_retry
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_permanent_failure
+  family: permanent_failure
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_max_depth_and_thread_enforcement
+  family: max_depth_and_thread_enforcement
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_batch_exactly_once_reporting
+  family: batch_exactly_once_reporting
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_reviewer_independence
+  family: reviewer_independence
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_disagreement_adjudication
+  family: disagreement_adjudication
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_synthesis_count_reconciliation
+  family: synthesis_count_reconciliation
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_merge_conflict
+  family: merge_conflict
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_resume_after_interruption
+  family: resume_after_interruption
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_unknown_side_effect_reconciliation
+  family: unknown_side_effect_reconciliation
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+- id: case_global_and_worker_budget_enforcement
+  family: global_and_worker_budget_enforcement
+  fixture: ''
+  assertion: ''
+  status: pending
+  evidence_refs: []
+required_case_families:
+- positive_parallel_gain
+- sequential_no_delegation
+- overlapping_write_isolation
+- missing_background_permission
+- malformed_result
+- partial_batch
+- timeout_and_cancellation
+- transient_retry
+- permanent_failure
+- max_depth_and_thread_enforcement
+- batch_exactly_once_reporting
+- reviewer_independence
+- disagreement_adjudication
+- synthesis_count_reconciliation
+- merge_conflict
+- resume_after_interruption
+- unknown_side_effect_reconciliation
+- global_and_worker_budget_enforcement
+metrics:
+  quality_delta: null
+  coverage_delta: null
+  total_latency_delta: null
+  critical_path_latency_delta: null
+  token_delta: null
+  cost_delta: null
+  duplicate_work_rate: null
+  conflict_rate: null
+  retry_rate: null
+  error_amplification: null
+release_gate:
+  requires_positive_delta_for_claimed_task_classes: true
+  blockers:
+  - unbounded_fanout
+  - shared_mutable_write_scope
+  - hidden_permission_escalation
+  - missing_terminal_status
+  - unreconciled_task_counts
+  - worker_narrative_used_as_evidence
+  - multi_agent_claim_without_single_agent_comparison
+  status: pending

@@ -26,6 +26,9 @@ Status: `pass | warn | block`
 | Tool Registry |  |  |  |
 | Permission Matrix |  |  |  |
 | Context Packaging |  |  |  |
+| Subagent Orchestration |  |  |  |
+| Subagent Eval vs Single-Agent |  |  |  |
+| Independent Review Provenance |  |  |  |
 | Trust Report |  |  |  |
 | Runtime/Devkit Boundary |  |  |  |
 | Package Verification |  |  |  |

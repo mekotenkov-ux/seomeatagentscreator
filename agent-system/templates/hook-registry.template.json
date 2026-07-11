@@ -29,7 +29,13 @@
       },
       "input_schema_ref": "",
       "output_schema_ref": "",
-      "allowed_decisions": ["allow", "deny", "ask", "modify", "observe"],
+      "allowed_decisions": [
+        "allow",
+        "deny",
+        "ask",
+        "modify",
+        "observe"
+      ],
       "risk_class": "",
       "side_effects": [],
       "permission_gate": "",
@@ -39,7 +45,12 @@
       "idempotency": "required|not_applicable|unknown",
       "privacy": {
         "allowed_fields": [],
-        "forbidden_fields": ["credentials", "secrets", "raw_transcript", "shell_history"],
+        "forbidden_fields": [
+          "credentials",
+          "secrets",
+          "raw_transcript",
+          "shell_history"
+        ],
         "retention": ""
       },
       "loop_guard": {
@@ -56,6 +67,72 @@
           "degraded_behavior": ""
         }
       ],
+      "test_case_ids": [],
+      "disable_or_rollback": "",
+      "owner": "",
+      "evidence_refs": []
+    },
+    {
+      "hook_id": "subagent_lifecycle_guard",
+      "status": "candidate|active|disabled|retired",
+      "purpose": "Enforce authorization, budgets, isolation, result contract, cancellation, and child cleanup around subagent lifecycle.",
+      "event_family": "subagent_start_stop",
+      "matcher": {
+        "tool_classes": [
+          "subagent_spawn",
+          "subagent_stop"
+        ],
+        "path_scope": [],
+        "action_risks": [
+          "subagent",
+          "background_worker",
+          "parallel_write"
+        ]
+      },
+      "handler": {
+        "type": "command|http|mcp_tool|prompt|agent|runtime_native",
+        "entrypoint": "",
+        "dependencies": []
+      },
+      "input_schema_ref": "subagent-task-contract.json",
+      "output_schema_ref": "subagent-result.json",
+      "allowed_decisions": [
+        "allow",
+        "deny",
+        "ask",
+        "observe"
+      ],
+      "risk_class": "subagent",
+      "side_effects": [
+        "spawn_or_stop_worker"
+      ],
+      "permission_gate": "explicit user, workflow, or platform-policy authorization",
+      "timeout_ms": 5000,
+      "max_retries": 0,
+      "fail_mode": "closed|escalate",
+      "idempotency": "required",
+      "privacy": {
+        "allowed_fields": [
+          "task ids",
+          "role",
+          "status",
+          "usage",
+          "artifact refs"
+        ],
+        "forbidden_fields": [
+          "credentials",
+          "secrets",
+          "raw_transcript",
+          "shell_history"
+        ],
+        "retention": ""
+      },
+      "loop_guard": {
+        "max_continuations": 0,
+        "max_calls_per_session": 0
+      },
+      "audit_artifact": "subagent-run-ledger.jsonl",
+      "target_mappings": [],
       "test_case_ids": [],
       "disable_or_rollback": "",
       "owner": "",
