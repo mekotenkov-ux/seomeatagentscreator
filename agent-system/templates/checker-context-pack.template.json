@@ -1,43 +1,102 @@
 {
-  "schema_version": 1,
-  "pack_id": "",
-  "objective": "",
-  "scenario": "",
-  "frozen_criteria": [],
-  "allowed_files": [],
-  "compact_artifacts": [
-    {
-      "path": "",
-      "kind": "csv|tsv|json|jsonl|markdown|sqlite|other",
-      "source_of_truth": false,
-      "row_count": null,
-      "summary": ""
-    }
-  ],
-  "tool_observations": [],
-  "skip_records": [],
-  "forbidden_actions": [],
-  "forbidden_context": [
-    "hidden desired verdict",
-    "intended fix",
-    "whole workspace unless explicitly allowed"
-  ],
-  "expected_report_schema": "checker-report.template.json",
-  "claim_boundary": [],
-  "allowed_actions": [],
-  "tool_allowlist": [],
-  "permission_scope": [],
-  "trust_labels": [],
-  "snapshot_or_hash_refs": [],
-  "freshness_checked_at": "",
-  "context_budget": {
-    "max_bytes": null,
-    "max_rows": null,
-    "max_files": null,
-    "enforcement": "runtime_enforced|advisory|unknown"
-  },
-  "full_artifact_load_reason": "",
-  "task_id": "",
-  "role_id": "",
-  "write_ownership": {}
+    "schema_version":  1,
+    "pack_id":  "",
+    "objective":  "",
+    "scenario":  "",
+    "frozen_criteria":  [
+
+                        ],
+    "allowed_files":  [
+
+                      ],
+    "compact_artifacts":  [
+                              {
+                                  "path":  "",
+                                  "kind":  "csv|tsv|json|jsonl|markdown|sqlite|other",
+                                  "source_of_truth":  false,
+                                  "row_count":  null,
+                                  "summary":  ""
+                              }
+                          ],
+    "tool_observations":  [
+
+                          ],
+    "skip_records":  [
+
+                     ],
+    "forbidden_actions":  [
+
+                          ],
+    "forbidden_context":  [
+                              "hidden desired verdict",
+                              "intended fix",
+                              "whole workspace unless explicitly allowed"
+                          ],
+    "expected_report_schema":  "checker-report.template.json",
+    "claim_boundary":  [
+
+                       ],
+    "allowed_actions":  [
+
+                        ],
+    "tool_allowlist":  [
+
+                       ],
+    "permission_scope":  [
+
+                         ],
+    "trust_labels":  [
+
+                     ],
+    "snapshot_or_hash_refs":  [
+
+                              ],
+    "freshness_checked_at":  "",
+    "context_budget":  {
+                           "max_bytes":  null,
+                           "max_rows":  null,
+                           "max_files":  null,
+                           "enforcement":  "runtime_enforced|advisory|unknown"
+                       },
+    "full_artifact_load_reason":  "",
+    "task_id":  "",
+    "role_id":  "",
+    "write_ownership":  {
+
+                        },
+    "context_items":  [
+                          {
+                              "item_id":  "",
+                              "artifact_ref":  "",
+                              "provenance_ref":  "",
+                              "integrity":  "trusted_control|trusted_data|untrusted_data|unknown",
+                              "classification":  "public|internal|private|secret|unknown",
+                              "purpose":  "",
+                              "allowed_sinks":  [
+
+                                                ],
+                              "retention_until":  "",
+                              "content_hash":  ""
+                          }
+                      ],
+    "sufficiency":  {
+                        "required_question_ids":  [
+
+                                                  ],
+                        "covered_question_ids":  [
+
+                                                 ],
+                        "missing_evidence":  [
+
+                                             ],
+                        "contradictions":  [
+
+                                           ],
+                        "bounded_next_queries":  [
+
+                                                 ],
+                        "status":  "unverified|sufficient|insufficient|blocked",
+                        "stop_reason":  "",
+                        "budget_remaining_ref":  ""
+                    }
 }

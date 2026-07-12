@@ -11,9 +11,10 @@
 1. Прочитайте `agent-system/AGENTS.md`.
 2. Для нового агента начните с `agent-system/skills/grill-me/SKILL.md`, затем проведите workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
 3. До написания адаптеров заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
-4. До заявлений о готовности создайте Trigger Lab, Output Eval Lab, tool registry, permission matrix, release review и package verification.
+4. До заявлений о готовности создайте versioned system identity, harness boundary, default-deny permission policy, approval ledger, append-only run events, Eval Validity, Trigger Lab, trajectory-aware Output Eval и Assumption Registry. Затем соберите package, проверьте fresh install и independent review; только после этого закройте SHA-256 evidence bundle и финальный machine release decision по всем 13 gates.
 5. Если пользователь дает ссылки на репозитории или инструменты, индексируйте их через `agent-system/skills/repo-tool-librarian/SKILL.md`; не встраивайте их без отдельного явного запроса.
 6. Держите репозиторий универсальным: публикуйте только повторяемую методику, шаблоны, инструкции и чеклисты.
+7. Используйте `agent-system/references/frontier-harness-engineering.md`; research-only приемы остаются experiment/defer до локального matched-budget holdout.
 
 ## Язык
 

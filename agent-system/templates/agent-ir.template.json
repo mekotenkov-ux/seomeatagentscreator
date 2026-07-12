@@ -1,181 +1,330 @@
 {
-  "name": "",
-  "version": "0.1.0",
-  "maturity": "production",
-  "job_to_be_done": "",
-  "target_users": [],
-  "primary_outputs": [],
-  "scope": {
-    "in": [],
-    "out": [],
-    "deferred": []
-  },
-  "trigger_surface": {
-    "should_trigger": [],
-    "should_not_trigger": [],
-    "near_neighbors": [],
-    "adversarial_cases": [],
-    "confusion_cases": [],
-    "holdout_cases": []
-  },
-  "autonomy": {
-    "level": "draft_only",
-    "allowed_actions": [],
-    "approval_gated_actions": [],
-    "forbidden_actions": []
-  },
-  "risk_level": [],
-  "data_sources": [],
-  "workflow": {
-    "steps": [],
-    "decision_points": [],
-    "failure_modes": [],
-    "stop_conditions": []
-  },
-  "loop_contract": {
-    "trigger": "",
-    "state_read": [],
-    "context_build": [],
-    "tool_proposal": "",
-    "schema_validation": "",
-    "permission_decision": "",
-    "execution_or_skip": "",
-    "structured_observation": "",
-    "checker_pass": "",
-    "state_write": "",
-    "repair_policy": "",
-    "hard_stop": ""
-  },
-  "budgets": {
-    "max_steps": null,
-    "max_tool_calls": null,
-    "max_runtime_minutes": null,
-    "max_tokens": null,
-    "max_cost": null,
-    "max_repair_iterations": null,
-    "max_subagent_calls_per_stage": null
-  },
-  "tool_contracts": [],
-  "permission_model": {},
-  "state_and_memory": {
-    "state_files": [],
-    "memory_files": [],
-    "artifact_roots": [],
-    "forbidden_memory_content": []
-  },
-  "context_packaging": {
-    "default_pack_schema": "",
-    "compact_artifact_formats": [],
-    "forbidden_raw_loads": [],
-    "subagent_call_budget": {}
-  },
-  "eval_plan": {
-    "trigger_lab": "",
-    "output_eval_lab": "",
-    "package_checks": [],
-    "install_simulation": "",
-    "workflow_lab": "",
-    "stage_quality_gates": "",
-    "negative_fixtures": [],
-    "birth_validation_gates": "",
-    "workflow_discovery_gate": "",
-    "subagent_eval_lab": ""
-  },
-  "final_evidence": {
-    "contract": "",
-    "runbook": "",
-    "external_evidence_items": [],
-    "descope_policy": "",
-    "forbidden_claims_until_external_pass": []
-  },
-  "claim_boundary": {
-    "accepted_evidence": [],
-    "pending_evidence": [],
-    "known_gaps": [],
-    "allowed_claims": [],
-    "forbidden_claims": []
-  },
-  "living_adaptation": {
-    "workflow_ledger": "",
-    "subagent_ledger": "",
-    "skill_candidate_registry": "",
-    "method_lesson_registry": "",
-    "promotion_gate": ""
-  },
-  "trust_boundary": {
-    "trusted_instructions": [],
-    "untrusted_data": [],
-    "secret_policy": "",
-    "network_policy": ""
-  },
-  "target_platforms": [],
-  "target_conformance_matrix": "",
-  "adapter_parity": [],
-  "install_birth": {
-    "birth_contract": "",
-    "birth_file": "",
-    "runtime_profile": "",
-    "birth_plan": "",
-    "environment_readiness": "",
-    "project_context": "",
-    "environment_phase": "detect runtime, native entrypoint, workspace, state paths, permissions, and cleanup policy before project inspection",
-    "project_phase": "ask one material context question at a time after environment adaptation passes, is declined, or is explicitly deferred",
-    "first_response_policy": "bare greeting starts mission-specific intake, not package maintenance",
-    "ambiguous_runtime_policy": "ask one clarifying question and skip adapter cleanup",
-    "protected_paths": [],
-    "post_birth_cleanup": []
-  },
-  "owner": "",
-  "review_cadence": "",
-  "known_limits": [],
-  "workflow_discovery": {
-    "notes": "",
-    "candidate_loop_ledger": "",
-    "selected_workflow_spec": "",
-    "trigger": "",
-    "inputs": [],
-    "actors": [],
-    "tools_or_channels": [],
-    "state": [],
-    "artifacts": [],
-    "checkpoints": [],
-    "done_signal": "",
-    "blocking_questions": []
-  },
-  "repo_tool_library": {
-    "library_path": "",
-    "candidate_items": [],
-    "selected_items": [],
-    "integration_requires_explicit_approval": true,
-    "integration_gate": "license, security, maintenance, runtime compatibility, validation, rollback"
-  },
-  "subagent_orchestration": {
-    "role_registry": "",
-    "delegation_plan": "",
-    "default_topology": "single_agent",
-    "allowed_topologies": [],
-    "authorization_sources": [],
-    "default_context_mode": "fresh",
-    "permission_inheritance": "",
-    "write_isolation_policy": "",
-    "result_schema": "subagent-result.json",
-    "run_ledger": "",
-    "single_agent_baseline_required": true,
-    "subagent_eval_lab": "",
-    "max_depth": 1,
-    "terminal_statuses": [
-      "completed",
-      "partial",
-      "failed",
-      "rejected",
-      "timed_out",
-      "budget_exhausted",
-      "cancelled",
-      "unknown_outcome"
-    ],
-    "interrupted_statuses": [
-      "input_required",
-      "auth_required"
-    ]
-  }
+    "name":  "",
+    "version":  "0.1.0",
+    "maturity":  "production",
+    "job_to_be_done":  "",
+    "target_users":  [
+
+                     ],
+    "primary_outputs":  [
+
+                        ],
+    "scope":  {
+                  "in":  [
+
+                         ],
+                  "out":  [
+
+                          ],
+                  "deferred":  [
+
+                               ]
+              },
+    "trigger_surface":  {
+                            "should_trigger":  [
+
+                                               ],
+                            "should_not_trigger":  [
+
+                                                   ],
+                            "near_neighbors":  [
+
+                                               ],
+                            "adversarial_cases":  [
+
+                                                  ],
+                            "confusion_cases":  [
+
+                                                ],
+                            "holdout_cases":  [
+
+                                              ]
+                        },
+    "autonomy":  {
+                     "level":  "draft_only",
+                     "allowed_actions":  [
+
+                                         ],
+                     "approval_gated_actions":  [
+
+                                                ],
+                     "forbidden_actions":  [
+
+                                           ]
+                 },
+    "risk_level":  [
+
+                   ],
+    "data_sources":  [
+
+                     ],
+    "workflow":  {
+                     "steps":  [
+
+                               ],
+                     "decision_points":  [
+
+                                         ],
+                     "failure_modes":  [
+
+                                       ],
+                     "stop_conditions":  [
+
+                                         ]
+                 },
+    "loop_contract":  {
+                          "trigger":  "",
+                          "state_read":  [
+
+                                         ],
+                          "context_build":  [
+
+                                            ],
+                          "tool_proposal":  "",
+                          "schema_validation":  "",
+                          "permission_decision":  "",
+                          "execution_or_skip":  "",
+                          "structured_observation":  "",
+                          "checker_pass":  "",
+                          "state_write":  "",
+                          "repair_policy":  "",
+                          "hard_stop":  ""
+                      },
+    "budgets":  {
+                    "max_steps":  null,
+                    "max_tool_calls":  null,
+                    "max_runtime_minutes":  null,
+                    "max_tokens":  null,
+                    "max_cost":  null,
+                    "max_repair_iterations":  null,
+                    "max_subagent_calls_per_stage":  null
+                },
+    "tool_contracts":  [
+
+                       ],
+    "permission_model":  {
+
+                         },
+    "state_and_memory":  {
+                             "state_files":  [
+
+                                             ],
+                             "memory_files":  [
+
+                                              ],
+                             "artifact_roots":  [
+
+                                                ],
+                             "forbidden_memory_content":  [
+
+                                                          ]
+                         },
+    "context_packaging":  {
+                              "default_pack_schema":  "",
+                              "compact_artifact_formats":  [
+
+                                                           ],
+                              "forbidden_raw_loads":  [
+
+                                                      ],
+                              "subagent_call_budget":  {
+
+                                                       }
+                          },
+    "eval_plan":  {
+                      "trigger_lab":  "",
+                      "output_eval_lab":  "",
+                      "package_checks":  [
+
+                                         ],
+                      "install_simulation":  "",
+                      "workflow_lab":  "",
+                      "stage_quality_gates":  "",
+                      "negative_fixtures":  [
+
+                                            ],
+                      "birth_validation_gates":  "",
+                      "workflow_discovery_gate":  "",
+                      "subagent_eval_lab":  ""
+                  },
+    "final_evidence":  {
+                           "contract":  "",
+                           "runbook":  "",
+                           "external_evidence_items":  [
+
+                                                       ],
+                           "descope_policy":  "",
+                           "forbidden_claims_until_external_pass":  [
+
+                                                                    ]
+                       },
+    "claim_boundary":  {
+                           "accepted_evidence":  [
+
+                                                 ],
+                           "pending_evidence":  [
+
+                                                ],
+                           "known_gaps":  [
+
+                                          ],
+                           "allowed_claims":  [
+
+                                              ],
+                           "forbidden_claims":  [
+
+                                                ]
+                       },
+    "living_adaptation":  {
+                              "workflow_ledger":  "",
+                              "subagent_ledger":  "",
+                              "skill_candidate_registry":  "",
+                              "method_lesson_registry":  "",
+                              "promotion_gate":  ""
+                          },
+    "trust_boundary":  {
+                           "trusted_instructions":  [
+
+                                                    ],
+                           "untrusted_data":  [
+
+                                              ],
+                           "secret_policy":  "",
+                           "network_policy":  ""
+                       },
+    "target_platforms":  [
+
+                         ],
+    "target_conformance_matrix":  "",
+    "adapter_parity":  [
+
+                       ],
+    "install_birth":  {
+                          "birth_contract":  "",
+                          "birth_file":  "",
+                          "runtime_profile":  "",
+                          "birth_plan":  "",
+                          "environment_readiness":  "",
+                          "project_context":  "",
+                          "environment_phase":  "detect runtime, native entrypoint, workspace, state paths, permissions, and cleanup policy before project inspection",
+                          "project_phase":  "ask one material context question at a time after environment adaptation passes, is declined, or is explicitly deferred",
+                          "first_response_policy":  "bare greeting starts mission-specific intake, not package maintenance",
+                          "ambiguous_runtime_policy":  "ask one clarifying question and skip adapter cleanup",
+                          "protected_paths":  [
+
+                                              ],
+                          "post_birth_cleanup":  [
+
+                                                 ]
+                      },
+    "owner":  "",
+    "review_cadence":  "",
+    "known_limits":  [
+
+                     ],
+    "workflow_discovery":  {
+                               "notes":  "",
+                               "candidate_loop_ledger":  "",
+                               "selected_workflow_spec":  "",
+                               "trigger":  "",
+                               "inputs":  [
+
+                                          ],
+                               "actors":  [
+
+                                          ],
+                               "tools_or_channels":  [
+
+                                                     ],
+                               "state":  [
+
+                                         ],
+                               "artifacts":  [
+
+                                             ],
+                               "checkpoints":  [
+
+                                               ],
+                               "done_signal":  "",
+                               "blocking_questions":  [
+
+                                                      ]
+                           },
+    "repo_tool_library":  {
+                              "library_path":  "",
+                              "candidate_items":  [
+
+                                                  ],
+                              "selected_items":  [
+
+                                                 ],
+                              "integration_requires_explicit_approval":  true,
+                              "integration_gate":  "license, security, maintenance, runtime compatibility, validation, rollback"
+                          },
+    "subagent_orchestration":  {
+                                   "role_registry":  "",
+                                   "delegation_plan":  "",
+                                   "default_topology":  "single_agent",
+                                   "allowed_topologies":  [
+
+                                                          ],
+                                   "authorization_sources":  [
+
+                                                             ],
+                                   "default_context_mode":  "fresh",
+                                   "permission_inheritance":  "",
+                                   "write_isolation_policy":  "",
+                                   "result_schema":  "subagent-result.json",
+                                   "run_ledger":  "",
+                                   "single_agent_baseline_required":  true,
+                                   "subagent_eval_lab":  "",
+                                   "max_depth":  1,
+                                   "terminal_statuses":  [
+                                                             "completed",
+                                                             "partial",
+                                                             "failed",
+                                                             "rejected",
+                                                             "timed_out",
+                                                             "budget_exhausted",
+                                                             "cancelled",
+                                                             "unknown_outcome"
+                                                         ],
+                                   "interrupted_statuses":  [
+                                                                "input_required",
+                                                                "auth_required"
+                                                            ]
+                               },
+    "system_identity":  {
+                            "system_release_id":  "",
+                            "harness_boundary_ref":  "",
+                            "permission_policy_ref":  "",
+                            "run_event_contract_ref":  "",
+                            "model_runtime_signature":  ""
+                        },
+    "harness_evolution":  {
+                              "assumption_registry_ref":  "",
+                              "ablation_lab_ref":  "",
+                              "model_or_runtime_change_triggers_ablation":  null,
+                              "automated_harness_search":  "disabled|experiment|approved"
+                          },
+    "eval_validity":  {
+                          "validity_report_ref":  "",
+                          "frozen_holdout_ref":  "",
+                          "repeated_trial_policy_ref":  "",
+                          "infrastructure_calibration_ref":  "",
+                          "required_grader_families":  [
+                                                           "outcome",
+                                                           "trajectory",
+                                                           "boundary",
+                                                           "stability"
+                                                       ]
+                      },
+    "research_adoption_policy":  {
+                                     "decision":  "adopt|experiment|defer",
+                                     "evidence_score":  null,
+                                     "evidence_refs":  [
+
+                                                       ],
+                                     "review_due_at":  ""
+                                 }
 }

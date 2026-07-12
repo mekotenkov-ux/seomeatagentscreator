@@ -1,17 +1,39 @@
 {
-  "schema_version": 1,
-  "generated_at": "<iso-8601>",
-  "workspace_root": "<relative-or-redacted>",
-  "package_root": "<relative-or-redacted>",
-  "active_runtime": "codex|claude|cursor|vscode-copilot|github-copilot|opencode|gemini-cli|cli|unknown",
-  "confidence": "explicit|high|medium|low|ambiguous",
-  "detection_signals": [],
-  "native_entrypoints_found": [],
-  "active_entrypoint": "",
-  "is_source_runtime": false,
-  "cleanup_allowed": false,
-  "state_root": "",
-  "artifact_root": "",
-  "blocked_reasons": [],
-  "next_valid_actions": []
+    "schema_version":  1,
+    "generated_at":  "\u003ciso-8601\u003e",
+    "workspace_root":  "\u003crelative-or-redacted\u003e",
+    "package_root":  "\u003crelative-or-redacted\u003e",
+    "active_runtime":  "codex|claude|cursor|vscode-copilot|github-copilot|opencode|gemini-cli|cli|unknown",
+    "confidence":  "explicit|high|medium|low|ambiguous",
+    "detection_signals":  [
+
+                          ],
+    "native_entrypoints_found":  [
+
+                                 ],
+    "active_entrypoint":  "",
+    "is_source_runtime":  false,
+    "cleanup_allowed":  false,
+    "state_root":  "",
+    "artifact_root":  "",
+    "blocked_reasons":  [
+
+                        ],
+    "next_valid_actions":  [
+
+                           ],
+    "system_release_id":  "",
+    "harness_boundary_ref":  "",
+    "runtime_image_hash":  "",
+    "dependency_lock_hash":  "",
+    "resource_profile_ref":  "",
+    "network_policy_ref":  "",
+    "credential_broker_ref":  "",
+    "trust_granted":  null,
+    "project_config_load_allowed":  null,
+    "replay_supported":  null,
+    "checkpoint_supported":  null,
+    "rehydration_supported":  null,
+    "async_events_supported":  null,
+    "time_semantics_ref":  ""
 }

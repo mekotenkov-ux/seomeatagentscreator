@@ -1,53 +1,80 @@
 {
-  "schema_version": 2,
-  "independent_execution": false,
-  "self_review_only": false,
-  "reviews": [
-    {
-      "id": "first-run-onboarding",
-      "kind": "scenario|clean-auditor",
-      "reviewer_id": "",
-      "independent": false,
-      "status": "pending|pass|warn|fail|blocked",
-      "inspected_files": [],
-      "work_trace": [],
-      "confusion_points": [],
-      "findings": [],
-      "subagent_run_id": "",
-      "parent_workflow_run_id": "",
-      "role_id": "",
-      "runtime": "",
-      "model": "",
-      "prompt_hash": "",
-      "context_pack_ref": "",
-      "context_hash": "",
-      "tools": [],
-      "permissions": [],
-      "isolation_mode": "",
-      "trace_ref": "",
-      "result_ref": "",
-      "evidence_refs": []
-    }
-  ],
-  "required_review_ids": [
-    "first-run-onboarding",
-    "happy-path-full-run",
-    "missing-input-or-permission",
-    "direct-skill-or-narrow-workflow",
-    "handoff-export-install",
-    "memory-state-living-adaptation",
-    "consistency-routing-auditor",
-    "modern-agent-system-auditor",
-    "export-boundary-auditor",
-    "claim-boundary-auditor"
-  ],
-  "findings": [
-    {
-      "id": "",
-      "status": "fixed|rejected_with_reason|known_limitation|not_applicable",
-      "reason": "",
-      "evidence_refs": []
-    }
-  ],
-  "all_findings_dispositioned": false
+    "schema_version":  3,
+    "independent_execution":  false,
+    "self_review_only":  false,
+    "reviews":  [
+                    {
+                        "id":  "first-run-onboarding",
+                        "kind":  "scenario|clean-auditor",
+                        "reviewer_id":  "",
+                        "independent":  false,
+                        "status":  "pending|pass|warn|fail|blocked",
+                        "inspected_files":  [
+
+                                            ],
+                        "work_trace":  [
+
+                                       ],
+                        "confusion_points":  [
+
+                                             ],
+                        "findings":  [
+
+                                     ],
+                        "subagent_run_id":  "",
+                        "parent_workflow_run_id":  "",
+                        "role_id":  "",
+                        "runtime":  "",
+                        "model":  "",
+                        "prompt_hash":  "",
+                        "context_pack_ref":  "",
+                        "context_hash":  "",
+                        "tools":  [
+
+                                  ],
+                        "permissions":  [
+
+                                        ],
+                        "isolation_mode":  "",
+                        "trace_ref":  "",
+                        "result_ref":  "",
+                        "evidence_refs":  [
+
+                                          ]
+                    }
+                ],
+    "required_review_ids":  [
+                                "first-run-onboarding",
+                                "happy-path-full-run",
+                                "missing-input-or-permission",
+                                "direct-skill-or-narrow-workflow",
+                                "handoff-export-install",
+                                "memory-state-living-adaptation",
+                                "consistency-routing-auditor",
+                                "modern-agent-system-auditor",
+                                "export-boundary-auditor",
+                                "claim-boundary-auditor"
+                            ],
+    "findings":  [
+                     {
+                         "id":  "",
+                         "status":  "fixed|rejected_with_reason|known_limitation|not_applicable",
+                         "reason":  "",
+                         "evidence_refs":  [
+
+                                           ]
+                     }
+                 ],
+    "all_findings_dispositioned":  false,
+    "system_release_id":  "",
+    "report_id":  "",
+    "gate_id":  "independent_review",
+    "status":  "unverified",
+    "completed_at":  "",
+    "blockers":  [
+
+                 ],
+    "warnings":  [
+
+                 ]
 }

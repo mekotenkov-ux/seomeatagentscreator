@@ -1,0 +1,45 @@
+version: 2
+lab_id: ""
+system_release_id: ""
+system_identity_ref: ""
+assumption_registry_ref: ""
+trigger: "model_change|runtime_change|tool_change|task_distribution_change|scheduled_review|manual"
+frozen_holdout_ref: ""
+baseline:
+  artifact_ref: ""
+  configuration_hash: ""
+  budgets_ref: ""
+  trials_per_task: null
+cases:
+  - case_id: ""
+    assumption_id: ""
+    intervention: "remove_one_component|replace_component|reduce_component"
+    candidate_configuration_hash: ""
+    one_intervention_only: null
+    matched_budgets: null
+    capability_suite_ref: ""
+    regression_suite_ref: ""
+    safety_suite_ref: ""
+    holdout_result_ref: ""
+    metrics:
+      quality_delta: null
+      safety_delta: null
+      latency_delta: null
+      token_delta: null
+      cost_delta: null
+      infrastructure_error_delta: null
+      confidence_interval_ref: ""
+    decision: "pending|remove|retain|replace|blocked"
+    decision_reason: ""
+    deterministic_control_rationale: ""
+    evidence_refs: []
+release_rule:
+  all_active_assumptions_covered: null
+  pending_or_blocked_cases_fail_release: true
+  retain_requires_measured_lift_or_deterministic_control: true
+  safety_non_inferiority_required: true
+  final_holdout_hidden_from_optimizer: true
+result:
+  status: "pending"
+  blockers: []
+  warnings: []

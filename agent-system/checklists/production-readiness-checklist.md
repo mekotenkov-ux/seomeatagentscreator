@@ -37,6 +37,17 @@
 - [ ] State/memory вне истории чата.
 - [ ] Workspace hygiene определен.
 
+## Harness Boundary And Authority
+
+- [ ] Полная system identity фиксирует model, harness, instructions, tools, permissions, runtime, dependencies и graders.
+- [ ] Session log, harness, sandbox и artifact store имеют отдельные интерфейсы и failure domains.
+- [ ] State переживает loss ephemeral compute; crash recovery или explicit not-applicable reason проверены.
+- [ ] Permission policy default-deny и исполняется runtime, а не prompt.
+- [ ] Approvals связаны с principal, exact action, normalized arguments, resource version, risk, budget и expiry.
+- [ ] Credentials не входят в sandbox; scoped broker/proxy, revoke и cleanup проверены.
+- [ ] External content, project config, tool results, subagent outputs и memory имеют provenance/trust labels.
+- [ ] Project-local config/hooks не исполняются до trust decision; symlinks разрешаются до path check.
+- [ ] Append-only run events покрывают все side-effecting calls, permission decisions, transfers и state deltas.
 ## Subagent Orchestration
 
 - [ ] Single-agent baseline создан до multi-agent claim.
@@ -62,6 +73,19 @@
 - [ ] Package verification есть.
 - [ ] Install simulation есть или blocker записан.
 
+## Eval Validity And Harness Evolution
+
+- [ ] Eval validity report имеет полный task inventory и reconciled dispositions.
+- [ ] У задач есть reference solution/feasibility witness и requirement-to-grader map.
+- [ ] Frozen holdout скрыт от optimizer; contamination, shortcuts, leakage и ambiguity проверены.
+- [ ] Baseline и candidate используют matched budgets, infrastructure и task distribution.
+- [ ] Stochastic workflows имеют repeated trials, clean resets, confidence intervals и all-attempt reporting.
+- [ ] Outcome, trajectory, boundary и stability graders покрыты отдельно.
+- [ ] Correct answer после hidden boundary violation всегда считается fail.
+- [ ] Infrastructure errors и A/A noise отделены от model/task failures.
+- [ ] LLM judge откалиброван и не является sole safety authority.
+- [ ] Harness Assumption Registry заполнен; model/runtime/tool changes запускают ablation.
+- [ ] Machine-readable release decision reconciles every required gate and derives allowed claims.
 ## Birth And IDE Adaptation
 
 - [ ] Birth contract создан до адаптеров.
@@ -86,6 +110,10 @@
 ## Living And Packaging
 
 - [ ] Skill candidates не считаются implemented skills без promotion gate.
+- [ ] Production traces используются только из approved redacted source path.
+- [ ] Living adaptation остается proposal-only до targeted, regression, safety и hidden-holdout gates.
+- [ ] Optimizer не может менять graders, permissions, logs, budgets, sandbox или final holdout.
+- [ ] Canary, kill switch, rollback и human approval доказаны до durable update.
 - [ ] Independent review summary machine-readable или blocker записан.
 - [ ] Runtime install проверяется из финального zip.
 - [ ] Birth flow отделяет environment adaptation от project adaptation.

@@ -1,3 +1,6 @@
+---
+---
+
 # Быстрый старт
 
 ## 1. Создайте рабочий репозиторий агента
@@ -7,11 +10,21 @@
 ```text
 my-agent-dev/
   agent-system/
-  package/
+  runtime/
   devkit/
 ```
 
-Скопируйте `agent-system/` из этого репозитория.
+Рекомендуемый вариант - клонировать весь репозиторий: так рядом остаются шаблоны, валидаторы и negative fixtures.
+
+При встраивании в существующий проект минимальный development layout включает:
+
+```text
+agent-system/
+scripts/
+requirements-dev.txt
+```
+
+Один `agent-system/` можно переносить как методическую/runtime-часть, но из него нельзя запускать package, install и release validators.
 
 ## 2. Запустите preflight
 
@@ -55,7 +68,20 @@ agent-system/templates/agent-ir.template.json
 
 Заполните его до создания платформенных файлов. IR - главный смысловой контракт, а не документация после факта.
 
-## 4. Создайте birth contract
+## 4. Зафиксируйте harness boundary
+
+До расширения vertical slice заполните:
+
+```text
+agent-system/templates/harness-boundary.template.json
+agent-system/templates/permission-policy.template.json
+agent-system/templates/run-event.template.json
+agent-system/templates/harness-assumption-registry.template.json
+```
+
+System identity связывает model, instructions, tools, permissions, runtime и graders. Session, harness, sandbox, artifacts и credentials должны иметь отдельные failure boundaries. Permission policy работает по default deny, а external content остается untrusted data и не может расширять authority.
+
+## 5. Создайте birth contract
 
 Скопируйте и адаптируйте:
 
@@ -70,7 +96,7 @@ agent-system/templates/birth-validation-gates.template.json
 
 Birth contract нужен до платформенных адаптеров. Он фиксирует, как агент при первом запуске определяет runtime, выбирает активный adapter, проверяет окружение, собирает project context и где останавливается до первой реальной задачи.
 
-## 5. Соберите первый vertical slice
+## 6. Соберите первый vertical slice
 
 Сначала один полный путь:
 
@@ -85,12 +111,20 @@ Birth contract нужен до платформенных адаптеров. О
 
 Не расширяйте возможности, пока первый путь не проверен.
 
-## 6. Добавьте проверки
+## 7. Добавьте проверки
 
 Минимум:
 
 - `trigger-lab.template.yaml`;
+- `eval-validity-report.template.json`;
 - `output-eval-lab.template.yaml`;
+- `harness-ablation-lab.template.yaml`;
+- `release-decision.template.json`;
+- `release-gate-evidence.template.json`;
+- `evidence-bundle-manifest.template.json`;
+- `external-approval-ledger.template.json`;
+- `final-evidence-runbook.template.md`;
+- `validation-run-matrix.template.yaml`;
 - `tool-registry.template.json`;
 - `release-review.template.md`;
 - `production-readiness-checklist.md`;
@@ -108,27 +142,45 @@ Birth contract нужен до платформенных адаптеров. О
 
 Если workflow использует subagents, сначала докажите пользу против single-agent baseline. Параллельные write workers должны иметь disjoint ownership и отдельные worktrees/containers; result counts и evidence сверяются до synthesis.
 
-## 7. Разделите runtime и devkit
+До любого quality claim валидируйте сами eval tasks, frozen holdout и infrastructure. Output Eval проверяет outcome, trajectory, boundary и stability отдельно, использует repeated trials для stochastic agents и отклоняет правильный ответ после hidden unsafe action. После model/runtime/tool change отметьте impact: затронутые assumptions проходят ablation, остальные получают evidence-backed `not_affected`.
+
+## 8. Разделите runtime и devkit
 
 Runtime - только файлы нормальной работы агента.
 
 Devkit - тесты, fixtures, validation scripts, source materials, audit reports и packaging scripts.
 
-## 8. Отлаживайте через sandbox
+## 9. Отлаживайте через sandbox
 
 Для качественной отладки создайте отдельный sandbox-проект, установите туда runtime и работайте из отдельного чата. Агент-создатель должен читать полный trace из sandbox и чинить исходный пакет.
 
-## 9. Публикуйте только clean package
+## 10. Соберите и установите clean package
 
 Перед публикацией проверьте:
 
-- нет `.env`;
+- нет `.env` и секретов;
 - нет закрытых данных;
 - нет временных рабочих папок и debug-runs;
 - нет доменных скиллов, если пакет универсальный;
 - нет локальных абсолютных путей;
-- нет скрытой зависимости от истории чата.
+- нет скрытой зависимости от истории чата;
+- runtime inventory точно совпадает с содержимым архива;
+- runtime и devkit собраны в разные zip;
+- runtime установлен и проверен из свежей распаковки.
 
-## 10. Проверьте переносимость
+Скопируйте `agent-system/templates/export-manifest.template.json` в корень development repo как `export-manifest.json`, настройте пути относительно этого корня и запустите:
 
-Перед публикацией заполните target conformance matrix, birth protocol, birth validation gates, final evidence contract и runtime/devkit boundary. Если пакет поддерживает несколько платформ, adapters должны быть thin layers поверх одного IR, а не расходящимися копиями промптов.
+```bash
+python -B scripts/verify_public_package.py
+python -B scripts/test_harness_release_controls.py
+python -B scripts/test_export_safety.py
+python -B scripts/build_agent_export.py export-manifest.json --run-install-simulation
+```
+
+## 11. Проверьте переносимость
+
+Заполните target conformance matrix, birth protocol, birth validation gates, final evidence contract и runtime/devkit boundary. Если пакет поддерживает несколько платформ, adapters должны быть thin layers поверх одного IR, а не расходящимися копиями промптов.
+
+## 12. Закройте финальный release decision
+
+Сначала получите package, install и independent-review evidence уже для финальных архивов. Затем соберите evidence bundle с реальными SHA-256 и запустите `scripts/validate_harness_release.py`. Финальный `pass` допустим только при точном прохождении всех 13 обязательных gates; `warn`, `pending` и `not_applicable` остаются вне публичного production claim.

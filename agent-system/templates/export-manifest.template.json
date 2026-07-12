@@ -1,41 +1,78 @@
 {
-  "schema_version": 1,
-  "package": "",
-  "version": "0.1.0",
-  "runtime": {
-    "source_root": "runtime",
-    "staging_dir": "dist/runtime-staging",
-    "zip_path": "dist/runtime.zip",
-    "include": [
-      "AGENTS.md",
-      "agent-ir.json",
-      "skills/**",
-      "references/**",
-      "templates/**",
-      "state/**",
-      "memory/**",
-      "MANIFEST.json",
-      "INSTALL.md"
-    ],
-    "exclude_parts": [
-      "tests",
-      "validation-tests",
-      "source-materials",
-      "agent-workspace",
-      "__pycache__",
-      "node_modules",
-      "browser-profile",
-      "chrome-profile"
-    ],
-    "exclude_suffixes": [".pyc", ".pyo", ".sqlite", ".db", ".zip"]
-  },
-  "devkit": {
-    "source_root": "devkit",
-    "staging_dir": "dist/devkit-staging",
-    "zip_path": "dist/devkit.zip",
-    "include": ["**"]
-  },
-  "required_dot_directories": [],
-  "generate_files_sha256": true,
-  "install_simulation_command": ""
+    "schema_version":  2,
+    "package":  "",
+    "version":  "0.1.0",
+    "system_release_id":  "",
+    "runtime":  {
+                    "source_root":  "runtime",
+                    "staging_dir":  "dist/runtime-staging",
+                    "zip_path":  "dist/runtime.zip",
+                    "package_validation_report":  "dist/package-validation.json",
+                    "install_validation_report":  "dist/install-validation.json",
+                    "include":  [
+                                    "AGENTS.md",
+                                    "agent-ir.json",
+                                    "skills/**",
+                                    "references/**",
+                                    "templates/**",
+                                    "state/**",
+                                    "memory/**",
+                                    "MANIFEST.json",
+                                    "INSTALL.md"
+                                ],
+                    "exclude_parts":  [
+                                          "tests",
+                                          "validation-tests",
+                                          "source-materials",
+                                          "agent-workspace",
+                                          "__pycache__",
+                                          "node_modules",
+                                          "browser-profile",
+                                          "chrome-profile"
+                                      ],
+                    "exclude_suffixes":  [
+                                             ".pyc",
+                                             ".pyo",
+                                             ".sqlite",
+                                             ".db",
+                                             ".zip"
+                                         ],
+                    "runtime_archive_ref":  "runtime-archive"
+                },
+    "devkit":  {
+                   "source_root":  "devkit",
+                   "staging_dir":  "dist/devkit-staging",
+                   "zip_path":  "dist/devkit.zip",
+                   "include":  [
+                                   "**"
+                               ],
+                   "exclude_parts":  [
+                                         ".git",
+                                         "__pycache__",
+                                         "node_modules"
+                                     ],
+                   "exclude_suffixes":  [
+                                            ".pyc",
+                                            ".pyo"
+                                        ]
+               },
+    "required_dot_directories":  [
+
+                                 ],
+    "generate_files_sha256":  true,
+    "install_simulation_command":  [
+                                       "python",
+                                       "-B",
+                                       "{repo_root}/scripts/validate_runtime_install.py",
+                                       "{root}",
+                                       "--system-release-id",
+                                       "{system_release_id}",
+                                       "--runtime-zip",
+                                       "{runtime_zip}",
+                                       "--runtime-archive-ref",
+                                       "{runtime_archive_ref}",
+                                       "--report",
+                                       "{install_report}"
+                                   ],
+    "install_simulation_timeout_seconds":  300
 }

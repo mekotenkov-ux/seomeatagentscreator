@@ -227,6 +227,7 @@
           <a href="birth.html">Birth</a>
           <a href="workflow-discovery.html">Workflows</a>
           <a href="repo-tool-library.html">Repo tools</a>
+          <a href="frontier-harness.html">Harness 2026</a>
         </div>
       </nav>
     </header>
@@ -237,7 +238,7 @@
           <h1>Создавайте агентов как системы, а не как промпты</h1>
           <p class="lead">
             Универсальная методика для Agent/Skill IR, router, skills,
-            typed tools, permission gates, checker loops, evals, release
+            typed tools, runtime authority, trajectory evals, harness ablation, release
             review и переносимых runtime-пакетов.
           </p>
           <div class="actions">
@@ -271,8 +272,13 @@
           <div class="card"><h3>target conformance</h3><p>Adapters для Codex, Claude, Cursor, CLI или других runtimes проверяются против одного Agent/Skill IR.</p></div>
           <div class="card"><h3>hook system</h3><p>Lifecycle hooks автоматически проверяют tool calls, approvals, state handoff и done signal там, где одной инструкции недостаточно.</p></div>
           <div class="card"><h3>subagent orchestration</h3><p>Система выбирает single-agent, handoff, fan-out, critic loop, team или batch по свойствам задачи и проверяет isolation, budgets, lifecycle и результат против baseline.</p></div>
-          <div class="card"><h3>final evidence</h3><p>Local proof, external proof, descopes, independent reviews и forbidden claims разделены машинным контрактом.</p></div>
-          <div class="card"><h3>Runtime/devkit</h3><p>Clean staging, FILES.sha256, zip entry inspection, install simulation и запрет на dev/test/raw artifacts в runtime.</p></div>
+          <div class="card"><h3>harness boundary</h3><p>Session, harness, sandbox, artifacts и credentials разделены, authority исполняется runtime, а external content не расширяет permissions.</p></div>
+          <div class="card"><h3>trajectory eval</h3><p>Outcome, process, boundary и stability проверяются отдельно; правильный ответ после скрытого unsafe action остается fail.</p></div>
+          <div class="card"><h3>eval validity</h3><p>До score система проверяет broken tasks, feasibility witnesses, grader coverage, leakage, frozen holdout и infrastructure noise.</p></div>
+          <div class="card"><h3>harness ablation</h3><p>Затронутый scaffold-компонент проходит matched-budget ablation; для незатронутого сохраняется evidence-backed not_affected.</p></div>
+          <div class="card"><h3>final evidence</h3><p>Evidence bundle пересчитывает SHA-256, а финальный pass требует package, install, independent review и остальные 13 gates.</p></div>
+          <div class="card"><h3>release controls</h3><p>Public verifier, harness negative fixtures и export safety tests ловят fake pass, hash mismatch, unsafe staging, devkit leakage и неполную установку.</p></div>
+          <div class="card"><h3>Runtime/devkit</h3><p>Disjoint staging, точный FILES.sha256, безопасный zip и install simulation из fresh extraction не пропускают dev/test/raw artifacts в runtime.</p></div>
           <div class="card"><h3>birth protocol</h3><p>Первый запуск разделен на runtime detection, active adapter decision, environment readiness, project context и birth gate.</p></div>
           <div class="card"><h3>workflow discovery</h3><p>Перед IR агент вытаскивает реальные loops: trigger, inputs, actors, tools, checkpoints, artifacts, failure modes и done signal.</p></div>
           <div class="card"><h3>repo/tool library</h3><p>Ссылки на репозитории и инструменты индексируются как кандидаты для будущих идей, а не встраиваются в runtime автоматически.</p></div>
@@ -295,7 +301,12 @@
           <div class="step">
             <span>3</span>
             <h3>Проверяемые слои</h3>
-            <p>Добавляем tool registry, permission matrix, trigger lab, output eval lab, checkers и release review.</p>
+            <p>Добавляем harness boundary, permission policy, run events, valid eval tasks, repeated trajectory trials, checkers и conditional ablation.</p>
+          </div>
+          <div class="step">
+            <span>4</span>
+            <h3>Доказанный релиз</h3>
+            <p>Собираем runtime/devkit, ставим финальный zip в fresh sandbox, проводим независимый аудит и только затем закрываем machine release decision.</p>
           </div>
         </div>
       </section>

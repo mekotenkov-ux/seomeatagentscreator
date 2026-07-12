@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "system_release_id": "",
+  "system_identity": {
+    "model_snapshot": "",
+    "reasoning_configuration": "",
+    "harness_commit": "",
+    "agent_ir_hash": "",
+    "instructions_hash": "",
+    "tool_registry_hash": "",
+    "permission_policy_hash": "",
+    "runtime_image_hash": "",
+    "dependency_lock_hash": "",
+    "grader_hash": ""
+  },
+  "interfaces": {
+    "session": {
+      "append_only_event_log": null,
+      "persistence_ref": "",
+      "state_revision_scheme": "",
+      "resume_contract_ref": ""
+    },
+    "harness": {
+      "state_externalized": null,
+      "policy_enforcement_outside_model": null,
+      "crash_recovery_ref": "",
+      "version_migration_ref": ""
+    },
+    "sandbox": {
+      "disposable": null,
+      "provision_recipe_ref": "",
+      "process_boundary_ref": "",
+      "filesystem_policy_ref": "",
+      "network_policy_ref": "",
+      "resource_profile_ref": "",
+      "workspace_mount_modes": [
+        {
+          "path_alias": "workspace",
+          "mode": "read_only|read_write",
+          "purpose": ""
+        }
+      ],
+      "cleanup_verification_ref": ""
+    },
+    "artifact_store": {
+      "outside_ephemeral_compute": null,
+      "immutable_evidence": null,
+      "artifact_manifest_ref": "",
+      "retention_policy_ref": ""
+    },
+    "credential_broker": {
+      "credentials_enter_sandbox": null,
+      "broker_or_proxy_ref": "",
+      "principal_scope_ref": "",
+      "short_lived_credentials": null,
+      "revocation_test_ref": ""
+    }
+  },
+  "trust_boundary": {
+    "project_config_loaded_after_trust": null,
+    "external_content_default": "untrusted_data|trusted_data|unknown",
+    "control_data_separation": null,
+    "provenance_propagation": null,
+    "persistent_state_startup_scan_ref": "",
+    "symlink_resolution_before_path_check": null
+  },
+  "authorization": {
+    "deny_by_default": null,
+    "permission_policy_ref": "",
+    "approval_binding_ref": "",
+    "runtime_enforcement_test_ref": ""
+  },
+  "egress": {
+    "policy_model": "capability_grant|deny_all|unknown",
+    "allowed_operations_ref": "",
+    "allowed_principals_ref": "",
+    "data_sink_policy_ref": "",
+    "exfiltration_test_ref": ""
+  },
+  "recovery": {
+    "durability_required": null,
+    "checkpoint_supported": null,
+    "rehydration_supported": null,
+    "sandbox_loss_drill_ref": "",
+    "harness_loss_drill_ref": "",
+    "unknown_effect_reconciliation_ref": "",
+    "not_applicable_reason": "",
+    "not_applicable_criteria": {
+      "workflow_max_runtime_minutes": null,
+      "no_async_side_effects": null,
+      "no_external_effects_after_response": null
+    }
+  },
+  "time_and_async_semantics": {
+    "clock_source": "",
+    "deadline_policy_ref": "",
+    "async_events_supported": null,
+    "replay_supported": null,
+    "deterministic_replay_ref": ""
+  },
+  "budget_limits": {
+    "max_steps": null,
+    "max_tool_calls": null,
+    "max_runtime_ms": null,
+    "max_input_tokens": null,
+    "max_output_tokens": null,
+    "max_cost": null
+  },
+  "status": "unverified",
+  "evidence_refs": [],
+  "blockers": [],
+  "warnings": []
+}

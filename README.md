@@ -23,21 +23,29 @@
 - workflow discovery перед IR;
 - repo/tool catalog для внешних ссылок и идей;
 - Agent/Skill IR;
+- versioned system identity;
+- harness boundary: session, harness, sandbox, artifacts и credential broker;
 - router и focused skills;
 - typed tool registry;
-- permission matrix;
+- default-deny permission policy и approval binding;
+- provenance-aware trusted-control/data-flow policy;
+- append-only run-event contract;
 - hook registry и lifecycle gates;
 - subagent orchestration: topology, role registry, task graph, isolation, lifecycle и eval;
 - state/memory вне истории чата;
 - context packaging;
 - trigger lab;
-- output eval lab;
+- eval-validity report до score;
+- trajectory-aware output eval: outcome, trajectory, boundary и stability;
+- repeated trials и infrastructure-noise calibration;
+- Harness Assumption Registry и Ablation Lab;
 - checker/reviewer layer;
 - skill training lab и skill-candidate lifecycle;
 - birth contract и first-run artifacts;
 - target conformance matrix;
 - final evidence contract;
 - release review;
+- machine-readable release decision;
 - runtime/devkit boundary;
 - package verification;
 - install simulation;
@@ -46,19 +54,24 @@
 
 ## Быстрый старт
 
-1. Скопируйте `agent-system/` в новый репозиторий или проект, где будете проектировать агента.
+1. Клонируйте весь репозиторий. Для встраивания в существующий проект минимально перенесите `agent-system/`, `scripts/` и `requirements-dev.txt`: без scripts доступны шаблоны, но недоступны исполняемые release gates.
 2. Откройте `agent-system/AGENTS.md` как корневую инструкцию для агента-создателя.
 3. Запустите preflight по `agent-system/skills/grill-me/SKILL.md`, затем workflow discovery по `agent-system/skills/workflow-loop-me/SKILL.md`.
 4. Заполните workflow notes/spec/ledger и `agent-system/templates/agent-ir.template.json`.
-5. Соберите первый vertical slice: router, один workflow, один skill, один tool path, один checker, один eval set.
-6. Проведите hook design pass: определите автоматические gates, fail modes, privacy, native mappings и validation cases.
-7. Проведите subagent design pass: докажите необходимость делегирования, выберите topology, роли, task graph, context, isolation, budgets и result contracts.
-8. Сравните Subagent Eval Lab с single-agent baseline.
-9. Проверьте Trigger Lab и Output Eval Lab.
-10. Разделите runtime и devkit.
-11. Соберите clean staging и только после этого делайте zip/public repo.
+6. Соберите первый vertical slice: router, один workflow, один skill, один tool path, один checker, один eval set.
+5. Зафиксируйте system identity, harness boundary, permission policy и run-event contract.
+7. Проведите hook design pass: автоматические gates, fail modes, privacy, native mappings и validation cases.
+8. Проведите subagent design pass: необходимость делегирования, topology, роли, task graph, context, isolation, budgets и result contracts.
+9. Проверьте Subagent Eval Lab против matched-budget single-agent baseline.
+10. Проверьте валидность eval tasks, frozen holdout и infrastructure noise.
+11. Запустите Trigger Lab и trajectory-aware Output Eval Lab с repeated trials.
+12. Проведите ablation затронутых harness assumptions; для остальных запишите evidence-backed `not_affected`.
+13. Разделите runtime и devkit.
+14. Соберите clean staging, runtime zip и devkit zip; проверьте архив и установку в fresh sandbox.
+15. Проведите независимые scenario-аудиты уже собранного пакета.
+16. Только после package/install/audit evidence сформируйте финальный machine release decision и публикуйте.
 
-Подробно: [docs/quick-start.md](docs/quick-start.md).
+Подробно: [быстрый старт](docs/quick-start.md), [как распаковывать](docs/unpack-and-use.md), [упаковка runtime/devkit](docs/packaging.md) и [frontier harness](docs/frontier-harness.md).
 
 ## Рекомендация по качественной отладке
 
@@ -73,7 +86,7 @@
 
 ## Гигиена публичного пакета
 
-Перед публикацией проверяйте, что пакет не содержит секреты, локальные пути, закрытые данные, временные рабочие артефакты и скрытую зависимость от истории текущего чата. Установите dev-зависимости через `python -m pip install -r requirements-dev.txt`, затем используйте `agent-system/checklists/export-clean-checklist.md` и `scripts/verify_public_package.py`. Заполненные subagent-run артефакты дополнительно проверяет `scripts/validate_subagent_run.py`.
+Перед публикацией проверяйте, что пакет не содержит секреты, локальные пути, закрытые данные, временные рабочие артефакты и скрытую зависимость от истории текущего чата. Установите dev-зависимости через `python -m pip install -r requirements-dev.txt`, затем запустите `python -B scripts/verify_public_package.py`, `python -B scripts/test_harness_release_controls.py` и `python -B scripts/test_export_safety.py`. Заполненные subagent-run артефакты дополнительно проверяет `scripts/validate_subagent_run.py`. Заполненный набор frontier harness release evidence проверяет `scripts/validate_harness_release.py`; наличие шаблонов или самостоятельно выставленного `pass` доказательством не является.
 
 ## Структура
 
@@ -100,6 +113,8 @@ agent-system/
     ide-runtime-adaptation.md
     hook-system.md
     subagent-orchestration.md
+    frontier-harness-engineering.md
+    frontier-harness-research-2026-07.md
     context-and-quality-gates.md
     target-adapters.md
     final-evidence-and-claim-guard.md
@@ -138,6 +153,18 @@ agent-system/
     release-review.template.md
     trigger-lab.template.yaml
     output-eval-lab.template.yaml
+    harness-boundary.template.json
+    permission-policy.template.json
+    run-event.template.json
+    harness-assumption-registry.template.json
+    harness-ablation-lab.template.yaml
+    eval-validity-report.template.json
+    release-decision.template.json
+    release-gate-evidence.template.json
+    evidence-bundle-manifest.template.json
+    external-approval-ledger.template.json
+    final-evidence-runbook.template.md
+    validation-run-matrix.template.yaml
     target-conformance.template.json
     final-evidence-contract.template.json
     independent-review-summary.template.json
@@ -148,13 +175,26 @@ agent-system/
   checklists/
     export-clean-checklist.md
     production-readiness-checklist.md
+scripts/
+  verify_public_package.py
+  validate_harness_release.py
+  validate_subagent_run.py
+  build_agent_export.py
+  validate_runtime_install.py
+  check_core_isolation.py
+  test_harness_release_controls.py
+  test_export_safety.py
+requirements-dev.txt
 docs/
   index.html
   quick-start.md
   architecture.md
+  frontier-harness.md
+  hooks.md
   subagents.md
   birth.md
   workflow-discovery.md
+  repo-tool-library.md
   unpack-and-use.md
   debugging.md
   packaging.md

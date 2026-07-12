@@ -1,48 +1,58 @@
 {
-  "name": "seomeatagentscreator",
-  "version": "0.7.0",
-  "language": "ru",
-  "license": "MIT",
-  "package_kind": "public_universal_agent_creation_system",
-  "maturity": "library",
-  "target_users": [
-    "agent developers",
-    "AI workflow designers",
-    "teams building reusable agent skills"
-  ],
-  "included": [
-    "universal agent creator operating contract",
-    "grill-me preflight skill",
-    "workflow-loop-me preflight skill for discovering repeatable work loops before agent architecture",
-    "repo/tool library reference, catalog template, card template, and intake template",
-    "repo-tool-librarian skill for indexing external repositories and tools without automatic integration",
-    "seed repo/tool catalog entries for Flue, PaddleOCR, and Agent-Reach",
-    "universal hook system reference, hook registry, lifecycle mapping, and validation template",
-    "subagent orchestrator skill, topology and role registry, task/result contracts, run ledger, isolation rules, lifecycle controls, and Subagent Eval Lab",
-    "agent-creator skill",
-    "production skill OS reference",
-    "universal references for skill training, package boundary, birth, IDE/runtime adaptation, adapters, context gates, evidence, long-running tools, isolation, observability, and validation",
-    "IR, tool registry, manifest, trigger lab, output eval, stage gate, target conformance, final evidence, independent review, and release review templates",
-    "first-run birth contract, runtime profile, birth plan, environment readiness, project context, and birth validation templates",
-    "workflow notes, workflow spec, and workflow discovery ledger templates",
-    "state, memory, skill-candidate, loop-state, checker-context, evidence-ledger, approval-ledger, and export-manifest templates",
-    "export and production readiness checklists",
-    "generic export, install validation, and core-isolation scripts",
-    "Russian documentation and GitHub Pages landing page",
-    "strict filled-run subagent validator for budgets, permissions, isolation, lifecycle, provenance, reconciliation, and done invariants",
-    "PyYAML development dependency for parsing YAML validation templates"
-  ],
-  "public_package_policy": [
-    "keep the repository domain-neutral",
-    "publish reusable instructions, templates, checklists, and docs",
-    "keep secrets, private data, temporary work artifacts, and local-only files out of the package"
-  ],
-  "homepage_block_required_link": "https://seomeat.ru/",
-  "known_limits": [
-    "This repository provides a universal creation system and templates.",
-    "Target platform adapters must be audited for the target runtime before public production claims.",
-    "Birth artifacts are templates until a real first-run install fills them with bounded observations.",
-    "Subagent delegation requires explicit user, workflow, or platform-policy authorization plus target-specific permission and sandbox enforcement.",
-    "Templates are not evidence until a real validated run fills them with bounded observations."
-  ]
+    "name":  "seomeatagentscreator",
+    "version":  "0.9.0",
+    "language":  "ru",
+    "license":  "MIT",
+    "package_kind":  "public_universal_agent_creation_system",
+    "maturity":  "library",
+    "target_users":  [
+                         "agent developers",
+                         "AI workflow designers",
+                         "teams building reusable agent skills"
+                     ],
+    "included":  [
+                     "universal agent creator operating contract",
+                     "grill-me preflight skill",
+                     "workflow-loop-me preflight skill for discovering repeatable work loops before agent architecture",
+                     "repo/tool library reference, catalog template, card template, and intake template",
+                     "repo-tool-librarian skill for indexing external repositories and tools without automatic integration",
+                     "seed repo/tool catalog entries for Flue, PaddleOCR, and Agent-Reach",
+                     "universal hook system reference, hook registry, lifecycle mapping, and validation template",
+                     "subagent orchestrator skill, topology and role registry, task/result contracts, run ledger, isolation rules, lifecycle controls, and Subagent Eval Lab",
+                     "agent-creator skill",
+                     "production skill OS reference",
+                     "universal references for skill training, package boundary, birth, IDE/runtime adaptation, adapters, context gates, evidence, long-running tools, isolation, observability, and validation",
+                     "IR, tool registry, manifest, trigger lab, output eval, stage gate, target conformance, final evidence, independent review, and release review templates",
+                     "first-run birth contract, runtime profile, birth plan, environment readiness, project context, and birth validation templates",
+                     "workflow notes, workflow spec, and workflow discovery ledger templates",
+                     "state, memory, skill-candidate, loop-state, checker-context, evidence-ledger, approval-ledger, and export-manifest templates",
+                     "export and production readiness checklists",
+                     "generic export, install validation, and core-isolation scripts",
+                     "Russian documentation and GitHub Pages landing page",
+                     "strict filled-run subagent validator for budgets, permissions, isolation, lifecycle, provenance, reconciliation, and done invariants",
+                     "PyYAML development dependency for parsing YAML validation templates",
+                     "July 2026 frontier harness research map covering OpenAI, Anthropic, Google/DeepMind, Microsoft, Meta, and academic labs",
+                     "versioned harness boundary for session, harness, sandbox, artifact store, credentials, recovery, trust, egress, and async semantics",
+                     "default-deny permission policy, approval binding, provenance-aware data flow, and append-only run-event contract",
+                     "eval-validity report, trajectory-aware Output Eval Lab, repeated-trial reliability, and infrastructure-noise calibration",
+                     "Harness Assumption Registry, matched-budget Ablation Lab, and governed proposal-only adaptation",
+                     "machine-readable release decision and strict filled frontier harness release validator",
+                     "SHA-256 evidence bundle, exact 13-gate release reconciliation, approval ledger, run-event lifecycle validation, and executable positive/negative control suites",
+                     "safe export builder with disjoint staging, symlink confinement, exact zip inventory, extracted install simulation, and package/install evidence reports"
+                 ],
+    "public_package_policy":  [
+                                  "keep the repository domain-neutral",
+                                  "publish reusable instructions, templates, checklists, and docs",
+                                  "keep secrets, private data, temporary work artifacts, and local-only files out of the package"
+                              ],
+    "homepage_block_required_link":  "https://seomeat.ru/",
+    "known_limits":  [
+                         "This repository provides a universal creation system and templates.",
+                         "Target platform adapters must be audited for the target runtime before public production claims.",
+                         "Birth artifacts are templates until a real first-run install fills them with bounded observations.",
+                         "Subagent delegation requires explicit user, workflow, or platform-policy authorization plus target-specific permission and sandbox enforcement.",
+                         "Templates are not evidence until a real validated run fills them with bounded observations.",
+                         "Automated harness search, active failure discovery, dynamic memory/playbook optimization, self-critique, self-preference, automatic ablation, and context-sufficiency gating remain experiments until local matched-budget holdout evidence supports them.",
+                         "The package does not authorize unattended production self-modification, unsandboxed generated tools, or LLM-only safety certification."
+                     ]
 }

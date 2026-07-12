@@ -1,26 +1,63 @@
 {
-  "version": 1,
-  "decided_at": "YYYY-MM-DD",
-  "workflow_run_id": "",
-  "status": "no_update_needed|updates_required|updates_required_and_applied|blocked",
-  "route_decision": "self|subagents|hybrid",
-  "durable_lessons": [
-    {
-      "lesson_id": "",
-      "summary": "",
-      "scope": "router|skill|command|checker|tool|validation|reference|memory|package-boundary",
-      "applied_to": [],
-      "validation": ""
-    }
-  ],
-  "skill_candidates": [
-    {
-      "candidate_id": "",
-      "status": "proposed|draft|accepted|implemented|rejected",
-      "trigger_summary": "",
-      "evidence_refs": []
-    }
-  ],
-  "no_update_reason": "",
-  "next_living_adaptation_check": ""
+    "schema_version":  2,
+    "decided_at":  "",
+    "workflow_run_id":  "",
+    "system_release_id":  "",
+    "status":  "no_update_needed|proposal_ready|approved_for_canary|applied|rejected|blocked",
+    "automatic_application_allowed":  false,
+    "source_policy":  {
+                          "approved_redacted_source_path":  "",
+                          "raw_private_logs_forbidden":  true,
+                          "expert_review_ref":  "",
+                          "expected_workflow_noise_separated":  null
+                      },
+    "experience_set":  {
+                           "finding_inventory_ref":  "",
+                           "diverse_failure_coreset_ref":  "",
+                           "success_counterexamples_ref":  "",
+                           "untouched_holdout_ref":  "",
+                           "holdout_hidden_from_optimizer":  true
+                       },
+    "candidate_change":  {
+                             "candidate_id":  "",
+                             "isolated_branch_or_sandbox_ref":  "",
+                             "changed_surfaces":  [
+
+                                                  ],
+                             "grader_changes_forbidden":  true,
+                             "permission_changes_forbidden":  true,
+                             "sandbox_changes_forbidden":  true,
+                             "budget_changes_forbidden":  true,
+                             "rollback_ref":  ""
+                         },
+    "validation":  {
+                       "matched_budget_baseline_ref":  "",
+                       "targeted_eval_ref":  "",
+                       "regression_eval_ref":  "",
+                       "safety_eval_ref":  "",
+                       "holdout_eval_ref":  "",
+                       "independent_review_ref":  "",
+                       "quality_delta":  null,
+                       "safety_delta":  null,
+                       "latency_delta":  null,
+                       "cost_delta":  null
+                   },
+    "approval_and_rollout":  {
+                                 "human_approval_ref":  "",
+                                 "canary_ref":  "",
+                                 "monitoring_ref":  "",
+                                 "kill_switch_ref":  "",
+                                 "rollback_drill_ref":  ""
+                             },
+    "durable_lessons":  [
+
+                        ],
+    "skill_candidates":  [
+
+                         ],
+    "rejection_or_no_update_reason":  "",
+    "next_review_at":  "",
+    "evidence_refs":  [
+
+                      ]
 }

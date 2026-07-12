@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "evidence_id": "",
+  "system_release_id": "",
+  "gate_id": "agent_ir|harness_boundary|permission_policy|trigger_lab|eval_validity|output_eval|trajectory_safety|assumption_ablation|target_conformance|trust|package|install|independent_review",
+  "status": "unverified",
+  "verification_command": "",
+  "executed_at": "",
+  "executor_provenance_ref": "",
+  "artifact_refs": [],
+  "blockers": [],
+  "warnings": []
+}

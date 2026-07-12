@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "registry_id": "",
+  "system_release_id": "",
+  "model_runtime_signature": "",
+  "no_active_assumptions_reason": "",
+  "assumptions": [
+    {
+      "assumption_id": "",
+      "component": "prompt|planner|critic|subagent|memory|compaction|retrieval|tool|hook|permission_gate|runtime|other",
+      "claim": "",
+      "compensates_for": "",
+      "scope": [],
+      "introduced_at": "",
+      "introduced_for_signature": "",
+      "impact_assessment": {
+        "affected_by_current_signature": null,
+        "not_affected_reason": "",
+        "evidence_refs": []
+      },
+      "owner": "",
+      "status": "proposed|active|ablation_due|retired|rejected",
+      "evidence_class": "deterministic_control|peer_reviewed|replicated_preprint|single_preprint|vendor_case_study|local_eval|anecdote",
+      "evidence_refs": [],
+      "baseline_ref": "",
+      "ablation_case_id": "",
+      "quality_lift": null,
+      "safety_lift": null,
+      "latency_overhead": null,
+      "token_overhead": null,
+      "cost_overhead": null,
+      "review_triggers": [
+        "model_change",
+        "runtime_change",
+        "tool_change",
+        "task_distribution_change",
+        "review_date"
+      ],
+      "review_due_at": "",
+      "rollback_ref": "",
+      "retirement_evidence_ref": ""
+    }
+  ],
+  "status": "unverified",
+  "blockers": [],
+  "warnings": []
+}

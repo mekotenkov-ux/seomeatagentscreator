@@ -59,6 +59,11 @@ Consult the library during:
 
 The catalog can suggest options, but selection and integration are separate approval-gated tasks.
 
+## Mandatory Candidate Check Before Agent Creation
+
+Before architecture starts, the meta-agent records a deliberate decision for `obra/superpowers` from the catalog: `not_relevant`, `consider`, `selected_by_user`, or `declined_by_user`. The purpose is to consider a reusable engineering methodology for the meta-agent itself, not to force it into every created agent.
+
+Ask the user only when using it would materially change the workflow, install a plugin, add a dependency or hook, alter permissions or telemetry, or change the generated package. A catalog entry never authorizes installation, code copying, or runtime integration.
 ## Integration Gate
 
 Before using a catalog item in a real agent package, require:

@@ -1,30 +1,124 @@
-version: 1
-agent_or_workflow: ""
+version: 3
+lab_id: ""
+system_release_id: ""
+system_identity_ref: ""
+eval_validity_ref: ""
+suite_kind: "capability|regression|safety|reliability|mixed"
+task_distribution_ref: ""
+dataset_split_hash: ""
 baseline:
   description: ""
-  artifact: ""
+  system_identity_ref: ""
+  artifact_ref: ""
+  budgets_ref: ""
 with_agent:
   description: ""
-  artifact: ""
-assertions:
-  - id: required-artifacts
-    type: artifact_presence
-    expected: []
-  - id: boundary-language
-    type: claim_boundary
-    forbidden_claims: []
-  - id: evidence
-    type: evidence_refs
-    expected_refs: []
-  - id: unsafe-actions
-    type: safety
+  system_identity_ref: ""
+  artifact_ref: ""
+  budgets_ref: ""
+comparison:
+  one_intervention_only: null
+  matched_budgets: null
+  matched_infrastructure: null
+  matched_task_distribution: null
+  improvement_claimed: null
+trial_protocol:
+  stochastic: null
+  trials_per_task: null
+  clean_state_reset: null
+  all_attempts_reported: null
+  time_blocks: []
+  deployment_attempt_policy: "single_attempt|retry_with_selector|best_of_k|other"
+  best_of_n_matches_deployment: null
+  determinism_evidence_ref: ""
+infrastructure:
+  profile_ref: ""
+  container_or_environment_hash: ""
+  cpu_floor: ""
+  ram_floor: ""
+  cpu_kill_ceiling: ""
+  ram_kill_ceiling: ""
+  timeout_policy_ref: ""
+  network_policy_ref: ""
+  cache_policy_ref: ""
+  concurrency: null
+  region_or_provider: ""
+  aa_noise_calibration_ref: ""
+  infrastructure_errors_reported_separately: null
+required_grader_families:
+  - outcome
+  - trajectory
+  - boundary
+  - stability
+graders:
+  outcome:
+    deterministic_state_checks: []
+    artifact_checks: []
+    model_rubric_refs: []
+    human_review_refs: []
+  trajectory:
+    required_events: []
+    forbidden_sequences: []
+    verification_required: null
+    blind_retry_detection_ref: ""
+    regression_cycle_detection_ref: ""
+  boundary:
+    permission_checks: []
+    data_flow_checks: []
+    inter_agent_transfer_checks: []
     forbidden_actions: []
+    correct_answer_after_hidden_violation_must_fail: true
+  stability:
+    recovery_checks: []
+    cancellation_checks: []
+    idempotency_checks: []
+    resource_limit_checks: []
+  model_judge:
+    calibration_ref: ""
+    confusion_matrix_ref: ""
+    abstention_policy_ref: ""
+    sole_safety_authority: false
+  human:
+    reviewer_provenance_refs: []
+    inter_rater_agreement_ref: ""
+metrics:
+  pass_at_1: null
+  pass_at_k: null
+  pass_power_k_or_consistency: null
+  critical_failure_probability: null
+  confidence_interval_ref: ""
+  outcome_quality: null
+  trajectory_quality: null
+  boundary_violation_count: null
+  infrastructure_error_rate: null
+  median_latency_ms: null
+  p95_latency_ms: null
+  average_tokens: null
+  average_tool_calls: null
+  average_cost: null
+cases:
+  - case_id: ""
+    task_id: ""
+    trial_result_refs: []
+    outcome_status: "pending|pass|fail|blocked"
+    trajectory_status: "pending|pass|fail|blocked"
+    boundary_status: "pending|pass|fail|blocked"
+    stability_status: "pending|pass|fail|blocked"
+    infrastructure_failure: null
+    evidence_refs: []
 result:
   status: "pending"
   blockers: []
   warnings: []
   accepted_limitations: []
+  critical_safety_violations: null
+  improvement_evidence_ref: ""
+  non_improvement_limit_ref: ""
 release_rule:
-  production_requires:
-    - "with-agent output materially improves baseline or records limitation"
-    - "all blockers fixed or explicitly descoped before public claim"
+  eval_validity_must_pass: true
+  all_required_grader_families_covered: true
+  p0_boundary_violation_blocks_release: true
+  quality_cannot_compensate_safety: true
+  stochastic_claim_requires_repeated_trials: true
+  best_of_n_claim_requires_matching_deployment: true
+  with_agent_must_improve_or_record_limit: true

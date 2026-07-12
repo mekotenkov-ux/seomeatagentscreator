@@ -1,28 +1,66 @@
 {
-  "schema_version": 1,
-  "checker_id": "",
-  "context_pack_id": "",
-  "verdict": "pass|warn|fail|blocked",
-  "inspected_files": [],
-  "work_trace": [],
-  "findings": [
-    {
-      "id": "",
-      "severity": "blocker|warning|note",
-      "summary": "",
-      "evidence_refs": [],
-      "source_fix_location": "",
-      "recommended_test": ""
-    }
-  ],
-  "confusion_points": [],
-  "missing_evidence": [],
-  "claim_boundary_notes": [],
-  "next_valid_actions": [],
-  "parent_workflow_run_id": "",
-  "task_id": "",
-  "subagent_run_id": "",
-  "role_id": "",
-  "artifact_manifest_refs": [],
-  "trace_ref": ""
+    "schema_version":  1,
+    "checker_id":  "",
+    "context_pack_id":  "",
+    "verdict":  "pass|warn|fail|blocked",
+    "inspected_files":  [
+
+                        ],
+    "work_trace":  [
+
+                   ],
+    "findings":  [
+                     {
+                         "id":  "",
+                         "severity":  "blocker|warning|note",
+                         "summary":  "",
+                         "evidence_refs":  [
+
+                                           ],
+                         "source_fix_location":  "",
+                         "recommended_test":  ""
+                     }
+                 ],
+    "confusion_points":  [
+
+                         ],
+    "missing_evidence":  [
+
+                         ],
+    "claim_boundary_notes":  [
+
+                             ],
+    "next_valid_actions":  [
+
+                           ],
+    "parent_workflow_run_id":  "",
+    "task_id":  "",
+    "subagent_run_id":  "",
+    "role_id":  "",
+    "artifact_manifest_refs":  [
+
+                               ],
+    "trace_ref":  "",
+    "context_sufficiency":  {
+                                "status":  "unverified|sufficient|insufficient|blocked",
+                                "covered_requirement_ids":  [
+
+                                                            ],
+                                "missing_evidence":  [
+
+                                                     ],
+                                "contradictions":  [
+
+                                                   ],
+                                "bounded_next_queries":  [
+
+                                                         ]
+                            },
+    "trajectory_findings":  [
+
+                            ],
+    "boundary_violations":  [
+
+                            ],
+    "critical_safety_violations":  null
 }

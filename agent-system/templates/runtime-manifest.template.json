@@ -1,27 +1,42 @@
 {
-  "name": "",
-  "version": "0.1.0",
-  "maturity": "production",
-  "package_kind": "runtime",
-  "target_platforms": [],
-  "entrypoints": {
-    "agent_router": "AGENTS.md"
-  },
-  "runtime_contents": [],
-  "required_tools": [],
-  "optional_tools": [],
-  "approval_gates": [],
-  "forbidden_runtime_content": [
-    ".env",
-    "secrets",
-    "credentials",
-    "devkit",
-    "fixtures",
-    "tests",
-    "debug-runs",
-    "browser profiles",
-    "local absolute paths"
-  ],
-  "known_limitations": [],
-  "validation_notes": []
+    "name":  "",
+    "version":  "0.1.0",
+    "maturity":  "production",
+    "package_kind":  "runtime",
+    "target_platforms":  [
+
+                         ],
+    "entrypoints":  {
+                        "agent_router":  "AGENTS.md"
+                    },
+    "runtime_contents":  [
+
+                         ],
+    "required_tools":  [
+
+                       ],
+    "optional_tools":  [
+
+                       ],
+    "approval_gates":  [
+
+                       ],
+    "forbidden_runtime_content":  [
+                                      ".env",
+                                      "secrets",
+                                      "credentials",
+                                      "devkit",
+                                      "fixtures",
+                                      "tests",
+                                      "debug-runs",
+                                      "browser profiles",
+                                      "local absolute paths"
+                                  ],
+    "known_limitations":  [
+
+                          ],
+    "validation_notes":  [
+
+                         ],
+    "system_release_id":  ""
 }

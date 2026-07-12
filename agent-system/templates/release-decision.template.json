@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "release_id": "",
+  "maturity": "production|library|governed",
+  "system_release_id": "",
+  "required_gates": [
+    "agent_ir",
+    "harness_boundary",
+    "permission_policy",
+    "trigger_lab",
+    "eval_validity",
+    "output_eval",
+    "trajectory_safety",
+    "assumption_ablation",
+    "target_conformance",
+    "trust",
+    "package",
+    "install",
+    "independent_review"
+  ],
+  "gate_results": [
+    {
+      "gate_id": "",
+      "status": "pass|warn|block|pending|not_applicable",
+      "evidence_ref": "",
+      "evidence_hash": "",
+      "source_fix_location": "",
+      "verification_command": "",
+      "waiver_ref": "",
+      "not_applicable_reason": ""
+    }
+  ],
+  "reconciliation": {
+    "all_required_gates_present": null,
+    "all_evidence_refs_resolve": null,
+    "pending_or_blocking_gates": [],
+    "expired_waivers": [],
+    "critical_safety_violations": null,
+    "quality_cannot_compensate_safety": true
+  },
+  "allowed_claims": [
+    {
+      "claim": "",
+      "supported_by_gate_ids": []
+    }
+  ],
+  "forbidden_claims": [],
+  "known_limits": [],
+  "decision": "pending",
+  "decided_by": "",
+  "decided_at": "",
+  "evidence_bundle_ref": ""
+}

@@ -11,6 +11,8 @@
 - `ide-runtime-adaptation.md` - как адаптировать один агент под Codex, Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenCode и CLI без drift.
 - `hook-system.md` - как проектировать lifecycle hooks, policy gates, native mappings, fail modes и проверки без зависимости от модельной дисциплины.
 - `subagent-orchestration.md` - как выбирать topology, задавать роли, task/result contracts, isolation, lifecycle, synthesis, budgets и Subagent Eval Lab.
+- `frontier-harness-engineering.md` - как разделять session/harness/sandbox, исполнять authority, проверять trajectories, eval validity, infra noise и harness assumptions.
+- `frontier-harness-research-2026-07.md` - доказательная карта исследований OpenAI, Anthropic, Google/DeepMind, Microsoft, Meta и академических лабораторий на 2026-07-11.
 - `context-and-quality-gates.md` - как строить compact context packs и stage gates.
 - `target-adapters.md` - как проверять Codex, Claude, Cursor, OpenCode и другие adapters против одного IR.
 - `final-evidence-and-claim-guard.md` - как отделять доказанные claims от planned work.

@@ -8,6 +8,8 @@ Date:
 ## Decision
 
 Status: `pass | warn | block`
+Machine decision ref: `release-decision.json`
+System release id:
 
 ## Scope
 
@@ -21,6 +23,12 @@ Status: `pass | warn | block`
 | --- | --- | --- | --- |
 | Intent Canvas |  |  |  |
 | Agent/Skill IR |  |  |  |
+| System Identity / Harness Boundary |  |  |  |
+| Permission Policy / Approval Binding |  |  |  |
+| Run Event / Trajectory Coverage |  |  |  |
+| Eval Validity |  |  |  |
+| Infrastructure Noise Calibration |  |  |  |
+| Harness Assumption Registry / Ablation |  |  |  |
 | Trigger Lab |  |  |  |
 | Output Eval Lab |  |  |  |
 | Tool Registry |  |  |  |

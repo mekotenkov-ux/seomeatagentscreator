@@ -1,0 +1,72 @@
+{
+    "schema_version":  2,
+    "event_id":  "",
+    "event_type":  "run_started|state_read|context_built|model_called|tool_proposed|permission_decided|tool_started|tool_observed|artifact_written|subagent_started|inter_agent_transfer|subagent_finished|checkpoint_written|cancel_requested|effect_reconciled|cleanup_finished|run_finished",
+    "timestamp":  "",
+    "trace_id":  "",
+    "span_id":  "",
+    "parent_span_id":  "",
+    "sequence":  0,
+    "workflow_run_id":  "",
+    "attempt_id":  "",
+    "actor":  {
+                  "type":  "user|agent|subagent|tool|runtime|checker|automation",
+                  "id":  "",
+                  "principal_id":  ""
+              },
+    "system_identity":  {
+                            "system_release_id":  "",
+                            "model_snapshot":  "",
+                            "harness_commit":  "",
+                            "instructions_hash":  "",
+                            "tool_registry_hash":  "",
+                            "permission_policy_hash":  ""
+                        },
+    "state":  {
+                  "revision_before":  "",
+                  "revision_after":  "",
+                  "checkpoint_ref":  ""
+              },
+    "intent_summary":  "",
+    "tool":  {
+                 "tool_call_id":  "",
+                 "tool_id":  "",
+                 "operation":  "",
+                 "resource":  "",
+                 "resource_version":  "",
+                 "risk_class":  "",
+                 "budget_ref":  "",
+                 "normalized_arguments_hash":  "",
+                 "observation_ref":  "",
+                 "principal_id":  ""
+             },
+    "permission":  {
+                       "decision":  "allow|deny|approval_required|not_applicable",
+                       "grant_or_approval_ref":  "",
+                       "enforcement_ref":  ""
+                   },
+    "effect":  {
+                   "status":  "none|proposed|started|committed|failed|unknown|reconciled|rolled_back",
+                   "resource_refs":  [
+
+                                     ],
+                   "state_delta_ref":  "",
+                   "idempotency_key":  "",
+                   "rollback_ref":  ""
+               },
+    "budgets":  {
+                    "step_delta":  0,
+                    "tool_call_delta":  0,
+                    "runtime_ms_delta":  0,
+                    "input_tokens_delta":  0,
+                    "output_tokens_delta":  0,
+                    "cost_delta":  0
+                },
+    "provenance_refs":  [
+
+                        ],
+    "artifact_refs":  [
+
+                      ],
+    "sensitive_payload_omitted":  true
+}

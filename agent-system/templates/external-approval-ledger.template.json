@@ -1,29 +1,49 @@
 {
-  "schema_version": 2,
-  "approvals": [
-    {
-      "approval_id": "",
-      "action_id": "",
-      "risk_class": "network|paid_api|external_write|destructive|subagent|package_install|other",
-      "scope": "",
-      "budget": {
-        "max_requests": null,
-        "max_cost": null,
-        "max_runtime_minutes": null
-      },
-      "approved_by": "",
-      "approval_ref": "",
-      "approved_at": "YYYY-MM-DDTHH:MM:SSZ",
-      "expires_at": "",
-      "evidence_refs": [],
-      "subagent_run_id": "",
-      "task_id": "",
-      "tool_call_id": "",
-      "decision": "pending|approved|denied|revoked|expired|consumed",
-      "consumed_at": "",
-      "revoked_at": "",
-      "idempotency_key": "",
-      "effective_permission_ref": ""
-    }
-  ]
+    "schema_version":  3,
+    "ledger_id":  "",
+    "system_release_id":  "",
+    "approvals":  [
+                      {
+                          "approval_id":  "",
+                          "action_id":  "",
+                          "risk_class":  "network|paid_api|external_write|destructive|subagent|package_install|other",
+                          "principal_id":  "",
+                          "provider_or_runtime":  "",
+                          "tool_id":  "",
+                          "operation":  "",
+                          "resource":  "",
+                          "resource_version":  "",
+                          "normalized_arguments_hash":  "",
+                          "scope":  [
+
+                                    ],
+                          "item_count":  null,
+                          "budget":  {
+                                         "max_requests":  null,
+                                         "max_cost":  null,
+                                         "max_runtime_minutes":  null
+                                     },
+                          "approved_by":  "",
+                          "reviewer_identity_ref":  "",
+                          "approval_ref":  "",
+                          "approved_at":  "YYYY-MM-DDTHH:MM:SSZ",
+                          "expires_at":  "",
+                          "evidence_refs":  [
+
+                                            ],
+                          "subagent_run_id":  "",
+                          "task_id":  "",
+                          "tool_call_id":  "",
+                          "decision":  "pending|approved|denied|revoked|expired|consumed",
+                          "consumed_at":  "",
+                          "revoked_at":  "",
+                          "idempotency_key":  "",
+                          "effective_permission_ref":  "",
+                          "budget_ref":  ""
+                      }
+                  ],
+    "status":  "unverified",
+    "blockers":  [
+
+                 ]
 }

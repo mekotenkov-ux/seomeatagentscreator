@@ -16,7 +16,16 @@
     "ambiguous_runtime_behavior": "ask one clarifying question before adapter cleanup",
     "bare_greeting_behavior": "start mission-specific intake, not package-maintenance menu"
   },
-  "target_platforms": ["codex", "claude", "cursor", "vscode-copilot", "github-copilot", "opencode", "gemini-cli", "cli"],
+  "catalog_process_reference_decision": {
+    "candidate_id": "obra-superpowers",
+    "evaluation_required_before_architecture": true,
+    "decision": "not_relevant|consider|selected_by_user|declined_by_user",
+    "reason": "",
+    "changes_workflow_or_runtime": false,
+    "user_confirmation_required": false,
+    "user_confirmation_ref": "",
+    "rule": "Cataloging does not install, copy, or integrate this candidate. Ask the user before selection when it materially changes workflow, plugin/dependency/hook surface, permissions, telemetry, or package contents."
+  },  "target_platforms": ["codex", "claude", "cursor", "vscode-copilot", "github-copilot", "opencode", "gemini-cli", "cli"],
   "protected_paths": ["AGENTS.md", "agent-ir.json", "install-birth.md", "skills/", "tools/", "references/", "templates/", "schemas/", "state/", "memory/", "LICENSE"],
   "adapter_rules": {
     "thin_adapters": true,

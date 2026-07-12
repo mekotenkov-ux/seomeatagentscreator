@@ -1,0 +1,89 @@
+{
+    "schema_version":  2,
+    "policy_id":  "",
+    "system_release_id":  "",
+    "default_decision":  "deny",
+    "enforcement":  {
+                        "runtime_native":  null,
+                        "enforcer_ref":  "",
+                        "metadata_only_fallback":  null,
+                        "deny_by_default_test_ref":  ""
+                    },
+    "risk_dimensions":  [
+                            "reversibility",
+                            "externality",
+                            "data_sensitivity",
+                            "authority_expansion",
+                            "financial_or_resource_cost",
+                            "destructive_potential"
+                        ],
+    "no_grants_reason":  "",
+    "grants":  [
+                   {
+                       "grant_id":  "",
+                       "principal":  "user|parent_agent|subagent|tool|automation",
+                       "principal_id":  "",
+                       "resource":  "",
+                       "operations":  [
+
+                                      ],
+                       "scope":  [
+
+                                 ],
+                       "conditions":  [
+
+                                      ],
+                       "normalized_arguments_hash":  "",
+                       "resource_version":  "",
+                       "risk_class":  "",
+                       "budget_ref":  "",
+                       "approval_required":  null,
+                       "approval_ref":  "",
+                       "issued_at":  "",
+                       "expires_at":  "",
+                       "revoked_at":  "",
+                       "runtime_enforcement_ref":  "",
+                       "tool_id":  ""
+                   }
+               ],
+    "approval_binding":  {
+                             "required_fields":  [
+                                                     "tool_call_id",
+                                                     "principal_id",
+                                                     "operation",
+                                                     "resource",
+                                                     "normalized_arguments_hash",
+                                                     "resource_version",
+                                                     "risk_class",
+                                                     "budget_ref",
+                                                     "issued_at",
+                                                     "expires_at"
+                                                 ],
+                             "reuse_after_argument_change_forbidden":  true,
+                             "reuse_after_resource_change_forbidden":  true,
+                             "expired_or_revoked_approval_forbidden":  true,
+                             "metadata_only_approval_for_high_risk_forbidden":  true
+                         },
+    "data_flow":  {
+                      "trusted_control_sources":  [
+
+                                                  ],
+                      "untrusted_data_sources":  [
+
+                                                 ],
+                      "allowed_sinks":  [
+
+                                        ],
+                      "no_data_flow_reason":  "",
+                      "provenance_required":  true,
+                      "untrusted_data_may_expand_authority":  false,
+                      "untrusted_data_may_modify_policy":  false
+                  },
+    "status":  "unverified",
+    "evidence_refs":  [
+
+                      ],
+    "blockers":  [
+
+                 ]
+}

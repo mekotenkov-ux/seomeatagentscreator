@@ -25,6 +25,9 @@ description: Используйте для создания, аудита, от�
 
 - router / instruction entrypoint;
 - Agent/Skill IR;
+- versioned system identity and harness boundary for session, harness, sandbox, artifact store and credential broker;
+- default-deny permission policy with approval binding, provenance-aware data flow and runtime enforcement;
+- append-only run-event contract for effects, permissions, transfers, state revisions and budgets;
 - workflow discovery notes, workflow spec и discovery ledger;
 - repo/tool library для идей и reusable building blocks, не для автоматической интеграции;
 - platform adapters;
@@ -40,12 +43,15 @@ description: Используйте для создания, аудита, от�
 - checker/reviewer layer;
 - context packaging policy;
 - Trigger Lab;
-- Output Eval Lab;
+- eval-validity report with task inventory, feasibility witnesses, grader mapping, contamination checks and frozen holdout;
+- Output Eval Lab with outcome, trajectory, boundary and stability graders, repeated trials and infrastructure calibration;
+- Harness Assumption Registry and matched-budget Ablation Lab;
 - workflow/negative fixtures;
 - skill training lab and skill-candidate lifecycle;
 - target conformance matrix;
 - final evidence contract;
 - release review;
+- machine-readable release decision that reconciles required gates and derives allowed claims;
 - evidence ledger and claim guard;
 - package verification;
 - install simulation from final zip;
@@ -58,31 +64,35 @@ description: Используйте для создания, аудита, от�
 
 1. Intake and grill-me preflight.
 2. Workflow discovery: world notes, candidate loops, selected workflow spec, blocking questions.
-3. Repo/tool library check: catalog useful external links as candidates, not dependencies.
+3. Repo/tool library check: catalog useful external links as candidates, not dependencies; before architecture, record a deliberate `obra-superpowers` decision for the meta-agent and ask the user only if its use is material.
 4. Qualification and maturity mode.
 5. Architecture before files.
 6. Agent/Skill IR before adapters.
-7. Production foundation slice.
-8. Tool contract.
-9. Hook design pass: отделить instructions от deterministic gates, заполнить registry, fail modes, native mappings и validation cases.
-10. Subagent design pass через `../subagent-orchestrator/SKILL.md`: сначала single-agent baseline, затем topology, roles, task graph, context, isolation, lifecycle, result schema и eval.
-11. Loop contract, если агент выполняет повторяемый процесс.
-12. Trigger Lab.
-13. Output Eval Lab.
-14. Stage quality gates and loop state.
-15. Context packaging and subagent budget.
-16. Skill Training Lab: workflow ledger, subagent records, skill candidates, promotion gate.
-17. Birth contract, first-run sequence, environment readiness, project context, and post-birth cleanup.
-18. Target conformance and adapter parity.
-19. Final evidence contract and claim guard.
-20. Trust, permissions, runtime probes.
-21. Memory and workspace policy.
-22. Release review.
-23. Independent validation.
-24. Repair and regress.
-25. Package, install, birth gate, export validation.
-26. Operations and living adaptation.
-
+7. Freeze system identity and define session/harness/sandbox/artifact/credential boundaries.
+8. Production foundation slice.
+9. Tool contract plus default-deny permission policy, approval binding and provenance-aware data flow.
+10. Append-only run-event and durable state contract.
+11. Hook design pass: separate instructions from deterministic gates, fill registry, fail modes, native mappings and validation cases.
+12. Subagent design pass through `../subagent-orchestrator/SKILL.md`: single-agent baseline first, then topology, roles, task graph, context, isolation, lifecycle, result schema and eval.
+13. Loop contract, if the agent performs a repeatable process.
+14. Trigger Lab.
+15. Eval-validity pass: full task inventory, feasibility witness, grader mapping, leakage/contamination checks and frozen holdout.
+16. Output Eval Lab: matched budgets/infrastructure, repeated trials, outcome/trajectory/boundary/stability graders and all-attempt reporting.
+17. Harness Assumption Registry and Ablation Lab.
+18. Stage quality gates and loop state.
+19. Context provenance and subagent budgets; sufficiency gate only for evidence-heavy retrieval workflows after local eval.
+20. Skill Training Lab: workflow ledger, subagent records, skill candidates, promotion gate.
+21. Birth contract, first-run sequence, environment readiness, project context and post-birth cleanup.
+22. Target conformance and adapter parity.
+23. Draft final-evidence contract and claim boundary.
+24. Trust, permissions, runtime probes, containment and recovery drills.
+25. Memory disclosure, freshness and poisoning policy.
+26. Human draft release review.
+27. Package, install, birth gate and export validation on fresh extraction.
+28. Independent validation of the final package.
+29. Repair, regress, rerun benchmark-validity checks, rebuild and reinstall.
+30. Hash the final evidence bundle and validate the machine-readable release decision.
+31. Governed operations and proposal-only living adaptation with hidden holdout, canary and rollback.
 ## Runtime package
 
 Runtime включает только файлы, которые агент читает при нормальной работе:

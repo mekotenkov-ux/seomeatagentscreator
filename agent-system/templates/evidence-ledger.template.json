@@ -1,32 +1,52 @@
 {
-  "schema_version": 2,
-  "package": "",
-  "accepted_evidence": [
-    {
-      "id": "",
-      "kind": "test|checker|package|install|external|review|manual_approval",
-      "status": "pass|warn|fail|blocked",
-      "summary": "",
-      "artifact_refs": [],
-      "claim_support": [],
-      "evidence_class": "local_pass|external_pending|external_pass|descoped",
-      "independent": false,
-      "provenance": {
-        "run_id": "",
-        "reviewer_id": "",
-        "runtime": "",
-        "prompt_hash": "",
-        "context_hash": "",
-        "trace_ref": "",
-        "result_ref": ""
-      }
-    }
-  ],
-  "pending_evidence": [],
-  "known_gaps": [],
-  "claim_boundary": {
-    "allowed_claims": [],
-    "forbidden_claims": [],
-    "limitations": []
-  }
+    "schema_version":  3,
+    "package":  "",
+    "system_release_id":  "",
+    "accepted_evidence":  [
+                              {
+                                  "id":  "",
+                                  "kind":  "test|checker|package|install|external|review|manual_approval|research",
+                                  "status":  "pass|warn",
+                                  "summary":  "",
+                                  "artifact_refs":  [
+
+                                                    ],
+                                  "claim_support":  [
+
+                                                    ],
+                                  "evidence_class":  "deterministic_control|peer_reviewed|replicated_preprint|single_preprint|vendor_case_study|local_eval|external_pass",
+                                  "adoption_decision":  "adopt|experiment|defer",
+                                  "evidence_score":  null,
+                                  "independent":  false,
+                                  "provenance":  {
+                                                     "run_id":  "",
+                                                     "reviewer_id":  "",
+                                                     "runtime":  "",
+                                                     "prompt_hash":  "",
+                                                     "context_hash":  "",
+                                                     "trace_ref":  "",
+                                                     "result_ref":  ""
+                                                 }
+                              }
+                          ],
+    "pending_evidence":  [
+
+                         ],
+    "rejected_or_failed_evidence":  [
+
+                                    ],
+    "known_gaps":  [
+
+                   ],
+    "claim_boundary":  {
+                           "allowed_claims":  [
+
+                                              ],
+                           "forbidden_claims":  [
+
+                                                ],
+                           "limitations":  [
+
+                                           ]
+                       }
 }

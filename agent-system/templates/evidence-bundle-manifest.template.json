@@ -1,24 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "bundle_id": "",
+  "system_release_id": "",
   "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "base_directory": ".",
+  "hash_algorithm": "sha256",
   "claim_boundary": {
     "supports": [],
     "does_not_support": []
   },
   "files": [
     {
+      "artifact_id": "",
       "path": "",
       "sha256": "",
-      "kind": "raw|processed|report|summary|approval|review",
+      "kind": "raw|processed|report|summary|approval|review|gate_evidence|run_log|package_validation|install_validation|independent_review|runtime_archive",
+      "gate_ids": [],
       "row_count": null,
       "included_raw_body": false,
-      "source": ""
+      "source": "",
+      "immutable": null
     }
   ],
-  "forbidden": {
-    "absolute_paths": true,
-    "secrets": true,
-    "unapproved_private_data": true
+  "policy": {
+    "reject_absolute_paths": true,
+    "reject_parent_traversal": true,
+    "reject_secrets": true,
+    "reject_unapproved_private_data": true
   }
 }

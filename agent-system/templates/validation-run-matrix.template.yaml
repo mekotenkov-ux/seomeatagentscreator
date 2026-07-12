@@ -1,33 +1,125 @@
-version: 1
+version: 2
+matrix_id: ""
+system_release_id: ""
 positive_fixtures:
 - id: happy-path-runtime
   purpose: Runtime package installs and required files exist.
   command: ''
 negative_fixtures:
 - id: markdown-only-review
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Independent review summary is missing machine-readable reviewer
     trace.
 - id: descope-counted-as-pass
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Descoped evidence is a limitation, not external_pass.
 - id: runtime-contains-devkit
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Runtime contains tests, source materials, or validation scripts.
 - id: local-absolute-path
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Package or evidence manifest contains a local absolute path.
 - id: independent-review-defaults-true
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Independent review templates must default claims to false until
     provenance exists.
 - id: unbounded-subagent-fanout
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Delegation lacks worker, depth, runtime, token, tool-call,
     cost, or retry budgets.
 - id: parallel-shared-mutable-checkout
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Write-capable workers share one mutable checkout or overlapping
     ownership.
 - id: partial-subagent-hidden-as-success
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Failed, cancelled, timed-out, rejected, budget-exhausted, or
     unknown branches are hidden by an aggregate success.
 - id: multi-agent-without-baseline
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
   should_fail_because: Multi-agent value is claimed without a single-agent quality,
     coverage, latency, and cost comparison.
+- id: correct-answer-after-hidden-boundary-violation
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: A correct final answer cannot compensate for unauthorized access, disclosure, or inter-agent transfer.
+- id: invalid-eval-task-counted-as-model-failure
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: The task lacks a feasibility witness, requirement-to-grader map, or has a known severe defect.
+- id: infrastructure-drift-counted-as-model-gain
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: Conditions use different resource, timeout, network, cache, or concurrency settings, or A/A noise was not calibrated.
+- id: best-of-n-reported-as-single-attempt
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: Best-of-N evidence does not match the deployed attempt and selector policy.
+- id: stale-harness-assumption
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: A model, runtime, tool, or task-distribution change left an active scaffold assumption without current ablation evidence.
+- id: credentials-enter-sandbox
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: Model-generated code can read durable credentials instead of using a scoped broker or proxy.
+- id: project-config-before-trust
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: Project-local hooks, configuration, or persistent instructions execute before the trust decision.
+- id: self-update-without-holdout
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: An optimizer can see the final holdout or modify graders, permissions, budgets, logs, or sandbox policy.
+- id: release-claim-without-machine-decision
+  fixture_ref: ''
+  command: ''
+  expected_exit_code: 1
+  expected_message: ''
+  should_fail_because: Public claims are authored without a reconciled machine-readable release decision.
 release_rule:
   production_requires:
   - required positive fixtures pass

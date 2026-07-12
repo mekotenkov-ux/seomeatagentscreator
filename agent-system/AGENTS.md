@@ -57,20 +57,23 @@
 1. Зафиксируйте brief и preflight decisions.
 2. Проведите workflow discovery: notes, candidate loops, selected workflow spec и blocking questions.
 3. Создайте Agent/Skill IR до адаптеров.
-4. Создайте birth contract: runtime profile, birth plan, environment readiness, project context и cleanup policy.
-5. Опишите trigger surface: should-trigger, should-not-trigger, near-neighbor, adversarial, confusion, holdout.
-6. Спроектируйте router, skills, command/workflow layer, tools, checkers, memory/state, workspace hygiene.
-7. Соберите один полный vertical slice.
-8. Опишите tool registry и permission matrix.
-9. Проведите hook design pass: какие правила остаются в skills, а какие требуют автоматического lifecycle gate; задайте fail mode, privacy, budgets, native mapping и tests.
-10. Проведите subagent design pass через `skills/subagent-orchestrator/SKILL.md`: single-agent baseline, topology, roles, task graph, context, permissions, isolation, lifecycle, result schema и eval.
-11. Создайте Trigger Lab, Output Eval Lab и Subagent Eval Lab.
-12. Добавьте context packaging policy.
-13. Добавьте release review, evidence ledger и claim guard.
-14. Разделите runtime и devkit.
-15. Проверьте package/install/birth gate.
-16. Только после этого публикуйте или архивируйте.
-
+4. Зафиксируйте system identity и границы session/harness/sandbox/artifact store/credential broker.
+5. Создайте default-deny permission policy, approval binding, provenance-aware data flow и append-only run-event contract.
+6. Создайте birth contract: runtime profile, birth plan, environment readiness, project context и cleanup policy.
+7. Опишите trigger surface: should-trigger, should-not-trigger, near-neighbor, adversarial, confusion, holdout.
+8. Спроектируйте router, skills, command/workflow layer, tools, checkers, memory/state, workspace hygiene.
+9. Соберите один полный vertical slice.
+10. Проведите hook design pass: какие правила остаются в skills, а какие требуют автоматического lifecycle gate; задайте fail mode, privacy, budgets, native mapping и tests.
+11. Проведите subagent design pass через `skills/subagent-orchestrator/SKILL.md`: single-agent baseline, topology, roles, task graph, context, permissions, isolation, lifecycle, result schema и eval.
+12. Валидируйте сам eval: task inventory, feasibility witnesses, grader mapping, contamination/shortcut checks и frozen holdout.
+13. Создайте Trigger Lab, trajectory-aware Output Eval Lab и Subagent Eval Lab с repeated trials и infrastructure calibration.
+14. Ведите Harness Assumption Registry и matched-budget Ablation Lab.
+15. Добавьте provenance-aware context packaging; context-sufficiency gate включайте только для evidence-heavy retrieval workflows после локального eval.
+16. Подготовьте draft release review, evidence ledger и claim boundary, но не финальный `pass`.
+17. Разделите runtime и devkit.
+18. Соберите архивы и проверьте trust, containment, recovery, package/install/birth gates на fresh extraction.
+19. Проведите независимые scenario-аудиты финального пакета; living adaptation оставьте proposal-only до hidden holdout, approval, canary и rollback.
+20. Сведите реальные hashes и gate reports в evidence bundle, проверьте финальный machine release decision и только после этого публикуйте или архивируйте.
 ## Runtime/devkit boundary
 
 Runtime содержит только то, что целевой агент читает и использует при нормальной работе:
@@ -107,11 +110,20 @@ Devkit содержит:
 Не называйте пакет production-ready, если:
 
 - нет IR;
+- нет versioned system identity и harness boundary;
+- authority описана только prompt, а не runtime permission policy;
+- credentials доступны model-generated code;
+- нет append-only trajectory events для side effects;
 - нет Trigger Lab;
-- нет Output Eval Lab;
+- нет eval-validity report или frozen holdout;
+- нет Output Eval Lab с outcome, trajectory, boundary и stability graders;
+- stochastic reliability заявлена по одной или выбранной лучшей попытке;
+- infrastructure noise не отделен от model/task failures;
+- есть stale harness assumption без ablation;
 - нет tool registry;
 - нет permission matrix;
 - нет release review;
+- нет machine-readable release decision;
 - нет package verification;
 - runtime содержит dev/test/private artifacts;
 - есть blocker;
@@ -128,6 +140,8 @@ Devkit содержит:
 - `references/ide-runtime-adaptation.md`;
 - `references/hook-system.md`;
 - `references/subagent-orchestration.md`;
+- `references/frontier-harness-engineering.md`;
+- `references/frontier-harness-research-2026-07.md`;
 - `references/context-and-quality-gates.md`;
 - `references/target-adapters.md`;
 - `references/final-evidence-and-claim-guard.md`;

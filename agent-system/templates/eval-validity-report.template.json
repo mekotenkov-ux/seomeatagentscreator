@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "report_id": "",
+  "system_release_id": "",
+  "eval_suite_id": "",
+  "eval_suite_version": "",
+  "dataset_commit_or_hash": "",
+  "claim_under_test": "",
+  "task_distribution_ref": "",
+  "task_inventory_ref": "",
+  "task_disposition_ref": "",
+  "source_task_count": 0,
+  "disposition_count": 0,
+  "counts_reconcile": null,
+  "predeclared_exclusion_policy_ref": "",
+  "holdout": {
+    "split_ref": "",
+    "frozen_before_tuning": null,
+    "hidden_from_optimizer": null,
+    "network_policy_ref": "",
+    "answer_key_access_test_ref": ""
+  },
+  "task_quality": {
+    "reference_solution_or_feasibility_witness_coverage": null,
+    "requirement_to_grader_map_ref": "",
+    "hidden_test_coverage_ref": "",
+    "mutation_test_ref": "",
+    "ambiguity_review_ref": "",
+    "contamination_probe_ref": "",
+    "evaluation_awareness_probe_ref": "",
+    "shortcut_and_leakage_probe_ref": "",
+    "known_severe_defects": null,
+    "known_warning_defects": null
+  },
+  "grader_quality": {
+    "deterministic_graders_ref": "",
+    "model_judge_calibration_ref": "",
+    "human_adjudication_ref": "",
+    "confusion_matrix_ref": "",
+    "inter_rater_agreement_ref": "",
+    "llm_is_sole_safety_authority": null
+  },
+  "independent_review": {
+    "reviewer_provenance_ref": "",
+    "blinded_to_system_identity": null,
+    "sample_size": 0,
+    "defect_rate_interval_ref": ""
+  },
+  "raw_intention_to_test_result_ref": "",
+  "adjudicated_result_ref": "",
+  "claim_eligible": null,
+  "status": "unverified",
+  "blockers": [],
+  "warnings": []
+}

@@ -1,36 +1,55 @@
 {
-  "version": 1,
-  "package": "",
-  "purpose": "Define evidence required before public, production, live, external, or independently validated claims.",
-  "status_semantics": {
-    "local_pass": "Local runtime/devkit/package/fixture checks pass.",
-    "external_pending": "Proof requires approval, credentials, budget, live data, reviewers, or another external condition.",
-    "external_pass": "The approved external run or independent review completed and produced bounded evidence artifacts.",
-    "descoped": "The user explicitly accepted that this evidence is out of scope, with reason and date.",
-    "ready_with_descopes": "Release may proceed with explicit limitations, not as full external proof."
-  },
-  "required_external_evidence": [
-    {
-      "id": "",
-      "current_local_status": "",
-      "approval_required": {
-        "network": false,
-        "credentials": [],
-        "budget_scope": [],
-        "subagents": false
-      },
-      "required_command_patterns": [],
-      "required_evidence_artifacts": [],
-      "pass_condition": "",
-      "forbidden_claim_until_pass": ""
-    }
-  ],
-  "final_claim_rule": "",
-  "forbidden_global_claims_until_external_pass": [],
-  "decision_record_contract": {
-    "path": "quality-gates/final_evidence_decisions.json",
-    "allowed_decisions": ["descoped"],
-    "required_fields_for_descope": ["id", "decision", "approved_by", "reason", "date"],
-    "rule": "A descope decision is a visible limitation. It never increments external_pass."
-  }
+    "version":  2,
+    "package":  "",
+    "purpose":  "Define evidence required before public, production, live, external, or independently validated claims.",
+    "status_semantics":  {
+                             "local_pass":  "Local runtime/devkit/package/fixture checks pass.",
+                             "external_pending":  "Proof requires approval, credentials, budget, live data, reviewers, or another external condition.",
+                             "external_pass":  "The approved external run or independent review completed and produced bounded evidence artifacts.",
+                             "descoped":  "The user explicitly accepted that this evidence is out of scope, with reason and date.",
+                             "ready_with_descopes":  "Release may proceed with explicit limitations, not as full external proof."
+                         },
+    "required_external_evidence":  [
+                                       {
+                                           "id":  "",
+                                           "current_local_status":  "",
+                                           "approval_required":  {
+                                                                     "network":  false,
+                                                                     "credentials":  [
+
+                                                                                     ],
+                                                                     "budget_scope":  [
+
+                                                                                      ],
+                                                                     "subagents":  false
+                                                                 },
+                                           "required_command_patterns":  [
+
+                                                                         ],
+                                           "required_evidence_artifacts":  [
+
+                                                                           ],
+                                           "pass_condition":  "",
+                                           "forbidden_claim_until_pass":  ""
+                                       }
+                                   ],
+    "final_claim_rule":  "",
+    "forbidden_global_claims_until_external_pass":  [
+
+                                                    ],
+    "decision_record_contract":  {
+                                     "path":  "quality-gates/final_evidence_decisions.json",
+                                     "allowed_decisions":  [
+                                                               "descoped"
+                                                           ],
+                                     "required_fields_for_descope":  [
+                                                                         "id",
+                                                                         "decision",
+                                                                         "approved_by",
+                                                                         "reason",
+                                                                         "date"
+                                                                     ],
+                                     "rule":  "A descope decision is a visible limitation. It never increments external_pass."
+                                 },
+    "system_release_id":  ""
 }

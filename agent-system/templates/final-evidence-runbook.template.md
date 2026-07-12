@@ -1,5 +1,8 @@
 # Final Evidence Runbook
 
+System release ID: <fill>
+Evidence bundle ID: <fill>
+
 Use this runbook before claiming external, live, independent, production, public, or client-ready proof.
 
 ## Rules
