@@ -46,11 +46,6 @@ A serious first-run flow produces machine-readable artifacts:
 
 Confirm whether the files are in installed runtime, source devkit, export staging, runtime zip output, or an uncertain location. Detect workspace root, package root, writable state/artifact directories, and whether destructive cleanup is forbidden. Write `runtime-profile.json` with `is_source_runtime`, confidence, blocked reasons, and next valid actions.
 
-### Phase 0.5. Optional Process Reference Decision
-
-Before designing a new agent, inspect the repo/tool catalog and record whether `obra/superpowers` is `not_relevant`, `consider`, `selected_by_user`, or `declined_by_user`. It is an optional methodology that the meta-agent may use while creating a software-oriented agent; it is never a default runtime dependency or a bundle of skills inherited by the new agent.
-
-Ask the user before selection only when it would materially change the working process, install a plugin, add a dependency or hook, change permissions or telemetry settings, or be shipped with the generated package. Record the decision and reason in the birth contract or workflow-discovery ledger. Cataloging alone is not permission to install or copy it.
 ### Phase 1. Runtime Detection
 
 Detect the active runtime or IDE from explicit flags, active entrypoints, runtime folders, process metadata, environment metadata, or a user answer.
