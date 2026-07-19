@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-07",
+  "generated_at": "2026-07-19",
   "library_policy": "Cataloging is not adoption. Items are not integrated without explicit project selection and validation.",
   "items": [
     {
+      "id": "google-open-knowledge-format",
+      "canonical_url": "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/",
+      "name": "Google Cloud Open Knowledge Format (OKF)",
+      "type": "reference",
+      "short_description": "Open, vendor-neutral format for an agent- and human-readable project knowledge bundle: Markdown concept files with YAML front matter and links between tables, datasets, metrics, APIs, playbooks, and join paths.",
+      "why_it_matters": "An optional way to give agents stable, reviewable context about a project's data model without making a database, cloud provider, vector store, or SDK part of the agent runtime.",
+      "agent_building_use_cases": [
+        "Document project tables, views, datasets, metrics, ownership, definitions, and join paths as versioned files.",
+        "Create a compact context layer for database-aware agents before they read raw schemas or query systems.",
+        "Keep database meaning, data quality notes, access constraints, and runbooks reviewable alongside code."
+      ],
+      "tags": ["knowledge-format", "project-database", "data-catalog", "metadata", "markdown", "yaml", "context", "agent-memory", "database-schema"],
+      "language_or_runtime": ["format only", "Markdown", "YAML", "Git", "any database or agent runtime"],
+      "license": "Open specification; check the selected implementation and repository license before adopting tooling.",
+      "maintenance_signals": {
+        "last_release": "OKF v0.1 announced by Google Cloud on 2026-06-12",
+        "recent_activity": "Early specification with published reference implementations and sample bundles; treat ecosystem maturity as evolving.",
+        "maintainer": "Google Cloud Data Cloud team with open contributions",
+        "known_adoption": "No production-fit claim recorded; evaluate on the target project's data and agent workflows."
+      },
+      "install_or_use_shape": "A directory of Markdown files with YAML front matter. It can live in the project repository and be read by humans or agents. No database migration, Google Cloud account, BigQuery access, SDK, or runtime dependency is required by the format itself.",
+      "risks": [
+        "OKF is a knowledge representation, not a database, permission system, backup, data lineage engine, or access-control mechanism.",
+        "Schema descriptions, metrics, joins, and operational notes can be sensitive; publish only approved metadata and keep credentials, raw private data, and customer data out of the bundle.",
+        "The specification is early; validate local conventions, accuracy, freshness ownership, and agent retrieval quality before relying on it.",
+        "Do not infer live database access, query authority, or data freshness from an OKF document."
+      ],
+      "permission_needs": ["approved_schema_or_documentation_read", "local_project_file_write_if_created", "explicit_database_access_only_if_a_project_separately_approves_it"],
+      "when_to_consider": [
+        "When an agent must understand a project's database schema, business metrics, joins, data contracts, or operational runbooks repeatedly.",
+        "When database context is scattered across SQL, dashboards, docs, and team knowledge and needs a versioned, reviewable summary.",
+        "When a project wants a portable knowledge layer that does not depend on one cloud or agent vendor."
+      ],
+      "when_not_to_use": [
+        "When the project has no durable data model or the cost of maintaining documentation outweighs its reuse value.",
+        "When a live schema introspection or existing authoritative catalog already serves the task and a duplicate bundle would drift.",
+        "When handling sensitive metadata has not been approved."
+      ],
+      "alternatives": ["existing data catalog or database documentation", "project-specific schema docs", "dbt documentation", "OpenMetadata", "DataHub", "a small reviewed Markdown data dictionary"],
+      "source_evidence_refs": [
+        "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/ - Google Cloud introduction to OKF v0.1, its Markdown/YAML bundle shape, database concept examples, and vendor-neutral design; inspected 2026-07-19.",
+        "https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf - reference code, specification, and example bundles linked from the Google Cloud announcement; inspect current repository state before selecting tooling."
+      ],
+      "inspection_date": "2026-07-19",
+      "status": "cataloged",
+      "status_reason": "Indexed as an optional project-database knowledge-layer idea. It is not mandatory, selected for a project, installed, or integrated into any agent runtime.",
+      "selected_for_projects": [],
+      "integration_evidence_refs": [],
+      "next_review_action": "For a concrete project, compare the bundle against the authoritative schema, define owners and freshness rules, classify sensitive metadata, and test whether it improves the agent's target tasks before relying on it."
+    },    {
       "id": "withastro-flue",
       "canonical_url": "https://github.com/withastro/flue",
       "name": "withastro/flue",
